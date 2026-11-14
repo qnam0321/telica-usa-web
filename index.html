@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELICA USA | Authorized U.S. TELICA Reseller | ASTERIKA LLC</title>
+    <meta name="description" content="TELICA USA is operated by ASTERIKA LLC, an authorized U.S. reseller of genuine TELICA ESL products, with CREBEE platform solutions and retail POS integration support.">
+    <link rel="canonical" href="https://telicausa.com/">
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://telicausa.com/",
+            "name": "TELICA USA",
+            "legalName": "ASTERIKA LLC",
+            "alternateName": ["ASTERIKA LLC d/b/a TELICA USA", "TELICA USA Authorized Reseller"],
+            "url": "https://telicausa.com/",
+            "logo": "https://telicausa.com/telica-logo.png",
+            "description": "Official U.S. Authorized Reseller of genuine TELICA & CREBEE Electronic Shelf Labels (ESL) and smart retail solutions, operated by ASTERIKA LLC in California.",
+            "email": "info@telicausa.com",
+            "telephone": "+1-562-312-1200",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Long Beach, CA",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+            },
+            "foundingDate": "2023",
+            "sameAs": ["https://www.linkedin.com/company/asterika-llc/"],
+            "knowsAbout": ["Electronic Shelf Labels", "TELICA ESL", "CREBEE Platform", "Retail POS Integration", "Smart Retail Solutions"],
+            "areaServed": {
+                "@type": "Country",
+                "name": "US"
+            },
+            "serviceType": "Authorized Reseller"
+        }
+    </script>
+
+    <!-- LocalBusiness Schema (추가 신뢰도) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "TELICA USA - Authorized Reseller",
+            "legalName": "ASTERIKA LLC",
+            "url": "https://telicausa.com/",
+            "description": "Authorized U.S. Reseller for TELICA Electronic Shelf Labels and CREBEE platform solutions with Square and Shopify POS integration.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "CA",
+                "addressCountry": "US"
+            },
+            "areaServed": "US",
+            "availableLanguage": ["en"],
+            "image": "https://telicausa.com/telica-logo.png"
+        }
+    </script>
+
+    <!-- Product Schema (제품 신뢰도) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "TELICA Electronic Shelf Labels (ESL)",
+            "brand": {
+                "@type": "Brand",
+                "name": "TELICA"
+            },
+            "manufacturer": {
+                "@type": "Organization",
+                "name": "TELICA Inc.",
+                "url": "https://www.telica.com/"
+            },
+            "description": "Genuine TELICA Electronic Shelf Labels with CREBEE platform integration for U.S. retail stores.",
+            "distributor": {
+                "@type": "Organization",
+                "@id": "https://telicausa.com/",
+                "name": "TELICA USA (ASTERIKA LLC)",
+                "url": "https://telicausa.com/"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "US"
+            },
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+            }
+        }
+    </script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', Arial, sans-serif; }
+        .corporate-tag { font-family: Arial, sans-serif; }
+        @media (min-width: 1024px) {
+            .desktop-dropdown:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+        .slide-fade {
+            transition: opacity 0.6s ease-in-out;
+        }
+        #view-home p.text-xs {
+            font-size: 0.8125rem;
+            line-height: 1.55;
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 antialiased selection:bg-red-600 selection:text-white overflow-x-hidden">
+
+    <!-- 상단 헤더 -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-0 sm:h-16 flex flex-wrap items-center justify-between gap-y-1 sm:flex-nowrap sm:justify-start">
+            
+            <!-- Brand -->
+            <div class="order-1 flex items-center space-x-3 sm:order-none">
+                <a href="#" onclick="switchPage('home'); return false;" class="flex items-center shrink-0 group space-x-1.5 py-0.5">
+                    <img src="telica-logo.png" alt="TELICA Logo" class="h-4 sm:h-5 w-auto object-contain">
+                    <span class="px-1.5 py-0.5 bg-zinc-900 text-white text-[10px] sm:text-[11px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
+                </a>
+            </div>
+
+            <div class="order-3 flex w-full flex-col items-start leading-tight text-left sm:order-none sm:ml-3 sm:w-auto">
+                <span class="text-[9px] sm:text-xs font-bold tracking-tight text-zinc-900 sm:whitespace-nowrap">Authorized U.S. TELICA Reseller</span>
+            </div>
+
+            <!-- Compact actions -->
+            <div class="order-2 flex items-center space-x-2 sm:order-none sm:ml-auto">
+                <button onclick="openQuoteModal('General Inquiry')" class="bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-4 py-2 rounded-none transition cursor-pointer shadow-sm">Quote</button>
+                <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="text-zinc-700 p-1.5 rounded-none hover:bg-zinc-100">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation menu -->
+        <div id="mobile-menu" class="hidden absolute top-[4.75rem] sm:top-16 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 p-4 space-y-3 shadow-xl z-50">
+            <div class="flex items-center justify-between border-b border-zinc-100 pb-2">
+                <span class="text-xs font-bold text-zinc-500 uppercase">Navigation Menu</span>
+                <button id="menu-close" aria-label="Close navigation menu" class="text-zinc-500 font-bold">✕</button>
+            </div>
+            <div class="space-y-2 text-xs font-medium">
+                <a href="#" onclick="switchPage('home'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-bold text-red-600">Home</a>
+                <div class="pl-2 space-y-1 border-l-2 border-zinc-100 my-1">
+                    <a href="#lineup" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-900 font-semibold">· DIY ESL Kit ($799)</a>
+                    <a href="#tag-1-5" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 1.5" ESL Tag (60-pack)</a>
+                    <a href="#tag-2-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 2.7" ESL Tag (40-pack)</a>
+                    <a href="#tag-3-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 3.7" ESL Tag (30-pack)</a>
+                    <a href="#" onclick="switchPage('rails'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 text-red-600 font-semibold">· Rails & Hardware Catalog</a>
+                </div>
+                <a href="#" onclick="switchPage('support'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Setup & Guides</a>
+                <a href="#" onclick="switchPage('partners'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Partners & Supplier Network</a>
+                <a href="#commercial" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 font-semibold text-zinc-900">Commercial Solutions</a>
+                <a href="#" onclick="switchPage('about'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">About Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- [메인 페이지 뷰] -->
+    <div id="view-home" class="page-view">
+        <!-- 히어로 섹션 -->
+        <section class="bg-zinc-900 text-white py-12 sm:py-16 px-4 sm:px-6 border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
+                <div class="w-full lg:w-1/2 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-xs font-bold text-zinc-400 corporate-tag uppercase tracking-wide">SMART RETAIL ESL SOLUTIONS FOR U.S. STORES</span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
+                        Transform Your Store Shelves into Digital Displays
+                    </h1>
+                    <p class="text-zinc-400 text-sm sm:text-base font-light leading-relaxed">
+                        <strong>TELICA USA</strong> offers genuine TELICA electronic shelf labels, CREBEE platform solutions, and POS integration support for U.S. retailers, including price sync with Square, Shopify, and other supported systems.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                        <button onclick="openQuoteModal('DIY ESL Kit Purchase')" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-none text-xs transition cursor-pointer text-center shadow-md">
+                            Request a DIY ESL Kit Quote
+                        </button>
+                        <a href="#" onclick="switchPage('rails'); return false;" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-semibold px-6 py-3 rounded-none text-xs transition border border-zinc-700 text-center">
+                            View Rails & Hardware ➔
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 bg-zinc-950 p-2 border border-zinc-800">
+                    <div class="relative h-60 sm:h-72 overflow-hidden bg-zinc-900" aria-label="Retail environment photos for context">
+                        <div class="slide absolute inset-0 opacity-100 slide-fade">
+                            <img src="store1.jpg?v=20261107" alt="Retail store aisle" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            <span class="absolute bottom-3 left-3 bg-zinc-900/80 px-2 py-1 text-[10px] text-zinc-300">Retail environment photo</span>
+                        </div>
+                        <div class="slide absolute inset-0 opacity-0 slide-fade">
+                            <img src="store2.jpg?v=20261107" alt="Retail shelf display" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            <span class="absolute bottom-3 left-3 bg-zinc-900/80 px-2 py-1 text-[10px] text-zinc-300">Retail environment photo</span>
+                        </div>
+                        <div class="slide absolute inset-0 opacity-0 slide-fade">
+                            <img src="store3.jpg?v=20261107" alt="Retail point-of-sale area" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            <span class="absolute bottom-3 left-3 bg-zinc-900/80 px-2 py-1 text-[10px] text-zinc-300">Retail environment photo</span>
+                        </div>
+                        <div class="slide absolute inset-0 opacity-0 slide-fade">
+                            <img src="store4.jpg?v=20261107" alt="Multi-aisle retail store" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                            <span class="absolute bottom-3 left-3 bg-zinc-900/80 px-2 py-1 text-[10px] text-zinc-300">Retail environment photo</span>
+                        </div>
+                        <div class="absolute bottom-3 right-3 flex space-x-1 z-10 bg-zinc-900/80 px-2 py-1">
+                            <span class="dot w-1.5 h-1.5 bg-red-500"></span>
+                            <span class="dot w-1.5 h-1.5 bg-zinc-600"></span>
+                            <span class="dot w-1.5 h-1.5 bg-zinc-600"></span>
+                            <span class="dot w-1.5 h-1.5 bg-zinc-600"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 도입 효과 섹션 -->
+        <section class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-10">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">WHY CHOOSE TELICA ESL</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">More Than a Digital Display: Practical Benefits for Retailers</h2>
+                    <p class="text-zinc-600 text-xs mt-1">See how electronic shelf labels can help streamline pricing, improve operational efficiency, and create a more consistent shopping experience.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-none bg-white border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Labor & Time Savings</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">Reduce time spent printing and manually replacing paper labels. Update shelf prices digitally instead.</p>
+                        </div>
+                        <p class="text-[10px] text-zinc-500 corporate-tag uppercase font-semibold">LESS TIME SPENT ON MANUAL UPDATES</p>
+                    </div>
+
+                    <div class="p-6 rounded-none bg-white border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Responsive Pricing & Promotions</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">Update prices and promotions in response to changing costs and market conditions.</p>
+                        </div>
+                        <p class="text-[10px] text-zinc-500 corporate-tag uppercase font-semibold">RESPONSIVE PRICE & PROMOTION UPDATES</p>
+                    </div>
+
+                    <div class="p-6 rounded-none bg-white border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Automatic POS Price Sync</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">After integration, prices sync automatically with Square, Shopify, and other supported POS systems. Closed POS systems can be connected through custom API integration.</p>
+                        </div>
+                        <p class="text-[10px] text-zinc-500 corporate-tag uppercase font-semibold">SHELF & REGISTER HARMONY</p>
+                    </div>
+
+                    <div class="p-6 rounded-none bg-white border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Reduce Price Mismatches & Build Trust</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">Reduce price mismatches at checkout and help provide customers with a more consistent shopping experience.</p>
+                        </div>
+                        <p class="text-[10px] text-zinc-500 corporate-tag uppercase font-semibold">FEWER PRICE MISMATCHES</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 bg-zinc-900 text-white p-6 sm:p-8 rounded-none flex flex-col md:flex-row items-center justify-between gap-6 border border-zinc-800">
+                    <div>
+                        <span class="text-[10px] uppercase text-red-400 corporate-tag font-bold">RETAIL STORE HARDWARE</span>
+                        <h4 class="text-lg font-bold mt-1">Need Shelf Rails & Mounting Solutions?</h4>
+                        <p class="text-zinc-400 text-sm font-light max-w-xl mt-1">Browse our available shelf rail profiles and mounting accessories, including listed lengths, colors, and prices.</p>
+                    </div>
+                    <button onclick="switchPage('rails'); return false;" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition whitespace-nowrap cursor-pointer shadow-md">
+                        View Rails & Hardware Catalog ➔
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESL Line-up 상세 안내 섹션 -->
+        <section id="lineup" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-10">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">ESL LINE-UP</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">Product Lineup & Direct Pricing</h2>
+                        <p class="text-zinc-600 text-xs mt-1">Explore U.S. direct pricing with no monthly cloud fees. <span class="text-zinc-500">*Shipping and applicable sales tax are calculated at the quote stage.</span></p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                    <!-- DIY ESL Kit -->
+                    <div class="bg-zinc-900 text-white p-6 sm:p-8 rounded-none border border-zinc-800 flex flex-col justify-between shadow-md">
+                        <div>
+                            <div class="w-full h-44 bg-zinc-800 rounded-none mb-4 overflow-hidden flex items-center justify-center border border-zinc-700 relative">
+                                <img src="kit.jpg" alt="DIY ESL Kit" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 -z-10">
+                                    <span class="text-xs corporate-tag text-zinc-400 uppercase">DIY STARTER KIT SETUP</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                                <span class="text-xs text-zinc-300 corporate-tag uppercase font-semibold">SINGLE STORE STARTER (10 TAGS)</span>
+                                <span class="text-xs font-bold text-red-400 corporate-tag uppercase">SPECIAL U.S. DIRECT PRICE</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-1">DIY ESL Kit</h3>
+                            <p class="text-zinc-400 text-xs mb-3">CREBEE Gateway Pro + 10 e-paper tags included</p>
+                            <p class="text-zinc-300 text-xs font-light leading-relaxed mb-4">
+                                This subscription-free starter kit for independent stores includes a CREBEE Gateway Pro and 10 e-paper ESL tags, with Square and Shopify integration. Other closed POS systems may be connected through custom API integration. <strong class="text-white">Note: The Gateway Pro is available only as part of this kit and is not sold separately.</strong>
+                            </p>
+                            
+                            <div class="border-t border-zinc-800 pt-3 mb-4 flex items-center justify-between">
+                                <span class="text-xs text-zinc-400">Standard MSRP: <span class="line-through text-zinc-500 font-bold">$999</span></span>
+                                <div class="text-right">
+                                    <span class="text-[10px] font-bold text-red-400 block corporate-tag uppercase">U.S. DIRECT SPECIAL</span>
+                                    <span class="text-xl font-extrabold text-white">$799</span>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-zinc-400 mb-4 italic">*Excludes shipping & applicable sales tax.</p>
+                        </div>
+                        <button onclick="openQuoteModal('DIY ESL Kit Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
+                            Request DIY ESL Kit Quote
+                        </button>
+                    </div>
+
+                    <!-- ESL Tag Refill Packs -->
+                    <div class="bg-white p-6 sm:p-8 rounded-none border border-zinc-300 flex flex-col justify-between shadow-xs">
+                        <div>
+                            <div class="flex justify-between items-center mb-3 flex-wrap gap-2">
+                                <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold">BULK EXPANSION</span>
+                                <span class="text-xs font-bold text-zinc-600 corporate-tag uppercase">VARIABLE PACK BUNDLE</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-zinc-900 mb-1">ESL Tag Refill Packs</h3>
+                            <p class="text-zinc-600 text-xs mb-3">Pack quantities vary by tag size (1.5": 60-pack, 2.7": 40-pack, 3.7": 30-pack)</p>
+                            <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">
+                                Expand your ESL deployment with bundle sizes tailored to each tag format. <strong class="text-zinc-900">Volume discounts are available depending on your total order quantity.</strong>
+                            </p>
+                            
+                            <div class="border-t border-zinc-200 pt-3 mb-4 space-y-2">
+                                <div class="flex items-center justify-between text-xs">
+                                    <span class="text-zinc-600 font-medium">1.5" Tag (60-pack):</span>
+                                    <span class="font-bold text-zinc-900">$509</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs">
+                                    <span class="text-zinc-600 font-medium">2.7" Tag (40-pack):</span>
+                                    <span class="font-bold text-zinc-900">$399</span>
+                                </div>
+                                <div class="flex items-center justify-between text-xs">
+                                    <span class="text-zinc-600 font-medium">3.7" Tag (30-pack):</span>
+                                    <span class="font-bold text-zinc-900">$599</span>
+                                </div>
+                            </div>
+                            <p class="text-[10px] text-zinc-500 mb-4 italic">*Excludes shipping & applicable sales tax.</p>
+                        </div>
+                        <div class="text-xs text-zinc-500 corporate-tag uppercase mb-3 font-semibold">AVAILABLE SIZES: 1.5", 2.7", 3.7"</div>
+                    </div>
+                </div>
+
+                <!-- 개별 태그 사이즈 카드 -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div id="tag-1-5" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">COMPACT</span>
+                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">60 TAGS ($509*)</span>
+                            </div>
+                            <h4 class="text-base font-bold text-zinc-900 mb-1">1.5" ESL Tag (60-pack)</h4>
+                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
+                                Ideal for narrow shelf edges, cosmetics, and small retail items. The e-paper display supports four-color pricing and barcodes. Each pack includes <strong>60 tags</strong> and is priced at $509. <em>*Volume discounts available.</em>
+                            </p>
+                        </div>
+                        <button onclick="openQuoteModal('1.5 Inch Tag Bundle Order')" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer">
+                            Request 1.5" Quote ➔
+                        </button>
+                    </div>
+
+                    <div id="tag-2-7" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[11px] font-bold text-red-600 corporate-tag uppercase">MOST POPULAR</span>
+                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">40 TAGS ($399*)</span>
+                            </div>
+                            <h4 class="text-base font-bold text-zinc-900 mb-1">2.7" ESL Tag (40-pack)</h4>
+                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
+                                A versatile four-color label for everyday pricing and promotions, designed for retail shelving. Each pack includes <strong>40 tags</strong> and is priced at $399. <em>*Volume discounts available.</em>
+                            </p>
+                        </div>
+                        <button onclick="openQuoteModal('2.7 Inch Tag Bundle Order')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer shadow-sm">
+                            Request 2.7" Quote ➔
+                        </button>
+                    </div>
+
+                    <div id="tag-3-7" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24 sm:col-span-3 lg:col-span-1">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">LARGE FORMAT</span>
+                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">30 TAGS ($599*)</span>
+                            </div>
+                            <h4 class="text-base font-bold text-zinc-900 mb-1">3.7" ESL Tag (30-pack)</h4>
+                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
+                                Designed to display detailed product information and promotions on endcaps. Each pack includes <strong>30 tags</strong> and is priced at $599. <em>*Volume discounts available.</em>
+                            </p>
+                        </div>
+                        <button onclick="openQuoteModal('3.7 Inch Tag Bundle Order')" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer">
+                            Request 3.7" Quote ➔
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 sm:px-6 bg-zinc-50 border-b border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">SYSTEM DETAILS</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">Coverage, Warranty & Ordering</h2>
+                    <p class="text-zinc-600 text-sm mt-1">Gateway coverage, product warranty, battery life, shipping, and tax information.</p>
+                </div>
+                <details class="group">
+                    <summary class="cursor-pointer text-sm font-semibold text-zinc-800 underline underline-offset-4">View product specifications and U.S. order details</summary>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                        <div class="p-5 bg-white border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Gateway Coverage</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">One gateway can support up to approximately 3,000 tags within an approximate 30-meter (98-foot) radius. Actual coverage may vary by store layout and wireless conditions.</p>
+                        </div>
+                        <div class="p-5 bg-white border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Factory Warranty</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">Products include a 1-year factory warranty. Please contact us for warranty terms and coverage details.</p>
+                        </div>
+                        <div class="p-5 bg-white border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Tag Battery Life</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">Tag battery life is approximately 5 years. Actual battery life may vary with usage and update frequency.</p>
+                        </div>
+                        <div class="p-5 bg-white border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">FCC Certification</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">The product is FCC-certified for the U.S. market.</p>
+                        </div>
+                        <div class="p-5 bg-white border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">U.S. Shipping</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">U.S. orders ship via UPS or USPS. Shipping charges are calculated with your quote.</p>
+                        </div>
+                        <div class="p-5 bg-white border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Applicable Sales Tax</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">Applicable sales tax is calculated based on the delivery location and relevant online sales tax rules, and will be included in your quote.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">RETURNS & REPLACEMENTS</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">Return & Warranty Requests</h2>
+                    <p class="text-zinc-600 text-sm mt-1">Contact us before sending a product back. Unopened returns are subject to approval; opened or damaged labels are not eligible for change-of-mind returns.</p>
+                </div>
+                <details class="group">
+                    <summary class="cursor-pointer text-sm font-semibold text-zinc-800 underline underline-offset-4">View return, refund, and warranty details</summary>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div class="p-5 bg-zinc-50 border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Unopened Products</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">Return requests for unused products in their original, unopened packaging must be made within 30 days of delivery and approved before return shipment. Approved returns are inspected before any eligible refund is issued.</p>
+                        </div>
+                        <div class="p-5 bg-zinc-50 border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Electronic Shelf Labels</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">Opened or installed labels with scratches, physical damage, or other signs of use are not eligible for return for a change of mind. If an item arrives damaged, is defective, or is incorrect, contact us so we can review the issue.</p>
+                        </div>
+                        <div class="p-5 bg-zinc-50 border border-zinc-300">
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Gateway Pro Warranty</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">Gateway Pro issues are subject to troubleshooting and inspection. If a defect covered by the 1-year factory warranty is confirmed, a replacement may be arranged under the warranty terms.</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-500 text-sm leading-relaxed mt-4">To request a return or warranty review, email <a href="mailto:info@telicausa.com" class="underline text-zinc-700">info@telicausa.com</a> with your order details and a description of the issue. This policy does not limit rights that apply under law.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Commercial Solutions 상세 안내 섹션 -->
+        <section id="commercial" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-10">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">FOR LARGER & MULTI-LOCATION PROJECTS</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">Commercial & Multi-Location Projects</h2>
+                    <p class="text-zinc-600 text-xs mt-1">Custom volume pricing is available through consultation with our U.S. solutions team. *Shipping and applicable sales tax are calculated in your quote based on the delivery location.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <div onclick="openDetailModal('opt1')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">CUSTOM INTEGRATION</span>
+                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
+                        </div>
+                        <h4 class="text-base font-bold text-zinc-900 mb-1">Flexible POS, ERP & Inventory Integration</h4>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed">Custom API and data bridging beyond standard cloud POS. Tiered volume pricing and custom scoping available upon consultation.</p>
+                    </div>
+                    <div onclick="openDetailModal('opt2')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">ARCHITECTURAL SCOPING</span>
+                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
+                        </div>
+                        <h4 class="text-base font-bold text-zinc-900 mb-1">Integration Assessment & Solution Design</h4>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed">We assess your store layout, wireless coverage, and shelf configuration to develop a tailored integration plan. Package pricing is available.</p>
+                    </div>
+                    <div onclick="openDetailModal('opt3')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">MULTI-STORE & SECURITY</span>
+                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
+                        </div>
+                        <h4 class="text-base font-bold text-zinc-900 mb-1">Multi-Store Rollouts & Secure U.S. Cloud Roadmap</h4>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed">Plan multi-store deployments using local gateways. Contact us to discuss deployment options and project-specific volume pricing.</p>
+                    </div>
+                    <div onclick="openDetailModal('opt4')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">ENTERPRISE SUPPORT & SERVER ARCHITECTURE</span>
+                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
+                        </div>
+                        <h4 class="text-base font-bold text-zinc-900 mb-1">Dedicated Commercial Support & Server Architecture Strategy</h4>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed">Tailored server hosting, local cloud setup options, and dedicated technical collaboration with the South Korean headquarters for enterprise chains.</p>
+                    </div>
+                </div>
+
+                <div class="text-center bg-zinc-900 text-white p-8 rounded-none shadow-lg">
+                    <h3 class="text-lg font-bold mb-2">Request a Custom Negotiable Project Quote</h3>
+                    <p class="text-zinc-400 text-xs font-light max-w-xl mx-auto mb-4">
+                        Contact our <strong>TELICA USA</strong> sales and solutions team for tailored scoping, custom volume discounts, and official commercial proposals.
+                    </p>
+                    <button onclick="openQuoteModal('Commercial & Multi-Location Project')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none text-xs transition cursor-pointer shadow-md">
+                        Request a Commercial Quote (Negotiable) ➔
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- [서브 페이지 뷰: About Us] -->
+    <div id="view-about" class="page-view hidden py-16 px-4 sm:px-6 bg-white">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="border-b border-zinc-200 pb-4">
+                <div class="flex items-center space-x-2 text-xs font-semibold text-zinc-500 mb-2">
+                    <a href="#" onclick="switchPage('home'); return false;" class="hover:underline">Home</a>
+                    <span>/</span>
+                    <span class="text-red-600">About Us</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900">About TELICA USA</h1>
+                <p class="text-zinc-600 text-xs sm:text-sm font-light mt-1">Electronic shelf label products and integration support for retailers, warehouses, and other businesses across the United States.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div class="space-y-4 text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                    <p><strong>TELICA USA</strong> is a business name operated by <strong>ASTERIKA LLC</strong>. We offer TELICA electronic shelf labels and CREBEE platform products from South Korea, along with gateways, mounting hardware, and integration support for U.S. businesses.</p>
+                    <p>Our offerings range from subscription-free DIY kits for independent stores to product and integration discussions for multi-location retailers and warehouse operations. Once configured with a supported POS, product prices can sync automatically with electronic shelf labels.</p>
+                </div>
+                <div class="bg-zinc-900 text-white p-6 rounded-none space-y-3">
+                    <h3 class="font-bold text-sm border-b border-zinc-800 pb-3">Our Core Pillars</h3>
+                    <ul class="space-y-2.5 text-xs font-light text-zinc-300">
+                        <li>• <strong>Products & Integration Support:</strong> ESL hardware, setup guidance, and integration support based on project requirements.</li>
+                        <li>• <strong>Subscription-Free DIY Kits:</strong> Starter kits with no monthly cloud fee.</li>
+                        <li>• <strong>Solutions for Different Environments:</strong> Product options for retail stores, warehouses, and other business settings.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-none border border-zinc-300 space-y-3">
+                <span class="text-[10px] text-zinc-700 font-bold corporate-tag uppercase">FUTURE-READY RETAIL CONSULTING</span>
+                <h3 class="font-bold text-zinc-900 text-sm">Expanding into Specialized Store Setups & Beyond</h3>
+                <p class="text-zinc-600 text-xs font-light leading-relaxed">
+                We are exploring ways to adapt electronic shelf labels to different store layouts and merchandising needs. For specialized projects, contact us to discuss product fit, setup options, and potential integrations.
+                </p>
+            </div>
+
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home & Solutions</a></div>
+        </div>
+    </div>
+
+    <!-- [서브 페이지 뷰: Rails & Hardware Catalog] -->
+    <div id="view-rails" class="page-view hidden py-16 px-4 sm:px-6 bg-white">
+        <div class="max-w-6xl mx-auto space-y-8">
+            <div class="border-b border-zinc-200 pb-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div>
+                    <div class="flex items-center space-x-2 text-xs font-semibold text-zinc-500 mb-2">
+                        <a href="#" onclick="switchPage('home'); return false;" class="hover:underline">Home</a>
+                        <span>/</span>
+                        <span class="text-red-600">Rails & Hardware</span>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900">ESL Shelf Rails & Accessories</h1>
+                    <p class="text-zinc-600 text-sm font-light mt-1">Rail types, lengths, and available colors for the products offered by TELICA USA.</p>
+                </div>
+                <button onclick="openQuoteModal('Rail & Hardware Order')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition shadow-sm whitespace-nowrap cursor-pointer">
+                    Request Rail Quote ➔
+                </button>
+            </div>
+
+            <section aria-labelledby="rail-products-heading">
+                <div class="mb-5">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">RAILS</span>
+                    <h2 id="rail-products-heading" class="text-xl font-bold text-zinc-900 mt-1">Shelf Rails</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 grid grid-cols-2 gap-2">
+                                <button type="button" onclick="openProductGallery(0)" aria-label="View Double-Sided Adhesive Rail photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="double-sided-adhesive-1.png" alt="Double-Sided Adhesive Rail, angled view" class="w-full h-full object-contain">
+                                </button>
+                                <button type="button" onclick="openProductGallery(1)" aria-label="View Double-Sided Adhesive Rail photo, angle 2" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="double-sided-adhesive-2.png" alt="Double-Sided Adhesive Rail, side view" class="w-full h-full object-contain">
+                                </button>
+                            </div>
+                            <h3 class="text-sm font-bold text-zinc-900">Double-Sided Adhesive Rail</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
+                            <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
+                            <p>Colors: <strong class="text-zinc-900">Transparent, White, Grey, Black</strong></p>
+                        </div>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 grid grid-cols-2 gap-2">
+                                <button type="button" onclick="openProductGallery(2)" aria-label="View L Shape 90 Degree Rail photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="l-shape-90-degree-1.png" alt="L Shape 90 Degree Rail, angled profile view" class="w-full h-full object-contain">
+                                </button>
+                                <button type="button" onclick="openProductGallery(3)" aria-label="View L Shape 90 Degree Rail photo, angle 2" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="l-shape-90-degree-2.png" alt="L Shape 90 Degree Rail, side view" class="w-full h-full object-contain">
+                                </button>
+                            </div>
+                            <h3 class="text-sm font-bold text-zinc-900">L Shape 90 Degree Rail</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
+                            <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
+                            <p>Color: <strong class="text-zinc-900">Transparent</strong></p>
+                        </div>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 grid grid-cols-2 gap-2">
+                                <button type="button" onclick="openProductGallery(4)" aria-label="View L Shape 45 Degree Rail photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="l-shape-45-degree-1-v2.png" alt="L Shape 45 Degree Rail, angled close-up" class="w-full h-full object-contain">
+                                </button>
+                                <button type="button" onclick="openProductGallery(5)" aria-label="View L Shape 45 Degree Rail photo, angle 2" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="l-shape-45-degree-2-v2.png" alt="L Shape 45 Degree Rail, side profile" class="w-full h-full object-contain">
+                                </button>
+                            </div>
+                            <h3 class="text-sm font-bold text-zinc-900">L Shape 45 Degree Rail</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
+                            <p>Length: <strong class="text-zinc-900">900 mm (35.43 in)</strong></p>
+                            <p>Color: <strong class="text-zinc-900">Transparent</strong></p>
+                        </div>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
+                            <h3 class="text-sm font-bold text-zinc-900">HG Type Rail</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
+                            <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
+                            <p>Colors: <strong class="text-zinc-900">White, Grey, Black</strong></p>
+                        </div>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
+                            <h3 class="text-sm font-bold text-zinc-900">Freezer Rail</h3>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
+                            <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
+                            <p>Color: <strong class="text-zinc-900">Transparent</strong></p>
+                        </div>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                </div>
+            </section>
+
+            <section aria-labelledby="accessories-heading">
+                <div class="mb-5">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">ACCESSORIES</span>
+                    <h2 id="accessories-heading" class="text-xl font-bold text-zinc-900 mt-1">Mounting Accessories</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
+                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder — Normal</h3>
+                        </div>
+                        <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
+                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder — Compressed</h3>
+                        </div>
+                        <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
+                            <h3 class="text-sm font-bold text-zinc-900">Stand</h3>
+                        </div>
+                        <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 mb-4 grid grid-cols-2 gap-2">
+                                <button type="button" onclick="openProductGallery(6)" aria-label="View Clip photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="clip-1.png" alt="Black ESL shelf clip with electronic label attached" class="w-full h-full object-contain">
+                                </button>
+                                <button type="button" onclick="openProductGallery(7)" aria-label="View Clip photo, angle 2" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
+                                    <img src="clip-2.png" alt="Black ESL shelf clip with clear label holder" class="w-full h-full object-contain">
+                                </button>
+                            </div>
+                            <h3 class="text-sm font-bold text-zinc-900">Clip</h3>
+                        </div>
+                        <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Black</strong></p>
+                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                    </article>
+                </div>
+            </section>
+            <p class="text-xs text-zinc-600">Bulk orders for rails and accessories may qualify for negotiated pricing. Contact us for a quote.</p>
+            <p class="text-xs text-zinc-500">Please confirm the selected type, color, and quantity when requesting a quote.</p>
+
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home & Solutions</a></div>
+        </div>
+    </div>
+
+    <!-- [서브 페이지 뷰: Setup & Guides] -->
+    <div id="view-support" class="page-view hidden py-16 px-4 sm:px-6 bg-white">
+        <div class="max-w-6xl mx-auto space-y-8">
+            <div class="border-b border-zinc-200 pb-4">
+                <div class="flex items-center space-x-2 text-xs font-semibold text-zinc-500 mb-2">
+                    <a href="#" onclick="switchPage('home'); return false;" class="hover:underline">Home</a>
+                    <span>/</span>
+                    <span class="text-red-600">Setup & Guides</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900">Setup Guides for TELICA & CREBEE Products</h1>
+                <p class="text-zinc-600 text-sm font-light mt-1">Browse setup resources for unboxing, gateway configuration, POS integration, and product maintenance.</p>
+            </div>
+
+            <!-- 그룹 1: Step 01 & 02 -->
+            <div class="bg-white p-6 rounded-none border border-zinc-300 shadow-xs space-y-4">
+                <div class="border-b border-zinc-100 pb-2">
+                    <span class="text-[10px] font-bold text-red-600 corporate-tag uppercase">STEP 01 & 02</span>
+                    <h3 class="text-base font-bold text-zinc-900 mt-1">Unboxing & Gateway Setup Guide</h3>
+                    <p class="text-zinc-600 text-xs font-light">Inspecting components and connecting your Crebee Gateway Pro for tag pairing.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
+                        <p class="text-xs font-bold text-zinc-800">Unboxing & Components Overview</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/MIW0WSBfve4" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
+                        <p class="text-xs font-bold text-zinc-800">Gateway Pro Connection & Tag Pairing Guide</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/FAplSeHhcZk" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 그룹 2: Step 03 (POS Integration) -->
+            <div class="bg-zinc-900 text-white p-6 rounded-none border border-zinc-800 shadow-md space-y-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-zinc-800 pb-3 gap-2">
+                    <div>
+                        <span class="text-[10px] font-bold text-red-400 corporate-tag uppercase">STEP 03</span>
+                        <h3 class="text-lg font-bold tracking-tight mt-1">Open POS & E-Commerce Integration</h3>
+                        <p class="text-zinc-400 text-xs font-light">Connect your preferred platform for real-time digital price synchronization.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-[10px] text-zinc-300 corporate-tag uppercase font-semibold">
+                        <span>SQUARE</span> • <span>SHOPIFY</span> • <span>LOYVERSE</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="space-y-1.5 bg-zinc-950 p-3 rounded-none border border-zinc-800">
+                        <p class="text-xs font-bold text-zinc-200">Square POS Real-Time Synchronization Guide</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/yk-GS1pPh-k" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="space-y-1.5 bg-zinc-950 p-3 rounded-none border border-zinc-800">
+                        <p class="text-xs font-bold text-zinc-200">Shopify Store Automatic Price Sync</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/78HBn0HuIEo" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="space-y-1.5 bg-zinc-950 p-3 rounded-none border border-zinc-800">
+                        <p class="text-xs font-bold text-zinc-200">Loyverse POS & ESL Integration</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/t2cQQ9vxx18" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 그룹 3: Real-World Case (Pharmacy) -->
+            <div class="bg-white p-6 rounded-none border border-zinc-300 shadow-xs space-y-4">
+                <div class="border-b border-zinc-100 pb-2">
+                    <span class="text-[10px] font-bold text-red-600 corporate-tag uppercase">REAL-WORLD CASE</span>
+                    <h3 class="text-base font-bold text-zinc-900 mt-1">Pharmacy ESL Installation Showcase</h3>
+                    <p class="text-zinc-600 text-xs font-light">Actual footage of electronic shelf labels deployed across retail pharmacy shelves.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
+                        <p class="text-xs font-bold text-zinc-800">MEGAMAX Pharmacy Full Aisle Rollout</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/7KWAx1WBkT4" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
+                        <p class="text-xs font-bold text-zinc-800">MEDISQUARE Pharmacy Live Deployment</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/a-EwxbRjcdE" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 그룹 4: Outdoor & No Wi-Fi -->
+            <div class="bg-white p-6 rounded-none border border-zinc-300 shadow-xs space-y-4">
+                <div class="border-b border-zinc-100 pb-2">
+                    <span class="text-[10px] font-bold text-red-600 corporate-tag uppercase">OUTDOOR & NO WI-FI</span>
+                    <h3 class="text-base font-bold text-zinc-900 mt-1">Food Trucks, Pop-ups & Outdoor Markets</h3>
+                    <p class="text-zinc-600 text-xs font-light">Operate smoothly without internet or Wi-Fi infrastructure.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
+                        <p class="text-xs font-bold text-zinc-800">Mobile Food Truck ESL Application</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/HWKrvoGNvMk" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
+                        <p class="text-xs font-bold text-zinc-800">Offline Gateway Operation Guide</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/26fM6y5yaVg" allowfullscreen></iframe></div>
+                    </div>
+                    <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
+                        <p class="text-xs font-bold text-zinc-800">Outdoor Market & Booth Deployment</p>
+                        <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/HWKrvoGNvMk" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 그룹 5: Maintenance Guide -->
+            <div class="bg-white p-6 rounded-none border border-zinc-300 shadow-xs space-y-4">
+                <div class="border-b border-zinc-100 pb-2">
+                    <span class="text-[10px] font-bold text-red-600 corporate-tag uppercase">MAINTENANCE GUIDE</span>
+                    <h3 class="text-base font-bold text-zinc-900 mt-1">ESL Tag Battery Replacement (5-Year Lifespan)</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+                    <div class="space-y-2 text-xs sm:text-sm text-zinc-600 font-light leading-relaxed">
+                        <p>TELICA e-paper tags are engineered for ultra-low power consumption, providing up to <strong>5 years of battery life</strong> under normal daily updates.</p>
+                        <p>When replacement is needed, this video demonstrates how to open the housing and replace the coin cell batteries.</p>
+                    </div>
+                    <div class="aspect-video bg-black rounded-none overflow-hidden border border-zinc-300">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/XLYDE5C_1hY" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home</a></div>
+        </div>
+    </div>
+
+    <!-- [서브 페이지 뷰: Partners & Supplier Network] -->
+    <div id="view-partners" class="page-view hidden py-16 px-4 sm:px-6 bg-white">
+        <div class="max-w-6xl mx-auto space-y-8">
+            <div class="border-b border-zinc-200 pb-4">
+                <div class="flex items-center space-x-2 text-xs font-semibold text-zinc-500 mb-2">
+                    <a href="#" onclick="switchPage('home'); return false;" class="hover:underline">Home</a>
+                    <span>/</span>
+                    <span class="text-red-600">Partners</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900">TELICA USA Partner Inquiries</h1>
+                <p class="text-zinc-600 text-sm font-light mt-1">We welcome inquiries about referrals, installation support, and potential sales-related opportunities. Any product resale or use of TELICA or CREBEE marks requires separate written authorization.</p>
+            </div>
+
+            <!-- 파트너 카드 4분할 그리드 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- 1. POS Agents -->
+                <div class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] text-red-600 corporate-tag uppercase font-bold">ECOSYSTEM PARTNER</span>
+                        <h3 class="text-sm font-bold text-zinc-900 mt-1 mb-2">POS Agents & Integrators</h3>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">POS providers and integrators can discuss referrals or project coordination for retailers exploring ESL solutions. Product resale requires separate written authorization.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Independent Sales Agents -->
+                <div class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] text-red-600 corporate-tag uppercase font-bold">SALES INQUIRY</span>
+                        <h3 class="text-sm font-bold text-zinc-900 mt-1 mb-2">Sales-Related Opportunities</h3>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">Contact us to discuss potential sales assistance or referrals. This inquiry does not grant product resale rights, a sales-agent appointment, or any territory or exclusivity.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Certified Installation Partners (남가주 지역 강조) -->
+                <div class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] text-red-600 corporate-tag uppercase font-bold">FIELD SERVICES</span>
+                        <h3 class="text-sm font-bold text-zinc-900 mt-1 mb-2">Installation Service Providers</h3>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">Experienced low-voltage and retail hardware installers, particularly in Southern California, may contact us to discuss potential project-based installation support.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Referral Partners -->
+                <div class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <span class="text-[10px] text-red-600 corporate-tag uppercase font-bold">REWARD PROGRAM</span>
+                        <h3 class="text-sm font-bold text-zinc-900 mt-1 mb-2">Referral Partners</h3>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">Customers and industry peers may contact us to discuss retailer introductions. Any referral arrangement, including applicable terms, must be agreed in writing in advance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-zinc-900 text-white p-8 rounded-none shadow-lg space-y-4 text-center max-w-2xl mx-auto">
+                <span class="text-[10px] text-red-400 uppercase tracking-widest corporate-tag font-bold">JOIN OUR NETWORK</span>
+                <h3 class="text-lg font-bold">Discuss a Potential Opportunity</h3>
+                <p class="text-zinc-400 text-sm font-light leading-relaxed">Send an inquiry about referrals, installation services, or a potential commercial relationship. No reseller appointment, territorial right, exclusivity, or other authorization is created by submitting this form; any such rights require explicit written approval and a separate agreement.</p>
+                <div class="pt-2">
+                    <button onclick="openQuoteModal('Partner / Reseller Inquiry')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
+                        Send an Inquiry
+                    </button>
+                </div>
+            </div>
+
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home</a></div>
+        </div>
+    </div>
+
+    <!-- 푸터 (Footer) -->
+    <footer class="bg-zinc-900 text-zinc-400 py-7 sm:py-9 px-6 border-t border-zinc-800 text-xs">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+            <div class="space-y-3">
+                <div class="space-y-1.5">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-white font-black text-xl tracking-tight">TELICA <span class="text-red-500">USA</span></span>
+                    </div>
+                    <span class="block text-[10px] font-semibold text-red-500 uppercase corporate-tag">TELICA & CREBEE ESL PRODUCTS AND SUPPORT</span>
+                    <p class="text-zinc-300 font-light max-w-md">Smart retail electronic shelf labels and the CREBEE platform for modern businesses across the United States.</p>
+                </div>
+
+                <!-- 공식 제조사 로고 -->
+                <div class="pt-1 space-y-1.5">
+                    <span class="block text-[10px] text-zinc-400 corporate-tag uppercase">Official Manufacturing Partners</span>
+                    <div class="flex items-center gap-2">
+                        <div class="bg-white p-1.5 rounded-none border border-zinc-200 flex items-center justify-center h-8 w-24">
+                            <img src="telica-logo.png" alt="TELICA HQ" class="h-4 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="text-[10px] font-bold text-zinc-900 hidden">TELICA</span>
+                        </div>
+                        <div class="bg-white p-1.5 rounded-none border border-zinc-200 flex items-center justify-center h-8 w-24">
+                            <img src="crebee-logo.png" alt="CREBEE" class="h-4 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="text-[10px] font-bold text-zinc-900 hidden">CREBEE</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="space-y-3 flex flex-col justify-between">
+                <div class="space-y-1.5 font-light">
+                    <h4 class="text-white font-semibold uppercase tracking-wider mb-1.5">Contact</h4>
+                    <p>All Inquiries & Orders: <a href="mailto:info@telicausa.com" class="text-white underline">info@telicausa.com</a></p>
+                    <div class="text-[11px] leading-relaxed text-zinc-300 corporate-tag pt-1">
+                        <p>Corporate Entity: <strong class="text-white">ASTERIKA LLC d/b/a TELICA USA</strong></p>
+                        <p>California, U.S.A. | Phone: +1 (562) 312-1200</p>
+                    </div>
+                </div>
+                
+                <p class="text-[10px] text-zinc-500 leading-relaxed font-light">
+                    <strong class="text-zinc-400">Authorization & Trademarks:</strong> TELICA USA is the trade name of ASTERIKA LLC, an independent reseller authorized by TELICA Inc. to market and resell genuine TELICA products in the United States on a non-exclusive basis. TELICA Inc. retains the right to sell directly and appoint other resellers. TELICA and CREBEE are trademarks used under authorization.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-3 border-t border-zinc-800 text-zinc-500 flex flex-col sm:flex-row justify-between items-center">
+            <p>© 2026 ASTERIKA LLC | TELICA USA. All rights reserved.</p>
+            <p class="mt-1 sm:mt-0 text-zinc-400">We typically respond within 1–2 business days.</p>
+        </div>
+    </footer>
+
+    <!-- 모달: Option Detail -->
+    <div id="detail-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-lg rounded-none p-6 space-y-4 shadow-2xl border border-zinc-300">
+            <div class="flex justify-between items-center border-b border-zinc-100 pb-3">
+                <div>
+                    <span id="modal-opt-tag" class="text-[10px] font-bold text-red-600 corporate-tag uppercase">Option Detail</span>
+                    <h3 id="modal-opt-title" class="text-base font-bold text-zinc-900 mt-1"></h3>
+                </div>
+                <button onclick="closeDetailModal()" class="text-zinc-400 hover:text-black p-1">✕</button>
+            </div>
+            <div id="modal-opt-content" class="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed space-y-2"></div>
+            <button id="modal-inquiry-btn" onclick="" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none cursor-pointer transition shadow-md">Inquiry About This Option ➔</button>
+        </div>
+    </div>
+
+    <div id="product-gallery-modal" class="hidden fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="gallery-title" onclick="if (event.target === this) closeProductGallery()">
+        <div class="w-full max-w-5xl bg-zinc-950 text-white border border-zinc-700">
+            <div class="flex items-center justify-between gap-3 p-3 sm:p-4 border-b border-zinc-800">
+                <div>
+                    <h2 id="gallery-title" class="font-semibold text-sm sm:text-base">Double-Sided Adhesive Rail</h2>
+                    <p id="gallery-count" class="text-xs text-zinc-400 mt-1" aria-live="polite"></p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="zoomProductPhoto(-0.25)" aria-label="Zoom out" class="w-9 h-9 border border-zinc-600 hover:bg-zinc-800 text-lg">−</button>
+                    <button type="button" onclick="resetProductPhotoZoom()" aria-label="Reset zoom" class="h-9 px-3 border border-zinc-600 hover:bg-zinc-800 text-xs">Reset</button>
+                    <button type="button" onclick="zoomProductPhoto(0.25)" aria-label="Zoom in" class="w-9 h-9 border border-zinc-600 hover:bg-zinc-800 text-lg">+</button>
+                    <button type="button" onclick="closeProductGallery()" aria-label="Close photo gallery" class="w-9 h-9 ml-1 text-zinc-300 hover:text-white text-xl">×</button>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 p-3 sm:p-4">
+                <button type="button" onclick="changeProductPhoto(-1)" aria-label="Previous photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">‹</button>
+                <div id="gallery-viewport" class="h-[55vh] sm:h-[65vh] flex-1 overflow-hidden flex items-center justify-center bg-black">
+                    <img id="gallery-image" src="" alt="" class="max-h-full max-w-full object-contain transition-transform duration-150" onclick="zoomProductPhoto(0.25)" title="Click to zoom in">
+                </div>
+                <button type="button" onclick="changeProductPhoto(1)" aria-label="Next photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">›</button>
+            </div>
+            <p class="px-3 pb-3 sm:px-4 sm:pb-4 text-center text-xs text-zinc-400">Use + / − to zoom. Click the photo to zoom in; use the arrows to switch views.</p>
+        </div>
+    </div>
+
+    <!-- 모달: Quote Inquiry -->
+    <div id="quote-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div id="modal-box" class="relative bg-white w-full max-w-lg rounded-none overflow-hidden shadow-2xl border border-zinc-300">
+            <div id="modal-header" class="bg-zinc-900 text-white px-6 py-4 flex justify-between items-center cursor-move select-none text-xs">
+                <div>
+                    <span class="font-bold text-sm">Request a Quote & Inquiry</span>
+                    <p class="text-[11px] text-zinc-400 mt-0.5">Please fill in required fields marked with <span class="text-red-500">*</span></p>
+                </div>
+                <button onclick="closeQuoteModal()" class="text-zinc-400 hover:text-white p-1">✕</button>
+            </div>
+            <form onsubmit="submitQuoteForm(event)" class="p-6 space-y-3 max-h-[75vh] overflow-y-auto text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-zinc-700 mb-1">Name / Company Name *</label>
+                        <input type="text" id="modal-name" required oninput="validateQuoteForm()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600" placeholder="Store Name">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-zinc-700 mb-1">Email Address *</label>
+                        <input type="email" id="modal-email" required oninput="validateQuoteForm()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600" placeholder="email@example.com">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-zinc-700 mb-1">Phone Number *</label>
+                        <input type="tel" id="modal-phone" required oninput="validateQuoteForm()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600" placeholder="(562) 000-0000">
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <label class="font-semibold text-zinc-700">ZIP Code *</label>
+                            <span id="zip-location" class="text-[11px] text-red-600 font-medium"></span>
+                        </div>
+                        <input type="text" id="modal-zip" maxlength="5" required oninput="lookupZipCode(this.value); validateQuoteForm();" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600" placeholder="90001">
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-semibold text-zinc-700 mb-1">Street Address <span class="text-zinc-400 font-normal">(Optional)</span></label>
+                    <input type="text" id="modal-address" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600" placeholder="123 Main St (Optional)">
+                </div>
+                <div>
+                    <label class="block font-semibold text-zinc-700 mb-1">Interest / Inquiry Type *</label>
+                    <select id="modal-interest" onchange="handleOrderInterestChange()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600 cursor-pointer">
+                        <option value="DIY ESL Kit Purchase">DIY ESL Kit Purchase ($799)</option>
+                        <option value="1.5 Inch Tag Bundle Order">1.5" ESL Tag Bundle Order (60-pack - $509*)</option>
+                        <option value="2.7 Inch Tag Bundle Order">2.7" ESL Tag Bundle Order (40-pack - $399*)</option>
+                        <option value="3.7 Inch Tag Bundle Order">3.7" ESL Tag Bundle Order (30-pack - $599*)</option>
+                        <option value="Rail & Hardware Order">Rail & Hardware Order</option>
+                        <option value="Partner / Reseller Inquiry">Partner / Reseller Inquiry</option>
+                        <option value="Commercial & Multi-Location Project">Commercial & Multi-Location Project (Negotiable)</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                    </select>
+                </div>
+                <div id="order-items-group" class="hidden space-y-3">
+                    <div id="order-items"></div>
+                    <button type="button" id="add-order-item" onclick="addOrderItem()" class="text-red-700 hover:text-red-800 underline font-semibold">+ Add item</button>
+                    <p class="text-[11px] text-zinc-500">WELCOME10: 10% off DIY ESL Kits · WELCOME5: 5% off ESL Tag Bundles</p>
+                    <div class="border-t border-zinc-200 pt-3 text-right">
+                        <p id="order-subtotal" class="text-xs text-zinc-600"></p>
+                        <p id="order-discount-total" class="text-xs text-green-700"></p>
+                        <p id="order-grand-total" class="text-sm font-bold text-zinc-900" aria-live="polite"></p>
+                        <p id="order-grand-total-note" class="text-[11px] text-zinc-500 mt-1"></p>
+                    </div>
+                </div>
+                <p id="bulk-order-note" class="hidden text-xs text-zinc-600">Displayed item and order totals are estimates. Discount codes are not validated by the server; final pricing will be confirmed with your quote. Shipping, applicable sales tax, volume discounts, and items marked price on request are not included in the estimate.</p>
+                <div>
+                    <label class="block font-semibold text-zinc-700 mb-1">Message & Details *</label>
+                    <textarea id="modal-message" rows="3" required oninput="validateQuoteForm()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none p-3 focus:outline-none focus:border-red-600" placeholder="Store details or quantities needed..."></textarea>
+                </div>
+                <p id="quote-form-status" class="hidden" role="status" aria-live="polite"></p>
+                <button type="submit" id="submit-btn" disabled class="w-full bg-zinc-300 text-zinc-500 font-semibold py-3 rounded-none cursor-not-allowed transition">Fill in required fields</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 스크립트 -->
+    <script>
+        function switchPage(pageName) {
+            ['home', 'about', 'rails', 'support', 'partners'].forEach(p => {
+                document.getElementById('view-' + p).classList.add('hidden');
+            });
+            document.getElementById('view-' + pageName).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuClose = document.getElementById('menu-close');
+        const setMobileMenuOpen = (isOpen) => {
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            menuBtn.setAttribute('aria-expanded', String(isOpen));
+        };
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            setMobileMenuOpen(mobileMenu.classList.contains('hidden'));
+        });
+        menuClose.addEventListener('click', () => setMobileMenuOpen(false));
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.closest('a')) setMobileMenuOpen(false);
+        });
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) setMobileMenuOpen(false);
+        });
+
+        const productGalleryPhotos = [
+            { src: 'double-sided-adhesive-1.png', alt: 'Double-Sided Adhesive Rail, angled view', title: 'Double-Sided Adhesive Rail', startIndex: 0, endIndex: 1, view: 'View 1 of 2' },
+            { src: 'double-sided-adhesive-2.png', alt: 'Double-Sided Adhesive Rail, side view', title: 'Double-Sided Adhesive Rail', startIndex: 0, endIndex: 1, view: 'View 2 of 2' },
+            { src: 'l-shape-90-degree-1.png', alt: 'L Shape 90 Degree Rail, angled profile view', title: 'L Shape 90 Degree Rail', startIndex: 2, endIndex: 3, view: 'View 1 of 2' },
+            { src: 'l-shape-90-degree-2.png', alt: 'L Shape 90 Degree Rail, side view', title: 'L Shape 90 Degree Rail', startIndex: 2, endIndex: 3, view: 'View 2 of 2' },
+            { src: 'l-shape-45-degree-1-v2.png', alt: 'L Shape 45 Degree Rail, angled close-up', title: 'L Shape 45 Degree Rail', startIndex: 4, endIndex: 5, view: 'View 1 of 2' },
+            { src: 'l-shape-45-degree-2-v2.png', alt: 'L Shape 45 Degree Rail, side profile', title: 'L Shape 45 Degree Rail', startIndex: 4, endIndex: 5, view: 'View 2 of 2' },
+            { src: 'clip-1.png', alt: 'Black ESL shelf clip with electronic label attached', title: 'Clip', startIndex: 6, endIndex: 7, view: 'View 1 of 2' },
+            { src: 'clip-2.png', alt: 'Black ESL shelf clip with clear label holder', title: 'Clip', startIndex: 6, endIndex: 7, view: 'View 2 of 2' }
+        ];
+        let currentProductPhoto = 0;
+        let productPhotoZoom = 1;
+        const productGalleryTitle = document.getElementById('gallery-title');
+
+        function renderProductGallery() {
+            const image = document.getElementById('gallery-image');
+            const photo = productGalleryPhotos[currentProductPhoto];
+            image.src = photo.src;
+            image.alt = photo.alt;
+            image.style.transform = `scale(${productPhotoZoom})`;
+            productGalleryTitle.textContent = photo.title;
+            document.getElementById('gallery-count').textContent = `${photo.view} · ${Math.round(productPhotoZoom * 100)}%`;
+        }
+
+        function openProductGallery(index) {
+            const photo = productGalleryPhotos[Math.max(0, Math.min(index, productGalleryPhotos.length - 1))];
+            currentProductPhoto = photo.startIndex;
+            productPhotoZoom = 1;
+            renderProductGallery();
+            document.getElementById('product-gallery-modal').classList.remove('hidden');
+            document.getElementById('product-gallery-modal').querySelector('[aria-label="Close photo gallery"]').focus();
+        }
+
+        function closeProductGallery() {
+            document.getElementById('product-gallery-modal').classList.add('hidden');
+        }
+
+        function changeProductPhoto(direction) {
+            const photo = productGalleryPhotos[currentProductPhoto];
+            const productPhotoCount = photo.endIndex - photo.startIndex + 1;
+            currentProductPhoto = photo.startIndex + (currentProductPhoto - photo.startIndex + direction + productPhotoCount) % productPhotoCount;
+            productPhotoZoom = 1;
+            renderProductGallery();
+        }
+
+        function zoomProductPhoto(amount) {
+            productPhotoZoom = Math.max(1, Math.min(3, productPhotoZoom + amount));
+            renderProductGallery();
+        }
+
+        function resetProductPhotoZoom() {
+            productPhotoZoom = 1;
+            renderProductGallery();
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (document.getElementById('product-gallery-modal').classList.contains('hidden')) return;
+            if (event.key === 'Escape') closeProductGallery();
+            if (event.key === 'ArrowLeft') changeProductPhoto(-1);
+            if (event.key === 'ArrowRight') changeProductPhoto(1);
+            if (event.key === '+' || event.key === '=') zoomProductPhoto(0.25);
+            if (event.key === '-') zoomProductPhoto(-0.25);
+        });
+
+        const optionDetails = {
+            opt1: {
+                title: "Flexible POS, ERP & Inventory Integration (Custom Negotiable Pricing)",
+                tag: "Option 01 - Custom Integration",
+                interest: "Commercial & Multi-Location Project",
+                content: `<p>Standard cloud POS systems (Square, Shopify) connect out-of-the-box, but large enterprise operations often rely on proprietary ERP and inventory databases.</p><p class="mt-2">TELICA USA provides custom API development and data bridging services. <strong>Pricing & volume discounts are custom negotiable</strong> based on your enterprise infrastructure. <em>*Shipping & sales tax quoted separately.</em></p>`
+            },
+            opt2: {
+                title: "Integration Assessment & Solution Design (Project Quotation)",
+                tag: "Option 02 - Architectural Scoping",
+                interest: "Commercial & Multi-Location Project",
+                content: `<p>Every retail environment has unique layouts, shelving materials, and wireless interference patterns.</p><p class="mt-2">Our technical specialists conduct thorough site architecture planning and wireless coverage testing. Scoping fees and package discounts are negotiated directly with our solutions engineering team. <em>*Shipping & sales tax quoted separately.</em></p>`
+            },
+            opt3: {
+                title: "Multi-Store Rollouts & Secure U.S. Cloud Roadmap (Volume Rebates)",
+                tag: "Option 03 - Multi-Store & Security",
+                content: `<p><strong>Decentralized Local Control:</strong> Standard deployment utilizes local gateways at each store for autonomous management without recurring cloud fees.</p><p class="mt-2"><strong>Superior U.S. Security vs. Foreign Servers:</strong> Avoid foreign server routing risks prevalent in competing Chinese-manufactured systems.</p><p class="mt-2"><strong>Negotiable Multi-Store Pricing:</strong> For multi-store rollouts, we offer aggressive tiered volume discounts and custom U.S. cloud roadmaps tailored to your corporate contract. <em>*Shipping & sales tax quoted separately.</em></p>`
+            },
+            opt4: {
+                title: "Dedicated Commercial Support & Server Architecture Strategy (HQ & Managed Collaboration)",
+                tag: "Option 04 - Enterprise Support & Server Architecture",
+                interest: "Commercial & Multi-Location Project",
+                content: `<p>Large enterprise chains and multi-location rollouts requiring dedicated infrastructure are supported through special project pricing, extended hardware manufacturer warranties, and tailored service level agreements (SLAs).</p><p class="mt-2">Server management, technical assistance, and hosting models are fully flexible based on corporate requirements—ranging from <strong>corporate headquarters self-hosted server setups</strong> to <strong>HQ-managed or outsourced operational frameworks</strong>, backed by close technical coordination with our South Korean engineering team rather than rigid regional support assumptions.</p>`
+            }
+        };
+
+        function openDetailModal(optKey) {
+            const data = optionDetails[optKey];
+            if (!data) return;
+            document.getElementById('modal-opt-tag').innerText = data.tag;
+            document.getElementById('modal-opt-title').innerText = data.title;
+            document.getElementById('modal-opt-content').innerHTML = data.content;
+            document.getElementById('modal-inquiry-btn').setAttribute('onclick', `closeDetailModal(); openQuoteModal('${data.interest}');`);
+            document.getElementById('detail-modal').classList.remove('hidden');
+        }
+        function closeDetailModal() { document.getElementById('detail-modal').classList.add('hidden'); }
+
+        const quoteModal = document.getElementById('quote-modal');
+        const modalBox = document.getElementById('modal-box');
+        const modalHeader = document.getElementById('modal-header');
+        let isSubmittingQuote = false;
+        let orderItems = [];
+        const productInterests = new Set([
+            'DIY ESL Kit Purchase',
+            '1.5 Inch Tag Bundle Order',
+            '2.7 Inch Tag Bundle Order',
+            '3.7 Inch Tag Bundle Order',
+            'Rail & Hardware Order'
+        ]);
+        const orderProducts = [
+            { value: 'DIY ESL Kit Purchase', label: 'DIY ESL Kit Purchase ($799)' },
+            { value: '1.5 Inch Tag Bundle Order', label: '1.5" ESL Tag Bundle (60-pack - $509*)' },
+            { value: '2.7 Inch Tag Bundle Order', label: '2.7" ESL Tag Bundle (40-pack - $399*)' },
+            { value: '3.7 Inch Tag Bundle Order', label: '3.7" ESL Tag Bundle (30-pack - $599*)' },
+            { value: 'Double-Sided Adhesive Rail', label: 'Double-Sided Adhesive Rail — 1200 mm (47.24 in), Transparent / White / Grey / Black' },
+            { value: 'L Shape 90 Degree Rail', label: 'L Shape 90 Degree Rail — 1200 mm (47.24 in), Transparent' },
+            { value: 'L Shape 45 Degree Rail', label: 'L Shape 45 Degree Rail — 900 mm (35.43 in), Transparent' },
+            { value: 'HG Type Rail', label: 'HG Type Rail — 1200 mm (47.24 in), White / Grey / Black' },
+            { value: 'Freezer Rail', label: 'Freezer Rail — 1200 mm (47.24 in), Transparent' },
+            { value: 'Swing Holder Normal', label: 'Swing Holder Normal — Transparent' },
+            { value: 'Swing Holder Compressed', label: 'Swing Holder Compressed — Transparent' },
+            { value: 'Stand', label: 'Stand — Transparent' },
+            { value: 'Clip', label: 'Clip — Black' }
+        ];
+        const railHardwareProductValues = new Set([
+            'Double-Sided Adhesive Rail',
+            'L Shape 90 Degree Rail',
+            'L Shape 45 Degree Rail',
+            'HG Type Rail',
+            'Freezer Rail',
+            'Swing Holder Normal',
+            'Swing Holder Compressed',
+            'Stand',
+            'Clip'
+        ]);
+        const orderItemPricesCents = {
+            'DIY ESL Kit Purchase': 79900,
+            '1.5 Inch Tag Bundle Order': 50900,
+            '2.7 Inch Tag Bundle Order': 39900,
+            '3.7 Inch Tag Bundle Order': 59900,
+            'Double-Sided Adhesive Rail': 350,
+            'L Shape 90 Degree Rail': 490,
+            'L Shape 45 Degree Rail': 490,
+            'HG Type Rail': 350,
+            'Freezer Rail': 370,
+            'Swing Holder Normal': 150,
+            'Swing Holder Compressed': 90,
+            'Stand': 90,
+            'Clip': 250
+        };
+        const orderDiscountCodes = {
+            WELCOME10: { rate: 10, products: new Set(['DIY ESL Kit Purchase']) },
+            WELCOME5: {
+                rate: 5,
+                products: new Set([
+                    '1.5 Inch Tag Bundle Order',
+                    '2.7 Inch Tag Bundle Order',
+                    '3.7 Inch Tag Bundle Order'
+                ])
+            }
+        };
+        const formatCurrency = cents => new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }).format(cents / 100);
+        const initialOrderProduct = {
+            'DIY ESL Kit Purchase': 'DIY ESL Kit Purchase',
+            '1.5 Inch Tag Bundle Order': '1.5 Inch Tag Bundle Order',
+            '2.7 Inch Tag Bundle Order': '2.7 Inch Tag Bundle Order',
+            '3.7 Inch Tag Bundle Order': '3.7 Inch Tag Bundle Order'
+        };
+
+        function initializeOrderItems(interest) {
+            orderItems = productInterests.has(interest)
+                ? [{ product: initialOrderProduct[interest] || '', quantity: 1, discountCode: '' }]
+                : [];
+            renderOrderItems();
+        }
+
+        function handleOrderInterestChange() {
+            const interest = document.getElementById('modal-interest').value;
+            initializeOrderItems(interest);
+            document.getElementById('bulk-order-note').classList.toggle('hidden', !productInterests.has(interest));
+            validateQuoteForm();
+        }
+
+        function renderOrderItems() {
+            const group = document.getElementById('order-items-group');
+            const container = document.getElementById('order-items');
+            const addButton = document.getElementById('add-order-item');
+            group.classList.toggle('hidden', !productInterests.has(document.getElementById('modal-interest').value));
+            container.replaceChildren();
+
+            orderItems.forEach((item, index) => {
+                const row = document.createElement('div');
+                row.className = 'mb-3 p-3 border border-zinc-200 bg-zinc-50';
+                const rowHeader = document.createElement('div');
+                rowHeader.className = 'flex items-center justify-between mb-1';
+                const label = document.createElement('label');
+                label.className = 'block font-semibold text-zinc-700';
+                label.textContent = `Order Item ${index + 1}`;
+                const removeButton = document.createElement('button');
+                removeButton.type = 'button';
+                removeButton.textContent = '×';
+                removeButton.setAttribute('aria-label', `Remove order item ${index + 1}`);
+                removeButton.className = 'text-zinc-500 hover:text-red-700 text-xl leading-none px-2';
+                removeButton.addEventListener('click', () => removeOrderItem(index));
+                rowHeader.append(label);
+                if (index > 0) rowHeader.append(removeButton);
+
+                const productSelector = document.createElement('select');
+                productSelector.className = 'w-full bg-white border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600 cursor-pointer';
+                productSelector.setAttribute('aria-label', `Order item ${index + 1}`);
+                const placeholder = document.createElement('option');
+                placeholder.value = '';
+                placeholder.textContent = 'Select a product';
+                productSelector.append(placeholder);
+                const productGroups = [
+                    { label: 'ESL Kits & Tag Bundles', products: orderProducts.filter(product => !railHardwareProductValues.has(product.value)) },
+                    { label: 'Rail & Hardware', products: orderProducts.filter(product => railHardwareProductValues.has(product.value)) }
+                ];
+                productGroups.forEach(productGroup => {
+                    const optgroup = document.createElement('optgroup');
+                    optgroup.label = productGroup.label;
+                    productGroup.products.forEach(product => {
+                        const option = document.createElement('option');
+                        option.value = product.value;
+                        option.textContent = product.label;
+                        optgroup.append(option);
+                    });
+                    productSelector.append(optgroup);
+                });
+                productSelector.value = item.product;
+                productSelector.addEventListener('change', () => {
+                    orderItems[index].product = productSelector.value;
+                    renderOrderItems();
+                    validateQuoteForm();
+                });
+
+                const discountLabel = document.createElement('label');
+                discountLabel.className = 'block text-zinc-600 mt-2 mb-1';
+                discountLabel.textContent = 'Discount Code (Optional)';
+                const discountCode = document.createElement('input');
+                discountCode.type = 'text';
+                discountCode.maxLength = 10;
+                discountCode.value = item.discountCode || '';
+                discountCode.placeholder = 'Up to 10 chars';
+                discountCode.autocomplete = 'off';
+                discountCode.autocapitalize = 'characters';
+                discountCode.className = 'w-40 max-w-full bg-zinc-50 border border-amber-300 rounded-none px-2 py-1.5 font-semibold tracking-wider text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-100';
+                discountCode.setAttribute('aria-label', `Discount code for item ${index + 1}`);
+                discountCode.addEventListener('input', () => {
+                    orderItems[index].discountCode = discountCode.value;
+                    updateOrderItemTotal(index);
+                });
+                const discountStatus = document.createElement('p');
+                discountStatus.id = `order-discount-status-${index}`;
+                discountStatus.className = 'text-xs mt-1';
+                discountStatus.setAttribute('aria-live', 'polite');
+
+                const quantityLabel = document.createElement('label');
+                quantityLabel.className = 'block text-zinc-600 mt-2 mb-1';
+                quantityLabel.textContent = 'Quantity';
+                const quantityControls = document.createElement('div');
+                quantityControls.className = 'flex items-center';
+                const decrement = document.createElement('button');
+                decrement.type = 'button';
+                decrement.textContent = '−';
+                decrement.setAttribute('aria-label', `Decrease quantity for item ${index + 1}`);
+                decrement.className = 'bg-zinc-200 hover:bg-zinc-300 px-4 py-2.5 font-bold';
+                decrement.addEventListener('click', () => updateItemQuantity(index, -1));
+                const quantity = document.createElement('input');
+                quantity.type = 'number';
+                quantity.min = index === 0 ? '0' : '1';
+                quantity.step = '1';
+                quantity.value = String(item.quantity);
+                quantity.setAttribute('aria-label', `Quantity for item ${index + 1}`);
+                quantity.className = 'w-20 text-center bg-white border-y border-zinc-300 py-2.5 focus:outline-none focus:border-red-600';
+                quantity.addEventListener('input', () => {
+                    orderItems[index].quantity = Number(quantity.value);
+                    if (index > 0 && orderItems[index].quantity === 0) {
+                        removeOrderItem(index);
+                        return;
+                    }
+                    updateOrderItemTotal(index);
+                    validateQuoteForm();
+                });
+                const increment = document.createElement('button');
+                increment.type = 'button';
+                increment.textContent = '+';
+                increment.setAttribute('aria-label', `Increase quantity for item ${index + 1}`);
+                increment.className = 'bg-zinc-200 hover:bg-zinc-300 px-4 py-2.5 font-bold';
+                increment.addEventListener('click', () => updateItemQuantity(index, 1));
+                quantityControls.append(decrement, quantity, increment);
+                const itemTotal = document.createElement('p');
+                itemTotal.id = `order-item-total-${index}`;
+                itemTotal.className = 'text-right text-sm font-semibold text-zinc-800 mt-2';
+                itemTotal.setAttribute('aria-live', 'polite');
+                row.append(rowHeader, productSelector, discountLabel, discountCode, discountStatus, quantityLabel, quantityControls, itemTotal);
+                container.append(row);
+                updateOrderItemTotal(index);
+            });
+
+            addButton.classList.remove('hidden');
+            addButton.disabled = false;
+            addButton.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+
+        function updateOrderItemTotal(index) {
+            const item = orderItems[index];
+            const total = document.getElementById(`order-item-total-${index}`);
+            if (!item) return;
+
+            const discount = getOrderItemDiscount(item);
+            const discountStatus = document.getElementById(`order-discount-status-${index}`);
+            if (discountStatus) {
+                discountStatus.textContent = !discount.code
+                    ? ''
+                    : discount.valid
+                        ? `${discount.code} applied: ${discount.rate}% off this item.`
+                        : discount.reason;
+                discountStatus.className = `text-xs mt-1 ${discount.valid ? 'text-green-700' : discount.code ? 'text-red-600' : 'text-zinc-500'}`;
+            }
+
+            const unitPriceCents = orderItemPricesCents[item.product];
+            if (unitPriceCents === undefined) {
+                if (total) {
+                    total.textContent = item.product
+                        ? 'Price available upon request.'
+                        : 'Select an item to see its estimated total.';
+                }
+                updateOrderGrandTotal();
+                return;
+            }
+
+            const quantity = Number(item.quantity);
+            if (total) {
+                if (!Number.isInteger(quantity) || quantity < 1) {
+                    total.textContent = Number.isInteger(quantity) && quantity === 0 && index === 0
+                        ? `Unit price: ${formatCurrency(unitPriceCents)} · Item total: ${formatCurrency(0)}`
+                        : `Unit price: ${formatCurrency(unitPriceCents)} · Enter a valid quantity`;
+                } else {
+                    const itemSubtotalCents = unitPriceCents * quantity;
+                    const itemDiscountCents = discount.valid ? Math.round(itemSubtotalCents * discount.rate / 100) : 0;
+                    total.textContent = itemDiscountCents
+                        ? `Subtotal: ${formatCurrency(itemSubtotalCents)} · Discount: −${formatCurrency(itemDiscountCents)} · Item total: ${formatCurrency(itemSubtotalCents - itemDiscountCents)}`
+                        : `Unit price: ${formatCurrency(unitPriceCents)} · Item total: ${formatCurrency(itemSubtotalCents)}`;
+                }
+            }
+            updateOrderGrandTotal();
+        }
+
+        function getOrderItemDiscount(item) {
+            const code = (item.discountCode || '').trim().toUpperCase();
+            if (!code) return { code: '', rate: 0, valid: false, reason: '' };
+            const discount = orderDiscountCodes[code];
+            if (!discount) return { code, rate: 0, valid: false, reason: 'Invalid discount code.' };
+            if (!item.product) return { code, rate: 0, valid: false, reason: 'Select a product to validate this code.' };
+            if (!discount.products.has(item.product)) {
+                const eligibleCategory = code === 'WELCOME10' ? 'DIY ESL Kit' : 'ESL Tag Bundles';
+                return { code, rate: 0, valid: false, reason: `${code} is only valid for ${eligibleCategory}.` };
+            }
+            return { code, rate: discount.rate, valid: true, reason: '' };
+        }
+
+        function updateOrderGrandTotal() {
+            const total = document.getElementById('order-grand-total');
+            const note = document.getElementById('order-grand-total-note');
+            if (!total || !note) return;
+            const subtotal = document.getElementById('order-subtotal');
+            const discountTotal = document.getElementById('order-discount-total');
+
+            const pricedItems = orderItems.filter(item => orderItemPricesCents[item.product] !== undefined);
+            const unpricedItems = orderItems.some(item => item.product && orderItemPricesCents[item.product] === undefined);
+            const validItems = pricedItems.filter(item => {
+                const index = orderItems.indexOf(item);
+                const minimumQuantity = index === 0 ? 0 : 1;
+                return Number.isInteger(Number(item.quantity)) && Number(item.quantity) >= minimumQuantity;
+            });
+            const invalidPricedItems = pricedItems.length !== validItems.length;
+            if (invalidPricedItems) {
+                subtotal.textContent = '';
+                discountTotal.textContent = '';
+                total.textContent = 'Estimated order total: —';
+                note.textContent = 'Enter a whole-number quantity for each priced item.';
+                return;
+            }
+
+            const subtotalCents = validItems.reduce((sum, item) =>
+                sum + orderItemPricesCents[item.product] * Number(item.quantity), 0);
+            const discountCents = validItems.reduce((sum, item) => {
+                const discount = getOrderItemDiscount(item);
+                const itemSubtotalCents = orderItemPricesCents[item.product] * Number(item.quantity);
+                return sum + (discount.valid ? Math.round(itemSubtotalCents * discount.rate / 100) : 0);
+            }, 0);
+            const totalCents = subtotalCents - discountCents;
+
+            subtotal.textContent = validItems.length ? `Subtotal: ${formatCurrency(subtotalCents)}` : '';
+            discountTotal.textContent = discountCents && validItems.length
+                ? `Total discounts: −${formatCurrency(discountCents)}`
+                : '';
+            total.textContent = validItems.length ? `Estimated order total: ${formatCurrency(totalCents)}` : 'Estimated order total: —';
+            note.textContent = unpricedItems
+                ? 'Priced items only; custom-priced items are excluded.'
+                : 'Based on listed prices. Discount is an estimate; final pricing will be confirmed with your quote.';
+        }
+
+        function updateItemQuantity(index, amount) {
+            const currentQuantity = Number.parseInt(orderItems[index].quantity, 10);
+            const nextQuantity = (Number.isNaN(currentQuantity) ? 1 : currentQuantity) + amount;
+            if (index > 0 && nextQuantity <= 0) {
+                removeOrderItem(index);
+                return;
+            }
+            orderItems[index].quantity = index === 0 ? Math.max(0, nextQuantity) : nextQuantity;
+            renderOrderItems();
+            validateQuoteForm();
+        }
+
+        function removeOrderItem(index) {
+            if (index === 0) return;
+            orderItems.splice(index, 1);
+            renderOrderItems();
+            validateQuoteForm();
+        }
+
+        function addOrderItem() {
+            if (!productInterests.has(document.getElementById('modal-interest').value)) return;
+            orderItems.push({ product: '', quantity: 1, discountCode: '' });
+            renderOrderItems();
+            validateQuoteForm();
+        }
+
+        function openQuoteModal(interest) {
+            quoteModal.classList.remove('hidden');
+            modalBox.style.transform = 'translate(0px, 0px)';
+            const status = document.getElementById('quote-form-status');
+            status.classList.add('hidden');
+            status.innerText = '';
+            const interestSelect = document.getElementById('modal-interest');
+            const previousInterest = interestSelect.value;
+            if (interest) {
+                interestSelect.value = interest;
+            }
+            document.getElementById('bulk-order-note').classList.toggle('hidden', !productInterests.has(interestSelect.value));
+            if (interestSelect.value !== previousInterest || orderItems.length === 0) {
+                initializeOrderItems(interestSelect.value);
+            }
+            document.getElementById('zip-location').innerText = '';
+            validateQuoteForm();
+        }
+        function closeQuoteModal() { quoteModal.classList.add('hidden'); }
+
+        let detectedLocation = "";
+        function lookupZipCode(zip) {
+            if (zip.trim().length === 5) {
+                document.getElementById('zip-location').innerText = "Checking...";
+                fetch(`https://api.zippopotam.us/us/${zip.trim()}`)
+                    .then(r => r.ok ? r.json() : Promise.reject())
+                    .then(d => { detectedLocation = `${d.places[0]['place name']}, ${d.places[0]['state abbreviation']}`; document.getElementById('zip-location').innerText = `📍 ${detectedLocation}`; })
+                    .catch(() => { detectedLocation = ""; document.getElementById('zip-location').innerText = "⚠️ Invalid ZIP"; });
+            } else { detectedLocation = ""; document.getElementById('zip-location').innerText = ""; }
+        }
+
+        function validateQuoteForm() {
+            const valid = document.getElementById('modal-name').value.trim() &&
+                          document.getElementById('modal-email').value.trim() &&
+                          document.getElementById('modal-phone').value.trim() &&
+                          document.getElementById('modal-zip').value.trim().length === 5 &&
+                          document.getElementById('modal-message').value.trim();
+            const interest = document.getElementById('modal-interest').value;
+            const orderItemsValid = !productInterests.has(interest) || (
+                orderItems.length > 0 &&
+                orderItems.every((item, index) =>
+                    item.product && Number.isInteger(item.quantity) && item.quantity >= (index === 0 ? 0 : 1)
+                ) &&
+                orderItems.some(item => item.quantity >= 1)
+            );
+            const btn = document.getElementById('submit-btn');
+            const canSubmit = valid && orderItemsValid;
+            btn.disabled = !canSubmit || isSubmittingQuote;
+            btn.className = canSubmit && !isSubmittingQuote ? "w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-none cursor-pointer transition shadow-md" : "w-full bg-zinc-300 text-zinc-500 font-semibold py-3 rounded-none cursor-not-allowed transition";
+            btn.innerText = isSubmittingQuote ? "Sending..." : canSubmit ? "Send Inquiry ➔" : "Fill in required fields";
+        }
+
+        let isDragging = false, startX, startY, currentX = 0, currentY = 0;
+        modalHeader.addEventListener('mousedown', (e) => { isDragging = true; startX = e.clientX - currentX; startY = e.clientY - currentY; });
+        document.addEventListener('mousemove', (e) => { if (!isDragging) return; currentX = e.clientX - startX; currentY = e.clientY - startY; modalBox.style.transform = `translate(${currentX}px, ${currentY}px)`; });
+        document.addEventListener('mouseup', () => { isDragging = false; });
+
+        async function submitQuoteForm(e) {
+            e.preventDefault();
+            if (isSubmittingQuote) return;
+            const name = document.getElementById('modal-name').value.trim();
+            const email = document.getElementById('modal-email').value.trim();
+            const phone = document.getElementById('modal-phone').value;
+            const zip = document.getElementById('modal-zip').value;
+            const address = document.getElementById('modal-address').value.trim();
+            const interest = document.getElementById('modal-interest').value;
+            const message = document.getElementById('modal-message').value;
+            const pricedSubtotalCents = orderItems.reduce((sum, item) => {
+                const unitPriceCents = orderItemPricesCents[item.product];
+                return unitPriceCents === undefined ? sum : sum + unitPriceCents * Number(item.quantity);
+            }, 0);
+            const estimatedItems = orderItems.map(item => {
+                const unitPriceCents = orderItemPricesCents[item.product];
+                const itemSubtotalCents = unitPriceCents === undefined ? 0 : unitPriceCents * Number(item.quantity);
+                const discount = getOrderItemDiscount(item);
+                const itemDiscountCents = discount.valid ? Math.round(itemSubtotalCents * discount.rate / 100) : 0;
+                return {
+                    ...item,
+                    discountCode: discount.code,
+                    discountPercent: discount.valid ? discount.rate : 0,
+                    estimatedSubtotal: formatCurrency(itemSubtotalCents),
+                    estimatedDiscount: formatCurrency(itemDiscountCents),
+                    estimatedTotal: formatCurrency(itemSubtotalCents - itemDiscountCents)
+                };
+            });
+            const discountCents = estimatedItems.reduce((sum, item) => {
+                const discount = getOrderItemDiscount(item);
+                const unitPriceCents = orderItemPricesCents[item.product];
+                if (!discount.valid || unitPriceCents === undefined) return sum;
+                return sum + Math.round(unitPriceCents * Number(item.quantity) * discount.rate / 100);
+            }, 0);
+            const loc = detectedLocation ? `${zip} (${detectedLocation})` : zip.trim();
+            const fullAddress = address ? `${address}, ${loc}` : loc;
+            const status = document.getElementById('quote-form-status');
+            const btn = document.getElementById('submit-btn');
+            const formData = new URLSearchParams({
+                _subject: `[TELICA USA Inquiry] ${interest} - From ${name}`,
+                _replyto: email,
+                name,
+                email,
+                phone,
+                location: fullAddress,
+                interest,
+                ...(productInterests.has(interest) ? {
+                    quantity: String(orderItems.reduce((total, item) => total + item.quantity, 0)),
+                    order_items: JSON.stringify(estimatedItems),
+                    estimated_subtotal: formatCurrency(pricedSubtotalCents),
+                    estimated_discount: formatCurrency(discountCents),
+                    estimated_total: formatCurrency(pricedSubtotalCents - discountCents)
+                } : {}),
+                message
+            });
+
+            isSubmittingQuote = true;
+            status.classList.add('hidden');
+            status.innerText = '';
+            validateQuoteForm();
+
+            try {
+                const response = await fetch('https://formspree.io/f/xwlljola', {
+                    method: 'POST',
+                    headers: { Accept: 'application/json' },
+                    body: formData
+                });
+                if (!response.ok) {
+                    throw new Error(`Formspree returned HTTP ${response.status}`);
+                }
+                status.className = 'text-green-700';
+                status.innerText = 'Your inquiry has been sent successfully. We will be in touch soon.';
+                document.querySelector('#quote-modal form').reset();
+                detectedLocation = '';
+                document.getElementById('zip-location').innerText = '';
+                initializeOrderItems(document.getElementById('modal-interest').value);
+                document.getElementById('bulk-order-note').classList.toggle('hidden', !productInterests.has(document.getElementById('modal-interest').value));
+            } catch (error) {
+                console.error('Unable to send inquiry through Formspree:', error);
+                status.className = 'text-red-700';
+                status.innerText = 'We could not send your inquiry. Please try again or email info@telicausa.com.';
+            } finally {
+                isSubmittingQuote = false;
+                validateQuoteForm();
+            }
+        }
+
+        const slides = document.querySelectorAll('#view-home .slide');
+        const dots = document.querySelectorAll('#view-home .dot');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].style.opacity = '0';
+            dots[currentSlide].classList.replace('bg-red-500', 'bg-zinc-600');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = '1';
+            dots[currentSlide].classList.replace('bg-zinc-600', 'bg-red-500');
+        }, 4000);
+
+    </script>
+</body>
+</html>
