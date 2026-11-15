@@ -204,7 +204,7 @@
                 </div>
                 <a href="#" onclick="switchPage('support'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Setup & Guides</a>
                 <a href="#" onclick="switchPage('partners'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Partners & Supplier Network</a>
-                <a href="#commercial" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 font-semibold text-zinc-900">Commercial Solutions</a>
+                <a href="#commercial" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 font-semibold text-zinc-900">ESL Project Assessment</a>
                 <a href="#" onclick="switchPage('about'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">About Us</a>
             </div>
         </div>
@@ -464,8 +464,8 @@
                             <p class="text-zinc-600 text-xs leading-relaxed">One gateway can support up to approximately 3,000 tags within an approximate 30-meter (98-foot) radius. Actual coverage may vary by store layout and wireless conditions.</p>
                         </div>
                         <div class="p-5 bg-white border border-zinc-300">
-                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Factory Warranty</h3>
-                            <p class="text-zinc-600 text-xs leading-relaxed">Products include a 1-year factory warranty. Please contact us for warranty terms and coverage details.</p>
+                            <h3 class="text-sm font-bold text-zinc-900 mb-2">Product Warranty</h3>
+                            <p class="text-zinc-600 text-xs leading-relaxed">CREBEE Gateway Pro SMS: 2-year factory warranty. ESL tags: 1-year factory warranty. Contact TELICA USA for warranty terms or help submitting a warranty request.</p>
                         </div>
                         <div class="p-5 bg-white border border-zinc-300">
                             <h3 class="text-sm font-bold text-zinc-900 mb-2">Tag Battery Life</h3>
@@ -516,58 +516,62 @@
             </div>
         </section>
 
-        <!-- Commercial Solutions 상세 안내 섹션 -->
+        <!-- POS Compatibility & Setup 섹션 -->
+        <section id="pos-setup" class="py-16 px-4 sm:px-6 bg-zinc-50 border-b border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">SUPPORTED POS CONFIGURATIONS</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">POS Compatibility & Setup</h2>
+                    <p class="text-zinc-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                        For supported POS configurations, use the setup guide below to review the connection steps. Check that the guide covers your POS platform and configuration before getting started.
+                    </p>
+                    <p class="text-zinc-500 text-xs sm:text-sm font-light mt-2">
+                        This guide covers the POS setup shown in the video. For other configurations, compatibility depends on your POS setup and available data access. Your POS provider's approval may also be required.
+                    </p>
+                </div>
+                
+                <div class="text-center mb-8">
+                    <a href="#setup-resources" onclick="switchPage('resources'); return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
+                        View the POS Setup Guide ➔
+                    </a>
+                </div>
+
+                <div class="mt-8 p-6 bg-white border border-zinc-300 rounded-none">
+                    <h3 class="text-sm font-bold text-zinc-900 mb-3">For custom integration or other questions:</h3>
+                    <p class="text-zinc-600 text-xs leading-relaxed mb-4">
+                        If your ESL deployment requires POS integration, site validation, or coordination across multiple locations, start with a project review.
+                    </p>
+                    <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=esl-project'; return false;" class="inline-block bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
+                        Discuss an ESL Project ➔
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESL Project Assessment 섹션 -->
         <section id="commercial" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-10">
-                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">FOR LARGER & MULTI-LOCATION PROJECTS</span>
-                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">Commercial & Multi-Location Projects</h2>
-                    <p class="text-zinc-600 text-xs mt-1">Custom volume pricing is available through consultation with our U.S. solutions team. *Shipping and applicable sales tax are calculated in your quote based on the delivery location.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <div onclick="openDetailModal('opt1')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">CUSTOM INTEGRATION</span>
-                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
-                        </div>
-                        <h4 class="text-base font-bold text-zinc-900 mb-1">Flexible POS, ERP & Inventory Integration</h4>
-                        <p class="text-zinc-600 text-xs font-light leading-relaxed">Custom API and data bridging beyond standard cloud POS. Tiered volume pricing and custom scoping available upon consultation.</p>
-                    </div>
-                    <div onclick="openDetailModal('opt2')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">ARCHITECTURAL SCOPING</span>
-                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
-                        </div>
-                        <h4 class="text-base font-bold text-zinc-900 mb-1">Integration Assessment & Solution Design</h4>
-                        <p class="text-zinc-600 text-xs font-light leading-relaxed">We assess your store layout, wireless coverage, and shelf configuration to develop a tailored integration plan. Package pricing is available.</p>
-                    </div>
-                    <div onclick="openDetailModal('opt3')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">MULTI-STORE & SECURITY</span>
-                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
-                        </div>
-                        <h4 class="text-base font-bold text-zinc-900 mb-1">Multi-Store Rollouts & Secure U.S. Cloud Roadmap</h4>
-                        <p class="text-zinc-600 text-xs font-light leading-relaxed">Plan multi-store deployments using local gateways. Contact us to discuss deployment options and project-specific volume pricing.</p>
-                    </div>
-                    <div onclick="openDetailModal('opt4')" class="p-6 rounded-none bg-white border border-zinc-300 hover:border-red-600 transition cursor-pointer group shadow-xs">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-red-600 font-bold text-xs uppercase corporate-tag">ENTERPRISE SUPPORT & SERVER ARCHITECTURE</span>
-                            <span class="text-[11px] font-semibold text-zinc-400 group-hover:text-red-600 transition">View Details ➔</span>
-                        </div>
-                        <h4 class="text-base font-bold text-zinc-900 mb-1">Dedicated Commercial Support & Server Architecture Strategy</h4>
-                        <p class="text-zinc-600 text-xs font-light leading-relaxed">Tailored server hosting, local cloud setup options, and dedicated technical collaboration with the South Korean headquarters for enterprise chains.</p>
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">CUSTOM INTEGRATION & MULTI-LOCATION SUPPORT</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">ESL Project Assessment for Retailers</h2>
+                    <p class="text-zinc-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                        If your ESL deployment requires POS integration, site validation, installation, or coordination across multiple locations, start with a project review through Asterika LLC. We help define equipment and integration requirements, identify the providers needed, and plan what to validate before rollout.
+                    </p>
+                    <div class="mt-4 p-4 bg-zinc-100 border border-zinc-300 rounded-none">
+                        <p class="text-zinc-700 text-xs font-light leading-relaxed">
+                            <strong>TELICA USA, operated by Asterika LLC, supplies ESL equipment.</strong> For custom integration, on-site installation, or wireless coverage testing, you arrange and contract for the work directly with the provider performing it.
+                        </p>
                     </div>
                 </div>
 
                 <div class="text-center bg-zinc-900 text-white p-8 rounded-none shadow-lg">
-                    <h3 class="text-lg font-bold mb-2">Request a Custom Negotiable Project Quote</h3>
+                    <h3 class="text-lg font-bold mb-2">Discuss an ESL Project with Asterika</h3>
                     <p class="text-zinc-400 text-xs font-light max-w-xl mx-auto mb-4">
-                        Contact our <strong>TELICA USA</strong> sales and solutions team for tailored scoping, custom volume discounts, and official commercial proposals.
+                        Tell us which POS you use, how many locations are in scope, and what you need to validate before rollout.
                     </p>
-                    <button onclick="openQuoteModal('Commercial & Multi-Location Project')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none text-xs transition cursor-pointer shadow-md">
-                        Request a Commercial Quote (Negotiable) ➔
-                    </button>
+                    <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=esl-project'; return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
+                        Discuss an ESL Project ➔
+                    </a>
                 </div>
             </div>
         </section>
@@ -926,13 +930,16 @@
                     </div>
                 </div>
 
-                <!-- 3. Certified Installation Partners (남가주 지역 강조) -->
+                <!-- 3. Certified Installation Partners -->
                 <div class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between">
                     <div>
                         <span class="text-[10px] text-red-600 corporate-tag uppercase font-bold">FIELD SERVICES</span>
-                        <h3 class="text-sm font-bold text-zinc-900 mt-1 mb-2">Installation Service Providers</h3>
-                        <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">Experienced low-voltage and retail hardware installers, particularly in Southern California, may contact us to discuss potential project-based installation support.</p>
+                        <h3 class="text-sm font-bold text-zinc-900 mt-1 mb-2">Installation & Integration Partnership</h3>
+                        <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">Installation and integration partnership inquiries are reviewed by Asterika LLC. Tell us about your integration or installation services, the areas you serve, and the types of projects you support.</p>
                     </div>
+                    <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=technical-partnership'; return false;" class="block text-center bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded-none transition cursor-pointer">
+                        Partner with Asterika ➔
+                    </a>
                 </div>
 
                 <!-- 4. Referral Partners -->
