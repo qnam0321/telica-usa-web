@@ -166,12 +166,37 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200">
         <!-- 메인 헤더 -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <!-- 첫 번째 줄: 설명 문구 -->
-            <div class="border-b border-zinc-200 py-1">
-                <p class="text-[10px] sm:text-xs font-normal text-zinc-700">Authorized U.S. TELICA Reseller</p>
+            <!-- 첫 번째 줄: Authorized 문구 + 메뉴 (오른쪽) -->
+            <div class="flex items-center justify-start py-2 border-b border-zinc-200 gap-8">
+                <!-- 왼쪽: Authorized 문구 -->
+                <p class="text-[10px] sm:text-xs font-normal text-zinc-700 whitespace-nowrap">Authorized U.S. TELICA Reseller</p>
+
+                <!-- 오른쪽: Desktop Navigation Menu -->
+                <nav class="hidden sm:flex items-center space-x-2 text-xs sm:text-sm font-medium ml-auto pr-32">
+                    <div class="relative group">
+                        <button class="text-zinc-900 hover:text-red-600 transition">Products</button>
+                        <div class="absolute left-0 mt-0 w-48 bg-white border border-zinc-200 shadow-lg hidden group-hover:block z-50">
+                            <a href="#lineup" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">DIY ESL Kit</a>
+                            <a href="#gateway-pro" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Gateway Pro</a>
+                            <a href="#tag-1-5" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">1.5" ESL Tag (60-pack)</a>
+                            <a href="#tag-2-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" ESL Tag (40-pack)</a>
+                            <a href="#tag-3-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">3.7" ESL Tag (30-pack)</a>
+                            <a href="#" onclick="switchPage('rails'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Rails & Hardware</a>
+                        </div>
+                    </div>
+                    <a href="#" onclick="switchPage('support'); return false;" class="text-zinc-900 hover:text-red-600 transition">Setup & Guides</a>
+                    <a href="#" onclick="switchPage('partners'); return false;" class="text-zinc-900 hover:text-red-600 transition">Partners & Supplier</a>
+                    <a href="#commercial" onclick="switchPage('home'); return false;" class="text-zinc-900 hover:text-red-600 transition">Project Assessment</a>
+                    <a href="#" onclick="switchPage('about'); return false;" class="text-zinc-900 hover:text-red-600 transition">About Us</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="sm:hidden text-zinc-700 p-1.5 rounded-none hover:bg-zinc-100">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
             </div>
 
-            <!-- 두 번째 줄: 로고와 메뉴 -->
+            <!-- 두 번째 줄: 로고 + Quote 버튼 -->
             <div class="flex items-center justify-between py-2">
                 <!-- 로고 -->
                 <a href="#" onclick="switchPage('home'); return false;" class="flex items-center space-x-2 shrink-0">
@@ -179,39 +204,12 @@
                     <span class="px-2 py-1 bg-zinc-900 text-white text-[11px] sm:text-[12px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
                 </a>
 
-                <!-- Desktop Navigation Menu + Actions (오른쪽 정렬) -->
-                <div class="flex items-center space-x-6">
-                    <!-- Navigation Menu -->
-                    <nav class="hidden sm:flex items-center space-x-4 text-xs sm:text-sm font-medium">
-                        <div class="relative group">
-                            <button class="text-zinc-900 hover:text-red-600 transition">Products</button>
-                            <div class="absolute left-0 mt-0 w-48 bg-white border border-zinc-200 shadow-lg hidden group-hover:block z-50">
-                                <a href="#lineup" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">DIY ESL Kit</a>
-                                <a href="#gateway-pro" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Gateway Pro</a>
-                                <a href="#tag-1-5" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">1.5" ESL Tag (60-pack)</a>
-                                <a href="#tag-2-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" ESL Tag (40-pack)</a>
-                                <a href="#tag-3-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">3.7" ESL Tag (30-pack)</a>
-                                <a href="#" onclick="switchPage('rails'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Rails & Hardware</a>
-                            </div>
-                        </div>
-                        <a href="#" onclick="switchPage('support'); return false;" class="text-zinc-900 hover:text-red-600 transition">Setup & Guides</a>
-                        <a href="#" onclick="switchPage('partners'); return false;" class="text-zinc-900 hover:text-red-600 transition">Partners & Supplier</a>
-                        <a href="#commercial" onclick="switchPage('home'); return false;" class="text-zinc-900 hover:text-red-600 transition">Project Assessment</a>
-                        <a href="#" onclick="switchPage('about'); return false;" class="text-zinc-900 hover:text-red-600 transition">About Us</a>
-                    </nav>
-
-                    <!-- Compact actions -->
-                    <div class="flex items-center space-x-2">
-                        <button onclick="openQuoteModal('General Inquiry')" class="bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-3 sm:px-4 py-2 rounded-none transition cursor-pointer shadow-sm">Quote</button>
-                        <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="sm:hidden text-zinc-700 p-1.5 rounded-none hover:bg-zinc-100">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                        </button>
-                    </div>
-                </div>
+                <!-- Quote 버튼 -->
+                <button onclick="openQuoteModal('General Inquiry')" class="bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-3 sm:px-4 py-2 rounded-none transition cursor-pointer shadow-sm">Quote</button>
             </div>
 
         <!-- Navigation menu -->
-        <div id="mobile-menu" class="hidden absolute top-[9rem] sm:top-20 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 shadow-xl z-50">
+        <div id="mobile-menu" class="hidden absolute top-[7.5rem] sm:top-24 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 shadow-xl z-50">
             <div class="space-y-2 text-xs font-medium p-4">
                 <div class="flex items-center justify-between mb-2">
                     <button id="menu-close" aria-label="Close navigation menu" class="text-zinc-500 font-bold">✕</button>
