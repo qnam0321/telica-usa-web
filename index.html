@@ -413,14 +413,15 @@
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
                     <!-- DIY ESL Kit -->
-                    <div class="bg-zinc-900 text-white p-6 sm:p-8 rounded-none border border-zinc-800 flex flex-col justify-between shadow-md">
-                        <div>
-                            <div class="w-full h-44 bg-zinc-800 rounded-none mb-4 overflow-hidden flex items-center justify-center border border-zinc-700 relative">
-                                <img src="kit.jpg" alt="DIY ESL Kit" class="w-full h-full object-cover" onerror="this.style.display='none'">
-                                <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 -z-10">
-                                    <span class="text-xs corporate-tag text-zinc-400 uppercase">DIY STARTER KIT SETUP</span>
-                                </div>
+                    <div class="bg-zinc-900 text-white p-6 sm:p-8 rounded-none border border-zinc-800 grid grid-cols-1 md:grid-cols-2 lg:col-span-2 gap-6 shadow-md">
+                        <div class="w-full h-48 sm:h-64 md:h-full md:min-h-[240px] bg-white rounded-none overflow-hidden flex items-center justify-center border border-zinc-700 relative">
+                            <img src="kit.jpg" alt="DIY ESL Kit" class="w-full h-full object-contain" onerror="this.style.display='none'">
+                            <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 -z-10">
+                                <span class="text-xs corporate-tag text-zinc-400 uppercase">DIY STARTER KIT SETUP</span>
                             </div>
+                        </div>
+                        <div class="flex flex-col justify-center">
+                        <div>
                             <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
                                 <span class="text-xs text-zinc-300 corporate-tag uppercase font-semibold">SINGLE STORE STARTER (10 TAGS)</span>
                                 <span class="text-xs font-bold text-red-400 corporate-tag uppercase">SPECIAL U.S. DIRECT PRICE</span>
@@ -443,10 +444,11 @@
                         <button onclick="openQuoteModal('DIY ESL Kit Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
                             Request DIY ESL Kit Quote
                         </button>
+                        </div>
                     </div>
 
                     <!-- Gateway Pro Product Card -->
-                    <div id="gateway-pro" class="bg-white rounded-none border border-zinc-300 shadow-xs scroll-mt-24 overflow-hidden">
+                    <div id="gateway-pro" class="bg-white rounded-none border border-zinc-300 shadow-xs scroll-mt-24 overflow-hidden self-start">
                         <!-- Single column layout: Images top, content below -->
                         <div class="flex flex-col">
                             <!-- Image Section: Hero image + thumbnails -->
@@ -622,10 +624,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- ê°œë³„ íƒœê·¸ ì‚¬ì´ì¦ˆ ì¹´ë“œ -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- ê°œë³„ íƒœê·¸ ì‚¬ì´ì¦ˆ ì¹´ë“œ -->
+                    <div class="grid grid-cols-1 gap-4">
                     <div id="tag-1-5" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24">
                         <div>
                             <div class="mb-1">
@@ -675,7 +675,7 @@
                         </button>
                     </div>
 
-                    <div id="tag-3-7" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24 sm:col-span-3 lg:col-span-1">
+                    <div id="tag-3-7" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24">
                         <div>
                             <div class="mb-1">
                                 <div class="flex justify-between items-center">
@@ -683,6 +683,7 @@
                                     <div class="text-center">
                                         <div class="text-[11px] corporate-tag"><span class="font-semibold">30 Tag</span> <span class="font-bold text-zinc-900 text-[13px]">$559*</span></div>
                                         <span class="text-[9px] text-zinc-500 font-light leading-none">($18.63 each)</span>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
