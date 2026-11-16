@@ -1,7 +1,10 @@
+# Cloudflare Pages Configuration
 name = "telica-usa-web"
-main = "index.html"
 compatibility_date = "2026-11-01"
-type = "javascript"
+
+[build]
+command = "echo 'Static site build complete'"
+watch_paths = ["index.html", "styles.css", "script.js"]
 
 [env.production]
 routes = [
@@ -9,12 +12,7 @@ routes = [
   { pattern = "*.telicausa.com", zone_name = "telicausa.com" }
 ]
 
-[[build.upload.rules]]
-type = "CompiledContentType"
-globs = ["**/*.wasm"]
-fallthrough = true
-
-# Rebuild trigger: 2026-11-16 04:00:42 - Cache purge
+# Cache purge trigger: 2026-11-16 04:06:00 - Menu link fixes and deployment
 
 
 
