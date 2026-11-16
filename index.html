@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -408,306 +408,141 @@
                 <div class="mb-10">
                     <span class="text-xs font-bold text-red-600 uppercase corporate-tag">ESL LINE-UP</span>
                     <h2 class="text-2xl font-bold text-zinc-900 mt-1">Product Lineup & Direct Pricing</h2>
-                        <p class="text-zinc-600 text-xs mt-1">Explore U.S. direct pricing with no monthly cloud fees. <span class="text-zinc-500">*Shipping and applicable sales tax are calculated at the quote stage.</span></p>
+                        <p class="text-zinc-600 text-xs mt-1">Shipping and applicable sales tax are calculated with your quote.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                    <!-- DIY ESL Kit -->
-                    <div class="bg-zinc-900 text-white p-4 sm:p-8 rounded-none border border-zinc-800 grid grid-cols-1 md:grid-cols-2 lg:col-span-2 gap-x-6 gap-y-3 shadow-md">
-                        <div class="md:col-span-2 border-b border-zinc-700 pb-3">
-                            <div class="w-fit max-w-full text-[clamp(1rem,7vw,1.5rem)] sm:text-2xl">
-                                <p class="font-extrabold leading-tight whitespace-nowrap">Single Store Starter</p>
-                                <p class="text-[0.68em] font-semibold leading-tight text-zinc-300 mt-2 text-justify [text-align-last:justify] whitespace-nowrap">Gateway Pro + 10 Tags (2.7")</p>
-                            </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:[grid-template-rows:auto_auto_1fr_auto_auto] gap-x-6 gap-y-6 lg:gap-y-0 mb-10">
+                    <article id="diy-kit" class="grid grid-cols-1 lg:row-span-5 lg:[grid-template-rows:subgrid] bg-zinc-900 text-white border border-zinc-800 p-5 sm:p-6 shadow-md scroll-mt-24">
+                        <div class="aspect-[4/3] sm:aspect-[16/9] bg-white overflow-hidden mb-4">
+                            <img src="kit.jpg" alt="DIY ESL Kit with Gateway Pro and shelf labels" class="w-full h-full object-contain">
                         </div>
-                        <div class="w-full h-48 sm:h-64 md:h-full md:min-h-[240px] bg-white rounded-none overflow-hidden flex items-center justify-center border border-zinc-700 relative">
-                            <img src="kit.jpg" alt="DIY ESL Kit" class="w-full h-full object-contain" onerror="this.style.display='none'">
-                            <div class="absolute inset-0 flex flex-col items-center justify-center bg-zinc-900 -z-10">
-                                <span class="text-xs corporate-tag text-zinc-400 uppercase">DIY STARTER KIT SETUP</span>
-                            </div>
+                        <div class="pb-4">
+                            <span class="text-xs font-bold text-red-400 corporate-tag uppercase">Single-Store Starter</span>
+                            <h3 class="text-xl font-bold mt-1">DIY ESL Kit</h3>
+                            <p class="text-sm text-zinc-300 mt-1">1 Gateway Pro + 10 standard 2.7″ ESL tags</p>
                         </div>
-                        <div class="flex flex-col justify-center">
-                        <div>
-                            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
-                                <span class="text-xs text-zinc-300 corporate-tag uppercase font-semibold">SINGLE STORE STARTER (10 TAGS)</span>
-                                <span class="text-xs font-bold text-red-400 corporate-tag uppercase">SPECIAL U.S. DIRECT PRICE</span>
-                            </div>
-                            <h3 class="text-xl font-bold mb-1">DIY ESL Kit</h3>
-                            <p class="text-zinc-400 text-xs mb-3">CREBEE Gateway Pro + 10 e-paper tags included</p>
-                            <p class="text-zinc-300 text-xs font-light leading-relaxed mb-4">
-                                This subscription-free starter kit for independent stores includes a CREBEE Gateway Pro and 10 e-paper ESL tags, with Square and Shopify integration. Other closed POS systems may be connected through custom API integration.
-                            </p>
-                            
-                            <div class="border-t border-zinc-800 pt-3 mb-4 flex items-center justify-between">
-                                <span class="text-xs text-zinc-400">Standard MSRP: <span class="line-through text-zinc-500 font-bold">$999</span></span>
-                                <div class="text-right">
-                                    <span class="text-[10px] font-bold text-red-400 block corporate-tag uppercase">U.S. DIRECT SPECIAL</span>
-                                    <span class="text-xl font-extrabold text-white">$799</span>
-                                </div>
-                            </div>
-                            <p class="text-[10px] text-zinc-400 mb-4 italic">*Excludes shipping & applicable sales tax.</p>
-                        </div>
-                        <button onclick="openQuoteModal('DIY ESL Kit Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
-                            Request DIY ESL Kit Quote
-                        </button>
-                        </div>
-                    </div>
-
-                    <!-- Gateway Pro Product Card -->
-                    <div id="gateway-pro" class="bg-white rounded-none border border-zinc-300 shadow-xs scroll-mt-24 overflow-hidden self-start">
-                        <!-- Single column layout: Images top, content below -->
-                        <div class="flex flex-col">
-                            <!-- Image Section: Hero image + thumbnails -->
-                            <div class="bg-zinc-50">
-                            <!-- Main Hero Image -->
-                            <div class="w-full h-80 sm:h-96 flex items-center justify-center overflow-hidden border-b border-zinc-200">
-                                <div class="relative w-full h-full flex items-center justify-center cursor-pointer group" onclick="openImageZoom(document.getElementById('gateway-pro-main-image').src, document.getElementById('gateway-pro-main-image').alt)">
-                                    <img id="gateway-pro-main-image" src="crebee-gateway-pro-front.webp" alt="CREBEE Gateway Pro - Front view" class="w-auto h-full object-contain transition-transform duration-300 group-hover:scale-105" data-gateway-zoom onerror="this.style.display='none'">
-                                    <div class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/5 transition pointer-events-none">
-                                        <span class="text-zinc-600 text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Click to enlarge</span>
-                                    </div>
-                                    </div>
-                                </div>
-
-                            <!-- Thumbnail Gallery -->
-                            <div class="px-4 sm:px-6 py-3 border-b border-zinc-200">
-                                <p class="text-xs text-zinc-500 font-semibold uppercase tracking-wider mb-2">Product Views</p>
-                                <div class="flex gap-2 overflow-x-auto pb-1">
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-front.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden ring-2 ring-red-600 cursor-pointer">
-                                        <img src="crebee-gateway-pro-front.webp" alt="Front" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-top.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-top.webp" alt="Top" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-side.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-side.webp" alt="Side" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-angle.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-angle.webp" alt="Angle" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-back.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-back.webp" alt="Back" class="w-full h-full object-cover">
-                                    </button>
-                                </div>
-                            </div>
-                            </div>
-
-                            <!-- Content Section: Full width below images -->
-                            <div class="p-6 sm:p-8">
-                            <h3 class="text-3xl font-bold text-zinc-900 mb-2">Gateway Pro</h3>
-                                
-                            <div class="flex items-center gap-2 flex-wrap mb-4">
-                                <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold bg-zinc-100 px-3 py-1 rounded">GATEWAY &amp; CONNECTIVITY</span>
-                                <span class="text-xs font-bold text-red-600 corporate-tag uppercase bg-red-50 px-3 py-1 rounded">Available for Purchase</span>
-                            </div>
-
-                            <p class="text-zinc-600 text-sm font-light leading-relaxed mb-3">
-                                The Gateway Pro sends product and price updates wirelessly to compatible TELICA electronic shelf labels. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee.
-                            </p>
-
-                            <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
-                                <strong class="text-zinc-900">2-Year Factory Warranty</strong> – Comprehensive coverage for peace of mind.
-                            </p>
-
-                            <ul class="text-xs text-zinc-700 space-y-2.5 font-light mb-6">
-                                <li class="flex items-start gap-3">
-                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                    <span>Manage your shelf labels with or without a POS integration.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                    <span>Supports up to 3,000 ESLs per gateway.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                    <span>Works with TELICA 1.5", 2.7", and 3.7" electronic shelf labels.</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                    <span>Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</span>
-                                </li>
+                        <div class="text-sm text-zinc-300 leading-relaxed pb-4">
+                            <p>Set up digital shelf labels in your first store with built-in CREBEE software. Import your product and pricing data from a CSV file or add items directly in CREBEE. You can get started without a POS integration.</p>
+                            <ul class="list-disc pl-5 space-y-1 mt-3">
+                                <li>No separate CREBEE software purchase or monthly CREBEE subscription fee.</li>
+                                <li>Square and Shopify integrations are available for supported configurations. Custom POS compatibility is assessed separately.</li>
                             </ul>
-
-                            <!-- Pricing Section -->
-                            <div class="border-t border-zinc-200 pt-4 mb-4">
-                                <p class="text-xs text-zinc-500 uppercase font-semibold tracking-wider mb-2">Pricing</p>
-                                <p class="text-lg font-bold text-zinc-900 mb-2">$699</p>
-                                <p class="text-[10px] text-zinc-500 italic mb-4">Pricing and warranty information available upon inquiry.</p>
-                                </div>
-
-                            <!-- Action Buttons -->
-                            <div class="flex flex-col gap-2">
-                                <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
-                                    Request a Gateway Pro Quote
-                                </button>
-                                <a href="#gateway-pro-setup" onclick="switchPage('support', 'gateway-pro-setup'); return false;" class="w-full bg-white hover:bg-zinc-100 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
-                                    Watch the Setup Videos
-                                </a>
-                            </div>
+                        </div>
+                        <div class="border-t border-zinc-700 pt-3 pb-4">
+                            <span class="text-2xl font-extrabold">$799</span>
+                            <span class="text-xs text-zinc-400 ml-2"><span class="line-through">$999</span> MSRP</span>
+                            <div class="mt-3 bg-red-50 text-red-900 p-3 text-xs">
+                                <p class="font-bold flex flex-wrap items-center gap-2">5% OFF YOUR FIRST ORDER <span class="border border-dashed border-red-800 px-2 py-1">WELCOME5</span></p>
+                                <p class="mt-1">Includes ESL tag packs ordered with your kit or gateway.</p>
                             </div>
                         </div>
-
-                        <!-- Old layout marker for reference (to be removed) -->
-                        <div class="hidden">
-                            <!-- Old Two-column layout structure - kept for reference -->
-                            <div class="p-6 sm:p-8 flex flex-col">
-                                <!-- Title & Description Above Images -->
-                                <div class="mb-6">
-                                    <h3 class="text-2xl font-bold text-zinc-900 mb-3 block">Gateway Pro</h3>
-                                    
-                                    <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
-                                        <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold">GATEWAY & CONNECTIVITY</span>
-                                        <span class="text-xs font-bold text-red-600 corporate-tag uppercase">Available for Standalone Purchase</span>
-                                    </div>
-
-                                    <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
-                                        The Gateway Pro sends product and price updates wirelessly to compatible TELICA electronic shelf labels. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee.
-                                    </p>
-
-                                    <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
-                                        <strong class="text-zinc-900">2-Year Factory Warranty</strong> — Comprehensive coverage for peace of mind.
-                                    </p>
-
-                                    <p class="text-2xl font-bold text-zinc-900">
-                                        $699
-                                    </p>
-                                </div>
-
-                                <!-- Image Gallery Section -->
-                                <div class="mb-6">
-                                    <!-- Main Image - Smaller -->
-                                    <div class="w-full h-48 bg-zinc-100 rounded-none mb-3 overflow-hidden flex items-center justify-center border border-zinc-200 relative cursor-pointer" onclick="openImageZoom(document.getElementById('gateway-pro-main-image').src, document.getElementById('gateway-pro-main-image').alt)">
-                                        <img id="gateway-pro-main-image" src="crebee-gateway-pro-front.webp" alt="CREBEE Gateway Pro - Front view" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" data-gateway-zoom onerror="this.style.display='none'">
-                                        <div class="absolute inset-0 flex items-center justify-center bg-black/0 hover:bg-black/10 transition pointer-events-none">
-                                            <span class="text-white text-xs font-semibold opacity-0 hover:opacity-100 transition">Click to enlarge</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Thumbnail Gallery -->
-                                    <div class="flex gap-2 overflow-x-auto pb-2">
-                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-front.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden ring-2 ring-red-500 cursor-pointer">
-                                            <img src="crebee-gateway-pro-front.webp" alt="Front" class="w-full h-full object-cover">
-                                        </button>
-                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-top.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                            <img src="crebee-gateway-pro-top.webp" alt="Ports and connectivity" class="w-full h-full object-cover">
-                                        </button>
-                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-side.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                            <img src="crebee-gateway-pro-side.webp" alt="Side view" class="w-full h-full object-cover">
-                                        </button>
-                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-angle.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                            <img src="crebee-gateway-pro-angle.webp" alt="Angle view" class="w-full h-full object-cover">
-                                        </button>
-                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-back.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                            <img src="crebee-gateway-pro-back.webp" alt="Back and mounting" class="w-full h-full object-cover">
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Description Section - Right side on desktop, bottom on mobile -->
-                            <div class="p-6 sm:p-8 flex flex-col justify-between border-t md:border-t-0 md:border-l border-zinc-200">
-                                <div>
-                                        <ul class="text-xs text-zinc-700 space-y-2 font-light">
-                                            <li>• Manage your shelf labels with or without a POS integration.</li>
-                                            <li>• Supports up to 3,000 ESLs per gateway.</li>
-                                            <li>• Works with TELICA 1.5″, 2.7″, and 3.7″ electronic shelf labels.</li>
-                                            <li>• Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="border-t border-zinc-200 pt-4 mb-4">
-                                        <p class="text-[10px] text-zinc-500 mb-2 italic">Pricing and warranty information coming soon.</p>
-                                    </div>
-                                
-                                <div class="flex flex-col gap-2">
-                                    <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
-                                        Request a Gateway Pro Quote
-                                    </button>
-                                    <a href="#gateway-pro-setup" onclick="switchPage('support', 'gateway-pro-setup'); return false;" class="w-full bg-white hover:bg-zinc-50 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
-                                        Watch the Setup Videos
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="flex flex-col sm:flex-row gap-2">
+                            <button type="button" onclick="openQuoteModal('DIY ESL Kit Purchase')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a DIY ESL Kit Quote</button>
+                            <a href="#gateway-pro-setup" onclick="switchPage('support', 'gateway-pro-setup'); return false;" aria-label="Watch the DIY ESL Kit gateway setup and tag pairing guide" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-800 text-white text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Gateway Setup &amp; Tag Pairing</a>
                         </div>
-                    </div>
-                    <!-- ê°œë³„ íƒœê·¸ ì‚¬ì´ì¦ˆ ì¹´ë“œ -->
-                    <div class="grid grid-cols-1 lg:auto-rows-fr gap-4">
-                    <div id="tag-1-5" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24">
-                        <div>
-                            <div class="mb-1">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">COMPACT</span>
-                                    <div class="text-center">
-                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">60 Tag</span> <span class="font-bold text-zinc-900 text-[13px]">$549*</span></div>
-                                        <span class="text-[9px] text-zinc-500 font-light leading-none">($9.15 each)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="text-base font-bold text-zinc-900 mb-1">1.5" ESL Tag (60-pack)</h4>
-                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
-                                Ideal for narrow shelf edges, cosmetics, and small retail items. The e-paper display supports four-color pricing and barcodes. Each pack includes <strong>60 tags</strong> and is priced at $549. <em>*Volume discounts available.</em>
-                            </p>
-                        </div>
-                        <button onclick="openQuoteModal('1.5 Inch Tag Bundle Order')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer shadow-sm">
-                            Request 1.5" Quote &#10140;
-                        </button>
-                    </div>
+                    </article>
 
-                    <div id="tag-2-7" class="bg-white p-5 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24">
-                        <div>
-                            <div class="mb-1">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-[11px] font-bold text-red-600 corporate-tag uppercase">MOST POPULAR</span>
-                                    <div class="text-center">
-                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">40 Tag</span> <span class="font-bold text-zinc-900 text-[13px]">$439*</span></div>
-                                        <span class="text-[9px] text-zinc-500 font-light leading-none">($10.98 each)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="text-base font-bold text-zinc-900 mb-1">2.7" ESL Tag (40-pack)</h4>
-                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
-                                A versatile four-color label for everyday pricing and promotions, designed for retail shelving. Each standard pack includes <strong>40 tags</strong> and is priced at $439. <em>*Volume discounts available.</em>
-                            </p>
-                            <div id="tag-2-7-freezer" class="flex items-center justify-end gap-2 border-t border-zinc-200 pt-3 mb-4 scroll-mt-24">
-                                <span class="text-xs font-semibold text-zinc-700">Freezer (40-pack)</span>
-                                <div class="text-right">
-                                    <span class="text-[13px] font-bold text-zinc-900">$450</span>
-                                    <span class="block text-[9px] text-zinc-500 font-light">($11.25 each)</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button onclick="openQuoteModal('2.7 Inch Tag Bundle Order')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer shadow-sm">
-                            Request 2.7" Quote &#10140;
-                        </button>
-                    </div>
-
-                    <div id="tag-3-7" class="bg-white p-5 lg:pb-8 rounded-none border border-zinc-300 shadow-xs flex flex-col justify-between scroll-mt-24">
-                        <div>
-                            <div class="mb-1">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">LARGE FORMAT</span>
-                                    <div class="text-center">
-                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">30 Tag</span> <span class="font-bold text-zinc-900 text-[13px]">$559*</span></div>
-                                        <span class="text-[9px] text-zinc-500 font-light leading-none">($18.63 each)</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="text-base font-bold text-zinc-900 mb-1">3.7" ESL Tag (30-pack)</h4>
-                            <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
-                                Designed to display detailed product information and promotions on endcaps. Each pack includes <strong>30 tags</strong> and is priced at $559. <em>*Volume discounts available.</em>
-                            </p>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <button onclick="openQuoteModal('3.7 Inch Tag Bundle Order')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer shadow-sm">
-                                Request 3.7" Quote &#10140;
+                    <article id="gateway-pro" class="grid grid-cols-1 lg:row-span-5 lg:[grid-template-rows:subgrid] bg-white border border-zinc-300 p-5 sm:p-6 shadow-sm scroll-mt-24">
+                        <div class="aspect-[4/3] sm:aspect-[16/9] bg-zinc-50 border border-zinc-200 flex flex-col mb-4">
+                            <button type="button" onclick="openGatewayImage()" aria-label="Enlarge CREBEE Gateway Pro image" class="min-h-0 flex-1 w-full">
+                                <img id="gateway-pro-main-image" src="crebee-gateway-pro-front.webp" alt="CREBEE Gateway Pro - Front view" class="w-full h-full object-contain">
                             </button>
-                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" class="w-full bg-white hover:bg-zinc-100 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
-                                Watch the Tag Installation Videos
-                            </a>
+                            <div class="flex justify-start sm:justify-center gap-2 overflow-x-auto p-2" aria-label="Gateway Pro product views">
+                                <button type="button" onclick="selectGatewayView(this, 'front', 'Front')" aria-label="Show Gateway Pro front view" aria-pressed="true" class="thumbnail-btn shrink-0 w-11 h-11 border border-red-600 ring-2 ring-red-600"><img src="crebee-gateway-pro-front.webp" alt="" class="w-full h-full object-contain"></button>
+                                <button type="button" onclick="selectGatewayView(this, 'top', 'Top')" aria-label="Show Gateway Pro top view" aria-pressed="false" class="thumbnail-btn shrink-0 w-11 h-11 border border-zinc-300"><img src="crebee-gateway-pro-top.webp" alt="" class="w-full h-full object-contain"></button>
+                                <button type="button" onclick="selectGatewayView(this, 'side', 'Side')" aria-label="Show Gateway Pro side view" aria-pressed="false" class="thumbnail-btn shrink-0 w-11 h-11 border border-zinc-300"><img src="crebee-gateway-pro-side.webp" alt="" class="w-full h-full object-contain"></button>
+                                <button type="button" onclick="selectGatewayView(this, 'angle', 'Angle')" aria-label="Show Gateway Pro angled view" aria-pressed="false" class="thumbnail-btn shrink-0 w-11 h-11 border border-zinc-300"><img src="crebee-gateway-pro-angle.webp" alt="" class="w-full h-full object-contain"></button>
+                                <button type="button" onclick="selectGatewayView(this, 'back', 'Back')" aria-label="Show Gateway Pro back view" aria-pressed="false" class="thumbnail-btn shrink-0 w-11 h-11 border border-zinc-300"><img src="crebee-gateway-pro-back.webp" alt="" class="w-full h-full object-contain"></button>
+                            </div>
                         </div>
+                        <div class="pb-4">
+                            <span class="text-xs font-bold text-red-600 corporate-tag uppercase">Available for Standalone Purchase</span>
+                            <h3 class="text-xl font-bold text-zinc-900 mt-1">CREBEE Gateway Pro</h3>
+                            <p class="text-sm text-zinc-600 mt-1">Standalone gateway with built-in CREBEE software</p>
+                        </div>
+                        <div class="text-sm text-zinc-600 leading-relaxed pb-4">
+                            <p>Add or replace a gateway in your TELICA ESL system. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee. Manage compatible labels with or without a POS integration.</p>
+                            <ul class="list-disc pl-5 space-y-1 mt-3">
+                                <li>Up to 3,000 compatible TELICA labels per gateway.</li>
+                                <li>Compatible with TELICA 1.5″, 2.7″ and 3.7″ ESLs.</li>
+                                <li>Up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</li>
+                                <li>2-year factory warranty for the Gateway Pro.</li>
+                            </ul>
+                        </div>
+                        <div class="border-t border-zinc-200 pt-3 pb-4">
+                            <span class="text-2xl font-extrabold text-zinc-900">$699</span>
+                            <div class="mt-3 bg-red-50 text-red-900 p-3 text-xs">
+                                <p class="font-bold flex flex-wrap items-center gap-2">5% OFF YOUR FIRST ORDER <span class="border border-dashed border-red-800 px-2 py-1">WELCOME5</span></p>
+                                <p class="mt-1">Includes ESL tag packs ordered with your kit or gateway.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-2">
+                            <button type="button" onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a Gateway Pro Quote</button>
+                            <a href="#gateway-pro-setup" onclick="switchPage('support', 'gateway-pro-setup'); return false;" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Gateway Setup &amp; Tag Pairing</a>
+                        </div>
+                    </article>
+                </div>
+
+                <h3 class="text-xl font-bold text-zinc-900 mb-4">ESL Tag Packs</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <article id="tag-2-7" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
+                        <span class="text-xs font-bold text-red-600 corporate-tag uppercase">Most Popular</span>
+                        <h4 class="text-lg font-bold text-zinc-900 mt-1">2.7″ Standard ESL Tag</h4>
+                        <p class="text-2xl font-extrabold text-zinc-900 mt-2">$439 <span class="text-sm font-medium text-zinc-600">/ 40-pack</span></p>
+                        <p class="text-xs text-zinc-500 mt-1">40 tags · $10.98 each</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A four-color shelf label for everyday pricing and promotions on standard retail shelves.</p>
+                        <div class="mt-auto flex flex-col sm:flex-row gap-2">
+                            <button type="button" onclick="openQuoteModal('2.7 Inch Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 2.7″ Standard Quote</button>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 2.7 inch standard tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                        </div>
+                    </article>
+                    <article id="tag-2-7-freezer" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
+                        <span class="self-start bg-blue-50 text-blue-900 px-2 py-1 text-xs font-bold corporate-tag uppercase">Freezer-Grade</span>
+                        <h4 class="text-lg font-bold text-zinc-900 mt-1">2.7″ Freezer-Grade ESL Tag</h4>
+                        <p class="text-2xl font-extrabold text-zinc-900 mt-2">$450 <span class="text-sm font-medium text-zinc-600">/ 40-pack</span></p>
+                        <p class="text-xs text-zinc-500 mt-1">40 tags · $11.25 each</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">Designed for refrigerated and frozen displays, including commercial coolers and freezers.</p>
+                        <div class="mt-auto flex flex-col sm:flex-row gap-2">
+                            <button type="button" onclick="openQuoteModal('2.7 Inch Freezer Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 2.7″ Freezer Quote</button>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 2.7 inch freezer-grade tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                        </div>
+                    </article>
+                    <article id="tag-1-5" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
+                        <span class="text-xs font-bold text-zinc-600 corporate-tag uppercase">Compact</span>
+                        <h4 class="text-lg font-bold text-zinc-900 mt-1">1.5″ ESL Tag</h4>
+                        <p class="text-2xl font-extrabold text-zinc-900 mt-2">$549 <span class="text-sm font-medium text-zinc-600">/ 60-pack</span></p>
+                        <p class="text-xs text-zinc-500 mt-1">60 tags · $9.15 each</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A compact four-color label for prices and barcodes on narrow shelves, cosmetics displays, and small items.</p>
+                        <div class="mt-auto flex flex-col sm:flex-row gap-2">
+                            <button type="button" onclick="openQuoteModal('1.5 Inch Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 1.5″ Quote</button>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 1.5 inch tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                        </div>
+                    </article>
+                    <article id="tag-3-7" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
+                        <span class="text-xs font-bold text-zinc-600 corporate-tag uppercase">Large Format</span>
+                        <h4 class="text-lg font-bold text-zinc-900 mt-1">3.7″ ESL Tag</h4>
+                        <p class="text-2xl font-extrabold text-zinc-900 mt-2">$559 <span class="text-sm font-medium text-zinc-600">/ 30-pack</span></p>
+                        <p class="text-xs text-zinc-500 mt-1">30 tags · $18.63 each</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A larger display for detailed product information and promotions on endcaps and other prominent displays.</p>
+                        <div class="mt-auto flex flex-col sm:flex-row gap-2">
+                            <button type="button" onclick="openQuoteModal('3.7 Inch Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 3.7″ Quote</button>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 3.7 inch tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                    <div class="border border-zinc-300 bg-zinc-50 p-5 flex flex-col">
+                        <h4 class="text-base font-bold">VIP Tag Reorders</h4>
+                        <p class="text-sm text-zinc-600 mt-2 mb-4">Already purchased a DIY ESL Kit or Gateway Pro from TELICA USA? Request VIP pricing on additional ESL tag packs.</p>
+                        <button type="button" onclick="openQuoteModal('2.7 Inch Tag Bundle Order', 'vip')" class="mt-auto min-h-[44px] bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-3">Request VIP Tag Pricing</button>
                     </div>
+                    <div class="border border-zinc-300 bg-zinc-50 p-5 flex flex-col">
+                        <h4 class="text-base font-bold">Volume Pricing for 10+ Tag Packs</h4>
+                        <p class="text-sm text-zinc-600 mt-2 mb-4">Mix and match ESL tag packs. We’ll review your quantities and quote each product separately.</p>
+                        <button type="button" onclick="openQuoteModal('2.7 Inch Tag Bundle Order', 'volume')" class="mt-auto min-h-[44px] bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-3">Request Volume Pricing</button>
                     </div>
                 </div>
+                <p class="text-xs text-zinc-500 mt-4">Welcome discounts, VIP pricing, and volume pricing exclude shelf rails, mounting hardware, and other accessories. Offers cannot be combined.</p>
             </div>
         </section>
 
@@ -1321,14 +1156,14 @@
     </div>
 
     <!-- ëª¨ë‹¬: Quote Inquiry -->
-    <div id="quote-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quote-title" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
         <div id="modal-box" class="relative bg-white w-full max-w-lg rounded-none overflow-hidden shadow-2xl border border-zinc-300">
             <div id="modal-header" class="bg-zinc-900 text-white px-6 py-4 flex justify-between items-center cursor-move select-none text-xs">
                 <div>
-                    <span class="font-bold text-sm">Request a Quote & Inquiry</span>
+                    <span id="quote-title" class="font-bold text-sm">Request a Quote & Inquiry</span>
                     <p class="text-[11px] text-zinc-400 mt-0.5">Please fill in required fields marked with <span class="text-red-500">*</span></p>
                 </div>
-                <button onclick="closeQuoteModal()" class="text-zinc-400 hover:text-white p-1">✕</button>
+                <button type="button" onclick="closeQuoteModal()" aria-label="Close quote dialog" class="text-zinc-400 hover:text-white p-1">✕</button>
             </div>
             <form onsubmit="submitQuoteForm(event)" class="p-6 space-y-3 max-h-[75vh] overflow-y-auto text-xs">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -1362,6 +1197,7 @@
                     <label class="block font-semibold text-zinc-700 mb-1">Interest / Inquiry Type *</label>
                     <select id="modal-interest" onchange="handleOrderInterestChange()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600 cursor-pointer">
                         <option value="DIY ESL Kit Purchase">DIY ESL Kit Purchase ($799)</option>
+                        <option value="Gateway Pro - Standalone Purchase">Gateway Pro - Standalone Purchase ($699)</option>
                         <option value="1.5 Inch Tag Bundle Order">1.5" ESL Tag Bundle Order (60-pack - $549*)</option>
                         <option value="2.7 Inch Tag Bundle Order">2.7" ESL Tag Bundle Order (40-pack - $439*)</option>
                         <option value="2.7 Inch Freezer Tag Bundle Order">2.7" Freezer Tag Bundle Order (40-pack - $450)</option>
@@ -1375,7 +1211,28 @@
                 <div id="order-items-group" class="hidden space-y-3">
                     <div id="order-items"></div>
                     <button type="button" id="add-order-item" onclick="addOrderItem()" class="text-red-700 hover:text-red-800 underline font-semibold">+ Add item</button>
-                    <p class="text-[11px] text-zinc-500">WELCOME10: 10% off DIY ESL Kits · WELCOME5: 5% off ESL Tag Bundles</p>
+                    <div>
+                        <label for="order-discount-code" class="block font-semibold text-zinc-700 mb-1">Discount Code (Optional)</label>
+                        <input id="order-discount-code" type="text" maxlength="40" autocomplete="off" autocapitalize="characters" oninput="updateOrderGrandTotal()" class="w-48 max-w-full bg-white border border-zinc-300 px-3 py-2">
+                        <p id="order-discount-status" class="text-xs mt-1" aria-live="polite"></p>
+                    </div>
+                    <div class="space-y-2 border border-zinc-200 p-3">
+                        <label class="flex items-start gap-2"><input id="request-vip" type="checkbox" onchange="updatePricingRequests()"> <span>Request VIP tag reorder pricing</span></label>
+                        <div id="vip-details" class="hidden space-y-2 pl-5">
+                            <p>We will verify your previous DIY Kit or Gateway Pro purchase before quoting tag prices.</p>
+                            <label class="flex items-start gap-2"><input id="vip-same-email" type="checkbox" checked onchange="updatePricingRequests()"> <span>Previous purchase used the email above</span></label>
+                            <div id="vip-other-email-wrap" class="hidden">
+                                <label for="vip-other-email" class="block mb-1">Previous purchase email (or provide an order number)</label>
+                                <input id="vip-other-email" type="email" oninput="validateQuoteForm()" class="w-full border border-zinc-300 px-3 py-2">
+                            </div>
+                            <label for="vip-order-number" class="block">Previous order number (optional if email is provided)</label>
+                            <input id="vip-order-number" type="text" oninput="validateQuoteForm()" class="w-full border border-zinc-300 px-3 py-2">
+                            <p id="vip-proof-error" class="text-red-700" aria-live="polite"></p>
+                        </div>
+                        <label class="flex items-start gap-2"><input id="request-volume" type="checkbox" onchange="updatePricingRequests()"> <span>Request volume pricing for 10+ tag packs</span></label>
+                        <p id="volume-status" class="text-zinc-600" aria-live="polite"></p>
+                        <p id="vip-status" class="text-zinc-600" aria-live="polite"></p>
+                    </div>
                     <div class="border-t border-zinc-200 pt-3 text-right">
                         <p id="order-subtotal" class="text-xs text-zinc-600"></p>
                         <p id="order-discount-total" class="text-xs text-green-700"></p>
@@ -1389,6 +1246,7 @@
                     <textarea id="modal-message" rows="3" required oninput="validateQuoteForm()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none p-3 focus:outline-none focus:border-red-600" placeholder="Store details or quantities needed..."></textarea>
                 </div>
                 <p id="quote-form-status" class="hidden" role="status" aria-live="polite"></p>
+                <p class="text-zinc-600">We’ll review your request, confirm any eligible discounts or custom pricing, and email you a payment link with your final total.</p>
                 <button type="submit" id="submit-btn" disabled class="w-full bg-zinc-300 text-zinc-500 font-semibold py-3 rounded-none cursor-not-allowed transition">Fill in required fields</button>
             </form>
         </div>
@@ -1406,6 +1264,29 @@
             } else {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
+        }
+
+        function selectGatewayView(button, view, label) {
+            const image = document.getElementById('gateway-pro-main-image');
+            image.src = `crebee-gateway-pro-${view}.webp`;
+            image.alt = `CREBEE Gateway Pro - ${label} view`;
+            document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(item => {
+                const selected = item === button;
+                item.setAttribute('aria-pressed', String(selected));
+                item.classList.toggle('ring-2', selected);
+                item.classList.toggle('ring-red-600', selected);
+                item.classList.toggle('border-red-600', selected);
+                item.classList.toggle('border-zinc-300', !selected);
+            });
+        }
+
+        function openGatewayImage() {
+            const image = document.getElementById('gateway-pro-main-image');
+            const zoom = document.getElementById('modalImage');
+            zoom.src = image.src;
+            zoom.alt = image.alt;
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.getElementById('closeModal').focus();
         }
 
         function openImageZoom(imageSrc, imageAlt) {
@@ -1544,6 +1425,7 @@
         function closeDetailModal() { document.getElementById('detail-modal').classList.add('hidden'); }
 
         const quoteModal = document.getElementById('quote-modal');
+        let quoteOpener = null;
         const modalBox = document.getElementById('modal-box');
         const modalHeader = document.getElementById('modal-header');
         let isSubmittingQuote = false;
@@ -1587,6 +1469,7 @@
         ]);
         const orderItemPricesCents = {
             'DIY ESL Kit Purchase': 79900,
+            'Gateway Pro - Standalone Purchase': 69900,
             '1.5 Inch Tag Bundle Order': 54900,
             '2.7 Inch Tag Bundle Order': 43900,
             '2.7 Inch Freezer Tag Bundle Order': 45000,
@@ -1601,18 +1484,13 @@
             'Stand': 90,
             'Clip': 250
         };
-        const orderDiscountCodes = {
-            WELCOME10: { rate: 10, products: new Set(['DIY ESL Kit Purchase']) },
-            WELCOME5: {
-                rate: 5,
-                products: new Set([
-                    '1.5 Inch Tag Bundle Order',
-                    '2.7 Inch Tag Bundle Order',
-                    '2.7 Inch Freezer Tag Bundle Order',
-                    '3.7 Inch Tag Bundle Order'
-                ])
-            }
-        };
+        const equipmentProducts = new Set(['DIY ESL Kit Purchase', 'Gateway Pro - Standalone Purchase']);
+        const tagProducts = new Set([
+            '1.5 Inch Tag Bundle Order',
+            '2.7 Inch Tag Bundle Order',
+            '2.7 Inch Freezer Tag Bundle Order',
+            '3.7 Inch Tag Bundle Order'
+        ]);
         const formatCurrency = cents => new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
@@ -1628,7 +1506,7 @@
 
         function initializeOrderItems(interest) {
             orderItems = productInterests.has(interest)
-                ? [{ product: initialOrderProduct[interest] || '', quantity: 1, discountCode: '' }]
+                ? [{ product: initialOrderProduct[interest] || '', quantity: 1 }]
                 : [];
             renderOrderItems();
         }
@@ -1693,27 +1571,6 @@
                     validateQuoteForm();
                 });
 
-                const discountLabel = document.createElement('label');
-                discountLabel.className = 'block text-zinc-600 mt-2 mb-1';
-                discountLabel.textContent = 'Discount Code (Optional)';
-                const discountCode = document.createElement('input');
-                discountCode.type = 'text';
-                discountCode.maxLength = 10;
-                discountCode.value = item.discountCode || '';
-                discountCode.placeholder = 'Up to 10 chars';
-                discountCode.autocomplete = 'off';
-                discountCode.autocapitalize = 'characters';
-                discountCode.className = 'w-40 max-w-full bg-zinc-50 border border-amber-300 rounded-none px-2 py-1.5 font-semibold tracking-wider text-zinc-800 placeholder:text-zinc-400 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-100';
-                discountCode.setAttribute('aria-label', `Discount code for item ${index + 1}`);
-                discountCode.addEventListener('input', () => {
-                    orderItems[index].discountCode = discountCode.value;
-                    updateOrderItemTotal(index);
-                });
-                const discountStatus = document.createElement('p');
-                discountStatus.id = `order-discount-status-${index}`;
-                discountStatus.className = 'text-xs mt-1';
-                discountStatus.setAttribute('aria-live', 'polite');
-
                 const quantityLabel = document.createElement('label');
                 quantityLabel.className = 'block text-zinc-600 mt-2 mb-1';
                 quantityLabel.textContent = 'Quantity';
@@ -1733,12 +1590,8 @@
                 quantity.setAttribute('aria-label', `Quantity for item ${index + 1}`);
                 quantity.className = 'w-20 text-center bg-white border-y border-zinc-300 py-2.5 focus:outline-none focus:border-red-600';
                 quantity.addEventListener('input', () => {
-                    orderItems[index].quantity = Number(quantity.value);
-                    if (index > 0 && orderItems[index].quantity === 0) {
-                        removeOrderItem(index);
-                        return;
-                    }
-                    updateOrderItemTotal(index);
+                    orderItems[index].quantity = quantity.value === '' ? NaN : Number(quantity.value);
+                    updateOrderGrandTotal();
                     validateQuoteForm();
                 });
                 const increment = document.createElement('button');
@@ -1752,113 +1605,91 @@
                 itemTotal.id = `order-item-total-${index}`;
                 itemTotal.className = 'text-right text-sm font-semibold text-zinc-800 mt-2';
                 itemTotal.setAttribute('aria-live', 'polite');
-                row.append(rowHeader, productSelector, discountLabel, discountCode, discountStatus, quantityLabel, quantityControls, itemTotal);
+                row.append(rowHeader, productSelector, quantityLabel, quantityControls, itemTotal);
                 container.append(row);
-                updateOrderItemTotal(index);
             });
 
+            updateOrderGrandTotal();
             addButton.classList.remove('hidden');
             addButton.disabled = false;
             addButton.classList.remove('opacity-50', 'cursor-not-allowed');
         }
 
-        function updateOrderItemTotal(index) {
-            const item = orderItems[index];
-            const total = document.getElementById(`order-item-total-${index}`);
-            if (!item) return;
-
-            const discount = getOrderItemDiscount(item);
-            const discountStatus = document.getElementById(`order-discount-status-${index}`);
-            if (discountStatus) {
-                discountStatus.textContent = !discount.code
-                    ? ''
-                    : discount.valid
-                        ? `${discount.code} applied: ${discount.rate}% off this item.`
-                        : discount.reason;
-                discountStatus.className = `text-xs mt-1 ${discount.valid ? 'text-green-700' : discount.code ? 'text-red-600' : 'text-zinc-500'}`;
-            }
-
-            const unitPriceCents = orderItemPricesCents[item.product];
-            if (unitPriceCents === undefined) {
-                if (total) {
-                    total.textContent = item.product
-                        ? 'Price available upon request.'
-                        : 'Select an item to see its estimated total.';
-                }
-                updateOrderGrandTotal();
-                return;
-            }
-
-            const quantity = Number(item.quantity);
-            if (total) {
-                if (!Number.isInteger(quantity) || quantity < 1) {
-                    total.textContent = Number.isInteger(quantity) && quantity === 0 && index === 0
-                        ? `Unit price: ${formatCurrency(unitPriceCents)} · Item total: ${formatCurrency(0)}`
-                        : `Unit price: ${formatCurrency(unitPriceCents)} · Enter a valid quantity`;
-                } else {
-                    const itemSubtotalCents = unitPriceCents * quantity;
-                    const itemDiscountCents = discount.valid ? Math.round(itemSubtotalCents * discount.rate / 100) : 0;
-                    total.textContent = itemDiscountCents
-                        ? `Subtotal: ${formatCurrency(itemSubtotalCents)} · Discount: −${formatCurrency(itemDiscountCents)} · Item total: ${formatCurrency(itemSubtotalCents - itemDiscountCents)}`
-                        : `Unit price: ${formatCurrency(unitPriceCents)} · Item total: ${formatCurrency(itemSubtotalCents)}`;
-                }
-            }
-            updateOrderGrandTotal();
+        function calculateQuoteEstimate() {
+            const code = document.getElementById('order-discount-code').value.trim().toUpperCase();
+            const validQuantity = (item, index) => Number.isInteger(item.quantity) && item.quantity >= (index === 0 ? 0 : 1);
+            const equipmentPresent = orderItems.some((item, index) => validQuantity(item, index) && item.quantity > 0 && equipmentProducts.has(item.product));
+            const welcomeEligible = code === 'WELCOME5' && equipmentPresent;
+            const items = orderItems.map((item, index) => {
+                const valid = validQuantity(item, index);
+                const unitPrice = orderItemPricesCents[item.product];
+                const subtotal = valid && unitPrice !== undefined ? unitPrice * item.quantity : 0;
+                const discount = welcomeEligible && (equipmentProducts.has(item.product) || tagProducts.has(item.product))
+                    ? Math.round(subtotal * 5 / 100) : 0;
+                return { ...item, valid, unitPrice, subtotal, discount };
+            });
+            return {
+                code, welcomeEligible, items,
+                invalid: items.some(item => !item.valid),
+                tagPacks: items.reduce((sum, item) => sum + (item.valid && tagProducts.has(item.product) ? item.quantity : 0), 0),
+                subtotal: items.reduce((sum, item) => sum + item.subtotal, 0),
+                discount: items.reduce((sum, item) => sum + item.discount, 0),
+                unpriced: items.some(item => item.product && item.unitPrice === undefined)
+            };
         }
 
-        function getOrderItemDiscount(item) {
-            const code = (item.discountCode || '').trim().toUpperCase();
-            if (!code) return { code: '', rate: 0, valid: false, reason: '' };
-            const discount = orderDiscountCodes[code];
-            if (!discount) return { code, rate: 0, valid: false, reason: 'Invalid discount code.' };
-            if (!item.product) return { code, rate: 0, valid: false, reason: 'Select a product to validate this code.' };
-            if (!discount.products.has(item.product)) {
-                const eligibleCategory = code === 'WELCOME10' ? 'DIY ESL Kit' : 'ESL Tag Bundles';
-                return { code, rate: 0, valid: false, reason: `${code} is only valid for ${eligibleCategory}.` };
-            }
-            return { code, rate: discount.rate, valid: true, reason: '' };
+        function updatePricingRequests() {
+            const vip = document.getElementById('request-vip').checked;
+            const sameEmail = document.getElementById('vip-same-email').checked;
+            document.getElementById('vip-details').classList.toggle('hidden', !vip);
+            document.getElementById('vip-other-email-wrap').classList.toggle('hidden', !vip || sameEmail);
+            document.getElementById('vip-other-email').disabled = !vip || sameEmail;
+            document.getElementById('vip-order-number').disabled = !vip;
+            updateOrderGrandTotal();
+            validateQuoteForm();
         }
 
         function updateOrderGrandTotal() {
-            const total = document.getElementById('order-grand-total');
-            const note = document.getElementById('order-grand-total-note');
-            if (!total || !note) return;
-            const subtotal = document.getElementById('order-subtotal');
-            const discountTotal = document.getElementById('order-discount-total');
+            const estimate = calculateQuoteEstimate();
+            const vip = document.getElementById('request-vip').checked;
+            const volumeRequested = document.getElementById('request-volume').checked;
+            const volumeEligible = estimate.tagPacks >= 10;
+            const status = document.getElementById('order-discount-status');
+            status.textContent = !estimate.code ? '' : estimate.code !== 'WELCOME5'
+                ? 'Unrecognized code. Please check the code.'
+                : !estimate.welcomeEligible
+                    ? 'WELCOME5 requires a DIY Kit or Gateway Pro in this order.'
+                    : 'Welcome estimate shown. First-purchase eligibility and final pricing will be verified.';
+            status.className = `text-xs mt-1 ${estimate.code && !estimate.welcomeEligible ? 'text-red-700' : 'text-zinc-600'}`;
 
-            const pricedItems = orderItems.filter(item => orderItemPricesCents[item.product] !== undefined);
-            const unpricedItems = orderItems.some(item => item.product && orderItemPricesCents[item.product] === undefined);
-            const validItems = pricedItems.filter(item => {
-                const index = orderItems.indexOf(item);
-                const minimumQuantity = index === 0 ? 0 : 1;
-                return Number.isInteger(Number(item.quantity)) && Number(item.quantity) >= minimumQuantity;
+            document.getElementById('volume-status').textContent = volumeEligible
+                ? `${estimate.tagPacks} tag packs: eligible for volume pricing review. No volume discount is calculated.`
+                : volumeRequested ? `${estimate.tagPacks} tag packs: volume pricing requires at least 10 packs.` : '';
+            document.getElementById('vip-status').textContent = !vip ? '' : estimate.tagPacks === 0
+                ? 'Add at least one ESL tag pack to request VIP tag pricing.'
+                : 'VIP pricing will be reviewed for tag packs only. Equipment and accessories remain at regular price.';
+
+            estimate.items.forEach((item, index) => {
+                const total = document.getElementById(`order-item-total-${index}`);
+                if (!total) return;
+                if (!item.valid) total.textContent = 'Enter a valid whole-number quantity.';
+                else if (item.unitPrice === undefined) total.textContent = item.product ? 'Price available upon request.' : 'Select an item to see its estimated total.';
+                else total.textContent = item.discount
+                    ? `Subtotal: ${formatCurrency(item.subtotal)} · Welcome estimate: −${formatCurrency(item.discount)} · Item total: ${formatCurrency(item.subtotal - item.discount)}`
+                    : `Unit price: ${formatCurrency(item.unitPrice)} · Item total: ${formatCurrency(item.subtotal)}`;
             });
-            const invalidPricedItems = pricedItems.length !== validItems.length;
-            if (invalidPricedItems) {
-                subtotal.textContent = '';
-                discountTotal.textContent = '';
-                total.textContent = 'Estimated order total: —';
-                note.textContent = 'Enter a whole-number quantity for each priced item.';
-                return;
-            }
 
-            const subtotalCents = validItems.reduce((sum, item) =>
-                sum + orderItemPricesCents[item.product] * Number(item.quantity), 0);
-            const discountCents = validItems.reduce((sum, item) => {
-                const discount = getOrderItemDiscount(item);
-                const itemSubtotalCents = orderItemPricesCents[item.product] * Number(item.quantity);
-                return sum + (discount.valid ? Math.round(itemSubtotalCents * discount.rate / 100) : 0);
-            }, 0);
-            const totalCents = subtotalCents - discountCents;
-
-            subtotal.textContent = validItems.length ? `Subtotal: ${formatCurrency(subtotalCents)}` : '';
-            discountTotal.textContent = discountCents && validItems.length
-                ? `Total discounts: −${formatCurrency(discountCents)}`
-                : '';
-            total.textContent = validItems.length ? `Estimated order total: ${formatCurrency(totalCents)}` : 'Estimated order total: —';
-            note.textContent = unpricedItems
-                ? 'Priced items only; custom-priced items are excluded.'
-                : 'Based on listed prices. Discount is an estimate; final pricing will be confirmed with your quote.';
+            document.getElementById('order-subtotal').textContent = estimate.items.length && !estimate.invalid ? `Subtotal: ${formatCurrency(estimate.subtotal)}` : '';
+            document.getElementById('order-discount-total').textContent = estimate.discount && !estimate.invalid
+                ? `Estimated Welcome discount: −${formatCurrency(estimate.discount)}` : '';
+            document.getElementById('order-grand-total').textContent = estimate.items.length && !estimate.invalid
+                ? `Estimated order total: ${formatCurrency(estimate.subtotal - estimate.discount)}` : 'Estimated order total: —';
+            const notes = [];
+            if (estimate.invalid) notes.push('Enter a whole-number quantity for each item.');
+            if (estimate.unpriced) notes.push('Custom-priced items are excluded from this estimate.');
+            if (estimate.welcomeEligible) notes.push('Welcome estimate is conditional on first-purchase verification.');
+            if (vip || volumeRequested || volumeEligible) notes.push('VIP and volume pricing are reviewed separately; offers cannot be combined.');
+            document.getElementById('order-grand-total-note').textContent = notes.join(' ');
         }
 
         function updateItemQuantity(index, amount) {
@@ -1871,6 +1702,8 @@
             orderItems[index].quantity = index === 0 ? Math.max(0, nextQuantity) : nextQuantity;
             renderOrderItems();
             validateQuoteForm();
+            const action = amount > 0 ? 'Increase' : 'Decrease';
+            document.querySelector(`[aria-label="${action} quantity for item ${index + 1}"]`).focus();
         }
 
         function removeOrderItem(index) {
@@ -1882,12 +1715,13 @@
 
         function addOrderItem() {
             if (!productInterests.has(document.getElementById('modal-interest').value)) return;
-            orderItems.push({ product: '', quantity: 1, discountCode: '' });
+            orderItems.push({ product: '', quantity: 1 });
             renderOrderItems();
             validateQuoteForm();
         }
 
-        function openQuoteModal(interest) {
+        function openQuoteModal(interest, pricingRequest) {
+            quoteOpener = document.activeElement;
             quoteModal.classList.remove('hidden');
             modalBox.style.transform = 'translate(0px, 0px)';
             const status = document.getElementById('quote-form-status');
@@ -1899,13 +1733,42 @@
                 interestSelect.value = interest;
             }
             document.getElementById('bulk-order-note').classList.toggle('hidden', !productInterests.has(interestSelect.value));
-            if (interestSelect.value !== previousInterest || orderItems.length === 0) {
+            if (pricingRequest || interestSelect.value !== previousInterest || orderItems.length === 0) {
                 initializeOrderItems(interestSelect.value);
             }
+            document.getElementById('request-vip').checked = pricingRequest === 'vip';
+            document.getElementById('request-volume').checked = pricingRequest === 'volume';
+            updatePricingRequests();
             document.getElementById('zip-location').innerText = '';
             validateQuoteForm();
+            quoteModal.querySelector('[aria-label="Close quote dialog"]').focus();
         }
-        function closeQuoteModal() { quoteModal.classList.add('hidden'); }
+        function closeQuoteModal() {
+            quoteModal.classList.add('hidden');
+            if (quoteOpener) quoteOpener.focus();
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (quoteModal.classList.contains('hidden')) return;
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                closeQuoteModal();
+            } else if (event.key === 'Tab') {
+                const controls = Array.from(quoteModal.querySelectorAll('button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), a[href]')).filter(control => control.getClientRects().length);
+                const first = controls[0];
+                const last = controls[controls.length - 1];
+                if (!quoteModal.contains(document.activeElement)) {
+                    event.preventDefault();
+                    first.focus();
+                } else if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
+            }
+        });
 
         let detectedLocation = "";
         function lookupZipCode(zip) {
@@ -1932,11 +1795,18 @@
                 ) &&
                 orderItems.some(item => item.quantity >= 1)
             );
+            const vipRequested = productInterests.has(interest) && document.getElementById('request-vip').checked;
+            const sameEmail = document.getElementById('vip-same-email').checked;
+            const previousEmail = document.getElementById('vip-other-email');
+            const previousOrder = document.getElementById('vip-order-number').value.trim();
+            const vipProofValid = !vipRequested || sameEmail || ((previousEmail.value.trim() || previousOrder) && (!previousEmail.value.trim() || previousEmail.validity.valid));
+            const vipValid = vipProofValid && (!vipRequested || calculateQuoteEstimate().tagPacks > 0);
+            document.getElementById('vip-proof-error').textContent = vipProofValid ? '' : 'Enter a valid previous purchase email or an order number.';
             const btn = document.getElementById('submit-btn');
-            const canSubmit = valid && orderItemsValid;
+            const canSubmit = valid && orderItemsValid && vipValid;
             btn.disabled = !canSubmit || isSubmittingQuote;
             btn.className = canSubmit && !isSubmittingQuote ? "w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-none cursor-pointer transition shadow-md" : "w-full bg-zinc-300 text-zinc-500 font-semibold py-3 rounded-none cursor-not-allowed transition";
-            btn.innerText = isSubmittingQuote ? "Sending..." : canSubmit ? "Send Inquiry \u2794" : "Fill in required fields";
+            btn.innerText = isSubmittingQuote ? "Sending..." : canSubmit ? "Send Inquiry →" : "Fill in required fields";
         }
 
         let isDragging = false, startX, startY, currentX = 0, currentY = 0;
@@ -1954,30 +1824,20 @@
             const address = document.getElementById('modal-address').value.trim();
             const interest = document.getElementById('modal-interest').value;
             const message = document.getElementById('modal-message').value;
-            const pricedSubtotalCents = orderItems.reduce((sum, item) => {
-                const unitPriceCents = orderItemPricesCents[item.product];
-                return unitPriceCents === undefined ? sum : sum + unitPriceCents * Number(item.quantity);
-            }, 0);
-            const estimatedItems = orderItems.map(item => {
-                const unitPriceCents = orderItemPricesCents[item.product];
-                const itemSubtotalCents = unitPriceCents === undefined ? 0 : unitPriceCents * Number(item.quantity);
-                const discount = getOrderItemDiscount(item);
-                const itemDiscountCents = discount.valid ? Math.round(itemSubtotalCents * discount.rate / 100) : 0;
+            const estimate = calculateQuoteEstimate();
+            const vipRequested = document.getElementById('request-vip').checked;
+            const volumeRequested = document.getElementById('request-volume').checked;
+            const sameEmail = document.getElementById('vip-same-email').checked;
+            const estimatedItems = estimate.items.map(item => {
                 return {
-                    ...item,
-                    discountCode: discount.code,
-                    discountPercent: discount.valid ? discount.rate : 0,
-                    estimatedSubtotal: formatCurrency(itemSubtotalCents),
-                    estimatedDiscount: formatCurrency(itemDiscountCents),
-                    estimatedTotal: formatCurrency(itemSubtotalCents - itemDiscountCents)
+                    product: item.product,
+                    quantity: item.quantity,
+                    discountPercent: item.discount ? 5 : 0,
+                    estimatedSubtotal: item.unitPrice === undefined ? null : formatCurrency(item.subtotal),
+                    estimatedDiscount: formatCurrency(item.discount),
+                    estimatedTotal: item.unitPrice === undefined ? null : formatCurrency(item.subtotal - item.discount)
                 };
             });
-            const discountCents = estimatedItems.reduce((sum, item) => {
-                const discount = getOrderItemDiscount(item);
-                const unitPriceCents = orderItemPricesCents[item.product];
-                if (!discount.valid || unitPriceCents === undefined) return sum;
-                return sum + Math.round(unitPriceCents * Number(item.quantity) * discount.rate / 100);
-            }, 0);
             const loc = detectedLocation ? `${zip} (${detectedLocation})` : zip.trim();
             const fullAddress = address ? `${address}, ${loc}` : loc;
             const status = document.getElementById('quote-form-status');
@@ -1993,9 +1853,24 @@
                 ...(productInterests.has(interest) ? {
                     quantity: String(orderItems.reduce((total, item) => total + item.quantity, 0)),
                     order_items: JSON.stringify(estimatedItems),
-                    estimated_subtotal: formatCurrency(pricedSubtotalCents),
-                    estimated_discount: formatCurrency(discountCents),
-                    estimated_total: formatCurrency(pricedSubtotalCents - discountCents)
+                    pricing_requests: JSON.stringify({
+                        welcome_code_entered: document.getElementById('order-discount-code').value.trim(),
+                        welcome_code_normalized: estimate.code,
+                        welcome_estimate_eligible: estimate.welcomeEligible,
+                        vip_requested: vipRequested,
+                        volume_requested: volumeRequested,
+                        volume_review_eligible: estimate.tagPacks >= 10,
+                        tag_pack_count: estimate.tagPacks,
+                        offers_cannot_be_combined: true,
+                        ...(vipRequested ? {
+                            previous_purchase_used_quote_email: sameEmail,
+                            ...(sameEmail ? {} : { previous_purchase_email: document.getElementById('vip-other-email').value.trim() }),
+                            previous_order_number: document.getElementById('vip-order-number').value.trim()
+                        } : {})
+                    }),
+                    estimated_subtotal: formatCurrency(estimate.subtotal),
+                    estimated_discount: formatCurrency(estimate.discount),
+                    estimated_total: formatCurrency(estimate.subtotal - estimate.discount)
                 } : {}),
                 message
             });
@@ -2021,6 +1896,7 @@
                 document.getElementById('zip-location').innerText = '';
                 initializeOrderItems(document.getElementById('modal-interest').value);
                 document.getElementById('bulk-order-note').classList.toggle('hidden', !productInterests.has(document.getElementById('modal-interest').value));
+                updatePricingRequests();
             } catch (error) {
                 console.error('Unable to send inquiry through Formspree:', error);
                 status.className = 'text-red-700';
