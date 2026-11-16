@@ -448,98 +448,95 @@
 
                     <!-- Gateway Pro Product Card -->
                     <div id="gateway-pro" class="bg-white rounded-none border border-zinc-300 shadow-xs scroll-mt-24 overflow-hidden">
-                        <!-- Professional layout: full-width image hero + content grid -->
+                        <!-- Single column layout: Images top, content below -->
                         <div class="flex flex-col">
-                            <!-- Hero Image Section - Full width -->
-                            <div class="w-full h-80 sm:h-96 bg-gradient-to-b from-zinc-50 to-white flex items-center justify-center overflow-hidden border-b border-zinc-200">
+                            <!-- Image Section: Hero image + thumbnails -->
+                            <div class="bg-zinc-50">
+                            <!-- Main Hero Image -->
+                            <div class="w-full h-80 sm:h-96 flex items-center justify-center overflow-hidden border-b border-zinc-200">
                                 <div class="relative w-full h-full flex items-center justify-center cursor-pointer group" onclick="openImageZoom(document.getElementById('gateway-pro-main-image').src, document.getElementById('gateway-pro-main-image').alt)">
                                     <img id="gateway-pro-main-image" src="crebee-gateway-pro-front.webp" alt="CREBEE Gateway Pro - Front view" class="w-auto h-full object-contain transition-transform duration-300 group-hover:scale-105" data-gateway-zoom onerror="this.style.display='none'">
                                     <div class="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/5 transition pointer-events-none">
                                         <span class="text-zinc-600 text-xs font-semibold opacity-0 group-hover:opacity-100 transition">Click to enlarge</span>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Content Grid: 2 columns on desktop, 1 on mobile -->
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
-                                <!-- Left Column: Details -->
-                                <div class="p-6 sm:p-8 md:col-span-2 border-r border-zinc-200">
-                                    <div class="mb-6">
-                                        <h3 class="text-3xl font-bold text-zinc-900 mb-3">Gateway Pro</h3>
-                                        
-                                        <div class="flex items-center gap-2 flex-wrap mb-4">
-                                            <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold bg-zinc-100 px-3 py-1 rounded">GATEWAY &amp; CONNECTIVITY</span>
-                                            <span class="text-xs font-bold text-red-600 corporate-tag uppercase bg-red-50 px-3 py-1 rounded">Available for Purchase</span>
-                                        </div>
-
-                                        <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
-                                            The Gateway Pro sends product and price updates wirelessly to compatible TELICA electronic shelf labels. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee.
-                                        </p>
-
-                                        <p class="text-zinc-600 text-sm font-light leading-relaxed mb-6">
-                                            <strong class="text-zinc-900">2-Year Factory Warranty</strong> – Comprehensive coverage for peace of mind.
-                                        </p>
-
-                                        <ul class="text-xs text-zinc-700 space-y-3 font-light">
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                                <span>Manage your shelf labels with or without a POS integration.</span>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                                <span>Supports up to 3,000 ESLs per gateway.</span>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                                <span>Works with TELICA 1.5", 2.7", and 3.7" electronic shelf labels.</span>
-                                            </li>
-                                            <li class="flex items-start gap-3">
-                                                <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
-                                                <span>Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</span>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
 
-                                <!-- Right Column: Price &amp; Actions -->
-                                <div class="p-6 sm:p-8 flex flex-col justify-between bg-zinc-50 border-t md:border-t-0 md:border-l border-zinc-200">
-                                    <div>
-                                        <p class="text-xs text-zinc-500 uppercase font-semibold tracking-wider mb-3">Pricing</p>
-                                        <p class="text-4xl font-bold text-red-600 mb-6">$699</p>
-                                        <p class="text-[10px] text-zinc-500 italic">Pricing and warranty information available upon inquiry.</p>
-                                    </div>
-
-                                    <div class="flex flex-col gap-2 mt-6">
-                                        <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
-                                            Request a Gateway Pro Quote
-                                        </button>
-                                        <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="w-full bg-white hover:bg-zinc-100 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
-                                            Watch the Setup Videos
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Thumbnail Gallery - Below content -->
-                            <div class="border-t border-zinc-200 px-6 sm:px-8 py-4 bg-white">
-                                <p class="text-xs text-zinc-500 font-semibold uppercase tracking-wider mb-3">Product Views</p>
-                                <div class="flex gap-2 overflow-x-auto pb-2">
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-front.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-16 h-16 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden ring-2 ring-red-600 cursor-pointer">
+                            <!-- Thumbnail Gallery -->
+                            <div class="px-4 sm:px-6 py-3 border-b border-zinc-200">
+                                <p class="text-xs text-zinc-500 font-semibold uppercase tracking-wider mb-2">Product Views</p>
+                                <div class="flex gap-2 overflow-x-auto pb-1">
+                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-front.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden ring-2 ring-red-600 cursor-pointer">
                                         <img src="crebee-gateway-pro-front.webp" alt="Front" class="w-full h-full object-cover">
                                     </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-top.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-16 h-16 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-top.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
                                         <img src="crebee-gateway-pro-top.webp" alt="Top" class="w-full h-full object-cover">
                                     </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-side.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-16 h-16 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-side.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
                                         <img src="crebee-gateway-pro-side.webp" alt="Side" class="w-full h-full object-cover">
                                     </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-angle.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-16 h-16 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-angle.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
                                         <img src="crebee-gateway-pro-angle.webp" alt="Angle" class="w-full h-full object-cover">
                                     </button>
-                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-back.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-16 h-16 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                    <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-back.webp'; document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b.classList.remove('ring-2', 'ring-red-600')); this.classList.add('ring-2', 'ring-red-600');" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
                                         <img src="crebee-gateway-pro-back.webp" alt="Back" class="w-full h-full object-cover">
                                     </button>
                                 </div>
+                            </div>
+                            </div>
+
+                            <!-- Content Section: Full width below images -->
+                            <div class="p-6 sm:p-8">
+                            <h3 class="text-3xl font-bold text-zinc-900 mb-2">Gateway Pro</h3>
+                                
+                            <div class="flex items-center gap-2 flex-wrap mb-4">
+                                <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold bg-zinc-100 px-3 py-1 rounded">GATEWAY &amp; CONNECTIVITY</span>
+                                <span class="text-xs font-bold text-red-600 corporate-tag uppercase bg-red-50 px-3 py-1 rounded">Available for Purchase</span>
+                            </div>
+
+                            <p class="text-zinc-600 text-sm font-light leading-relaxed mb-3">
+                                The Gateway Pro sends product and price updates wirelessly to compatible TELICA electronic shelf labels. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee.
+                            </p>
+
+                            <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
+                                <strong class="text-zinc-900">2-Year Factory Warranty</strong> – Comprehensive coverage for peace of mind.
+                            </p>
+
+                            <ul class="text-xs text-zinc-700 space-y-2.5 font-light mb-6">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
+                                    <span>Manage your shelf labels with or without a POS integration.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
+                                    <span>Supports up to 3,000 ESLs per gateway.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
+                                    <span>Works with TELICA 1.5", 2.7", and 3.7" electronic shelf labels.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-red-600 font-bold flex-shrink-0 mt-0.5">•</span>
+                                    <span>Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</span>
+                                </li>
+                            </ul>
+
+                            <!-- Pricing Section -->
+                            <div class="border-t border-zinc-200 pt-4 mb-4">
+                                <p class="text-xs text-zinc-500 uppercase font-semibold tracking-wider mb-2">Pricing</p>
+                                <p class="text-4xl font-bold text-red-600 mb-2">$699</p>
+                                <p class="text-[10px] text-zinc-500 italic mb-4">Pricing and warranty information available upon inquiry.</p>
+                                </div>
+
+                            <!-- Action Buttons -->
+                            <div class="flex flex-col gap-2">
+                                <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
+                                    Request a Gateway Pro Quote
+                                </button>
+                                <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="w-full bg-white hover:bg-zinc-100 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
+                                    Watch the Setup Videos
+                                </a>
+                            </div>
                             </div>
                         </div>
 
@@ -637,7 +634,7 @@
                                 <div class="flex justify-between items-center">
                                     <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">COMPACT</span>
                                     <div class="text-center">
-                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">60 TAGS</span> <span class="font-bold text-zinc-900">$549*</span></div>
+                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">60 Tag</span> <span class="font-bold text-zinc-900 text-[13px]">$549*</span></div>
                                         <span class="text-[9px] text-zinc-500 font-light leading-none">($9.15 each)</span>
                                     </div>
                                 </div>
@@ -658,7 +655,7 @@
                                 <div class="flex justify-between items-center">
                                     <span class="text-[11px] font-bold text-red-600 corporate-tag uppercase">MOST POPULAR</span>
                                     <div class="text-center">
-                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">40 TAGS</span> <span class="font-bold text-zinc-900">$439*</span></div>
+                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">40 Tag</span> <span class="font-bold text-zinc-900 text-[13px]">$439*</span></div>
                                         <span class="text-[9px] text-zinc-500 font-light leading-none">($10.98 each)</span>
                                     </div>
                                 </div>
@@ -679,7 +676,7 @@
                                 <div class="flex justify-between items-center">
                                     <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">LARGE FORMAT</span>
                                     <div class="text-center">
-                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">30 TAGS</span> <span class="font-bold text-zinc-900">$559*</span></div>
+                                        <div class="text-[11px] corporate-tag"><span class="font-semibold">30 Tag</span> <span class="font-bold text-zinc-900 text-[13px]">$559*</span></div>
                                         <span class="text-[9px] text-zinc-500 font-light leading-none">($18.63 each)</span>
                                     </div>
                                 </div>
