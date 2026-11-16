@@ -172,19 +172,14 @@
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200">
         <!-- ë©”ì¸ í—¤ë” -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <!-- ì²« ë²ˆì§¸ ì¤„: Authorized ë¬¸êµ¬ -->
-            <div class="flex items-center justify-start py-2 border-b border-zinc-200">
-                <!-- ì™¼ìª½: Authorized ë¬¸êµ¬ -->
-                <p class="text-[10px] sm:text-xs font-normal text-zinc-700 whitespace-nowrap">Authorized U.S. TELICA Reseller</p>
-            </div>
-
-            <!-- ë‘ ë²ˆì§¸ ì¤„: ë¡œê³  + ë©”ë‰´ (ì¤‘ì•™) -->
+<!-- ë‘ ë²ˆì§¸ ì¤„: ë¡œê³  + ë©”ë‰´ (ì¤‘ì•™) -->
             <div class="flex items-center justify-between py-2">
                 <!-- ì™¼ìª½: ë¡œê³  -->
                 <a href="#" onclick="switchPage('home'); return false;" class="flex items-center space-x-2 shrink-0">
                     <img src="file:///C:/Users/Sales-NJ/Desktop/%23%20%EC%9B%B9%EC%9E%91%EC%97%85/telica-usa-web-repo/telica-logo.png" alt="TELICA Logo" class="h-5 sm:h-6 w-auto object-contain">
                     <span class="px-2 py-1 bg-zinc-900 text-white text-[11px] sm:text-[12px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
                 </a>
+                    <p class="text-[9px] sm:text-[10px] font-normal text-zinc-600 mt-1">Authorized U.S. TELICA Reseller</p>
 
                 <!-- ì¤‘ì•™: Desktop Navigation Menu -->
                 <nav class="hidden sm:flex items-center space-x-6 text-xs sm:text-sm font-medium">
@@ -215,7 +210,7 @@
         <div id="mobile-menu" class="hidden absolute top-[7.5rem] sm:top-24 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 shadow-xl z-50">
             <div class="space-y-2 text-xs font-medium p-4">
                 <div class="flex items-center justify-between mb-2">
-                    <button id="menu-close" aria-label="Close navigation menu" class="text-zinc-500 font-bold">âœ•</button>
+                    <button id="menu-close" aria-label="Close navigation menu" class="text-zinc-500 font-bold">✕</button>
                 </div>
                 
                 <!-- Products Section -->
@@ -1271,7 +1266,7 @@
                     <span id="modal-opt-tag" class="text-[10px] font-bold text-red-600 corporate-tag uppercase">Option Detail</span>
                     <h3 id="modal-opt-title" class="text-base font-bold text-zinc-900 mt-1"></h3>
                 </div>
-                <button onclick="closeDetailModal()" class="text-zinc-400 hover:text-black p-1">âœ•</button>
+                <button onclick="closeDetailModal()" class="text-zinc-400 hover:text-black p-1">✕</button>
             </div>
             <div id="modal-opt-content" class="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed space-y-2"></div>
             <button id="modal-inquiry-btn" onclick="" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none cursor-pointer transition shadow-md">Inquiry About This Option âž”</button>
@@ -1311,7 +1306,7 @@
                     <span class="font-bold text-sm">Request a Quote & Inquiry</span>
                     <p class="text-[11px] text-zinc-400 mt-0.5">Please fill in required fields marked with <span class="text-red-500">*</span></p>
                 </div>
-                <button onclick="closeQuoteModal()" class="text-zinc-400 hover:text-white p-1">âœ•</button>
+                <button onclick="closeQuoteModal()" class="text-zinc-400 hover:text-white p-1">✕</button>
             </div>
             <form onsubmit="submitQuoteForm(event)" class="p-6 space-y-3 max-h-[75vh] overflow-y-auto text-xs">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -2074,3 +2069,5 @@
     </script>
 </body>
 </html>
+
+
