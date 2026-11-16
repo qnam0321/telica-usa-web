@@ -1,4 +1,4 @@
-﻿name = "telica-usa-web"
+name = "telica-usa-web"
 main = "index.html"
 compatibility_date = "2026-11-01"
 type = "javascript"
@@ -14,5 +14,6 @@ type = "CompiledContentType"
 globs = ["**/*.wasm"]
 fallthrough = true
 
-# Rebuild trigger: 2026-11-15 22:22:10
+# Rebuild trigger: 2026-11-16 02:10:42
+
 
