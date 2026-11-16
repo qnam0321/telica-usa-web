@@ -197,6 +197,7 @@
                 <a href="#" onclick="switchPage('home'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-bold text-red-600">Home</a>
                 <div class="pl-2 space-y-1 border-l-2 border-zinc-100 my-1">
                     <a href="#lineup" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-900 font-semibold">· DIY ESL Kit ($799)</a>
+                    <a href="#gateway-pro" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· Gateway Pro</a>
                     <a href="#tag-1-5" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 1.5" ESL Tag (60-pack)</a>
                     <a href="#tag-2-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 2.7" ESL Tag (40-pack)</a>
                     <a href="#tag-3-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 3.7" ESL Tag (30-pack)</a>
@@ -320,6 +321,60 @@
             </div>
         </section>
 
+        <!-- Set Up Digital Shelf Labels Yourself 홍보 섹션 -->
+        <section class="py-16 px-4 sm:px-6 bg-zinc-50 border-b border-zinc-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-10">
+                    <span class="text-xs font-bold text-red-600 uppercase corporate-tag">DIY DEPLOYMENT & MANAGEMENT</span>
+                    <h2 class="text-2xl font-bold text-zinc-900 mt-1">Set Up Digital Shelf Labels Yourself</h2>
+                </div>
+
+                <div class="bg-white rounded-none border border-zinc-300 p-8 sm:p-10 shadow-sm">
+                    <p class="text-zinc-600 text-sm font-light leading-relaxed mb-8">
+                        Set up and run TELICA electronic shelf labels without connecting to a POS system. CREBEE software comes built into the Gateway Pro, so there's no separate software purchase or monthly CREBEE subscription fee.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-none bg-red-600 text-white font-bold text-lg">1</div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-zinc-900 mb-1">Connect the gateway and pair your labels.</h4>
+                                <p class="text-zinc-600 text-xs font-light">Follow our setup videos to connect the Gateway Pro and pair your TELICA shelf labels.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-none bg-red-600 text-white font-bold text-lg">2</div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-zinc-900 mb-1">Add your products.</h4>
+                                <p class="text-zinc-600 text-xs font-light">Upload a CSV file with your product and pricing data. If you carry a smaller assortment, enter your items directly in CREBEE.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-10 w-10 rounded-none bg-red-600 text-white font-bold text-lg">3</div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-zinc-900 mb-1">Update prices from your phone.</h4>
+                                <p class="text-zinc-600 text-xs font-light">Use the CREBEE mobile app to send price changes to your shelf labels.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-none text-sm transition cursor-pointer shadow-md">
+                            Watch the Gateway Pro Setup Videos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ESL Line-up 상세 안내 섹션 -->
         <section id="lineup" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
             <div class="max-w-7xl mx-auto">
@@ -346,7 +401,7 @@
                             <h3 class="text-xl font-bold mb-1">DIY ESL Kit</h3>
                             <p class="text-zinc-400 text-xs mb-3">CREBEE Gateway Pro + 10 e-paper tags included</p>
                             <p class="text-zinc-300 text-xs font-light leading-relaxed mb-4">
-                                This subscription-free starter kit for independent stores includes a CREBEE Gateway Pro and 10 e-paper ESL tags, with Square and Shopify integration. Other closed POS systems may be connected through custom API integration. <strong class="text-white">Note: The Gateway Pro is available only as part of this kit and is not sold separately.</strong>
+                                This subscription-free starter kit for independent stores includes a CREBEE Gateway Pro and 10 e-paper ESL tags, with Square and Shopify integration. Other closed POS systems may be connected through custom API integration.
                             </p>
                             
                             <div class="border-t border-zinc-800 pt-3 mb-4 flex items-center justify-between">
@@ -363,36 +418,68 @@
                         </button>
                     </div>
 
-                    <!-- ESL Tag Refill Packs -->
-                    <div class="bg-white p-6 sm:p-8 rounded-none border border-zinc-300 flex flex-col justify-between shadow-xs">
+                    <!-- Gateway Pro Product Card -->
+                    <div id="gateway-pro" class="bg-white p-6 sm:p-8 rounded-none border border-zinc-300 flex flex-col justify-between shadow-xs scroll-mt-24">
                         <div>
-                            <div class="flex justify-between items-center mb-3 flex-wrap gap-2">
-                                <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold">BULK EXPANSION</span>
-                                <span class="text-xs font-bold text-zinc-600 corporate-tag uppercase">VARIABLE PACK BUNDLE</span>
+                            <!-- Image Gallery Section -->
+                            <div class="mb-4">
+                                <!-- Main Image -->
+                                <div class="w-full h-64 bg-zinc-100 rounded-none mb-3 overflow-hidden flex items-center justify-center border border-zinc-200 relative">
+                                    <img id="gateway-pro-main-image" src="crebee-gateway-pro-front.webp" alt="CREBEE Gateway Pro - Front view" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                </div>
+                                
+                                <!-- Thumbnail Gallery -->
+                                <div class="flex gap-2 overflow-x-auto pb-2">
+                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-front.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden ring-2 ring-red-500 cursor-pointer">
+                                        <img src="crebee-gateway-pro-front.webp" alt="Front" class="w-full h-full object-cover">
+                                    </button>
+                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-top.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                        <img src="crebee-gateway-pro-top.webp" alt="Ports and connectivity" class="w-full h-full object-cover">
+                                    </button>
+                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-side.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                        <img src="crebee-gateway-pro-side.webp" alt="Side view" class="w-full h-full object-cover">
+                                    </button>
+                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-angle.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                        <img src="crebee-gateway-pro-angle.webp" alt="Angle view" class="w-full h-full object-cover">
+                                    </button>
+                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-back.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                        <img src="crebee-gateway-pro-back.webp" alt="Back and mounting" class="w-full h-full object-cover">
+                                    </button>
+                                </div>
                             </div>
-                            <h3 class="text-xl font-bold text-zinc-900 mb-1">ESL Tag Refill Packs</h3>
-                            <p class="text-zinc-600 text-xs mb-3">Pack quantities vary by tag size (1.5": 60-pack, 2.7": 40-pack, 3.7": 30-pack)</p>
+
+                            <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                                <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold">GATEWAY & CONNECTIVITY</span>
+                                <span class="text-xs font-bold text-red-600 corporate-tag uppercase">Available for Standalone Purchase</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-zinc-900 mb-1">CREBEE Gateway Pro</h3>
+                            <p class="text-zinc-600 text-xs mb-3 font-semibold">Available for standalone purchase</p>
                             <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">
-                                Expand your ESL deployment with bundle sizes tailored to each tag format. <strong class="text-zinc-900">Volume discounts are available depending on your total order quantity.</strong>
+                                The Gateway Pro sends product and price updates wirelessly to compatible TELICA electronic shelf labels. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee.
                             </p>
-                            
-                            <div class="border-t border-zinc-200 pt-3 mb-4 space-y-2">
-                                <div class="flex items-center justify-between text-xs">
-                                    <span class="text-zinc-600 font-medium">1.5" Tag (60-pack):</span>
-                                    <span class="font-bold text-zinc-900">$509</span>
-                                </div>
-                                <div class="flex items-center justify-between text-xs">
-                                    <span class="text-zinc-600 font-medium">2.7" Tag (40-pack):</span>
-                                    <span class="font-bold text-zinc-900">$399</span>
-                                </div>
-                                <div class="flex items-center justify-between text-xs">
-                                    <span class="text-zinc-600 font-medium">3.7" Tag (30-pack):</span>
-                                    <span class="font-bold text-zinc-900">$499</span>
-                                </div>
+
+                            <div class="bg-zinc-50 p-4 rounded-none border border-zinc-200 mb-4 space-y-2">
+                                <ul class="text-xs text-zinc-700 space-y-2 font-light">
+                                    <li>• Manage your shelf labels with or without a POS integration.</li>
+                                    <li>• Supports up to 3,000 ESLs per gateway.</li>
+                                    <li>• Works with TELICA 1.5″, 2.7″, and 3.7″ electronic shelf labels.</li>
+                                    <li>• Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</li>
+                                </ul>
                             </div>
-                            <p class="text-[10px] text-zinc-500 mb-4 italic">*Excludes shipping & applicable sales tax.</p>
+
+                            <div class="border-t border-zinc-200 pt-4 mb-4">
+                                <p class="text-[10px] text-zinc-500 mb-2 italic">Pricing and warranty information coming soon.</p>
+                            </div>
                         </div>
-                        <div class="text-xs text-zinc-500 corporate-tag uppercase mb-3 font-semibold">AVAILABLE SIZES: 1.5", 2.7", 3.7"</div>
+
+                        <div class="flex flex-col gap-2">
+                            <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
+                                Request a Gateway Pro Quote
+                            </button>
+                            <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="w-full bg-white hover:bg-zinc-50 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
+                                Watch the Setup Videos
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -787,12 +874,12 @@
                 <p class="text-zinc-600 text-sm font-light mt-1">Browse setup resources for unboxing, gateway configuration, POS integration, and product maintenance.</p>
             </div>
 
-            <!-- 그룹 1: Step 01 & 02 -->
-            <div class="bg-white p-6 rounded-none border border-zinc-300 shadow-xs space-y-4">
+            <!-- 그룹 1: Step 01 & 02 - Gateway Pro Setup -->
+            <div id="gateway-pro-setup" class="bg-white p-6 rounded-none border border-zinc-300 shadow-xs space-y-4 scroll-mt-24">
                 <div class="border-b border-zinc-100 pb-2">
                     <span class="text-[10px] font-bold text-red-600 corporate-tag uppercase">STEP 01 & 02</span>
-                    <h3 class="text-base font-bold text-zinc-900 mt-1">Unboxing & Gateway Setup Guide</h3>
-                    <p class="text-zinc-600 text-xs font-light">Inspecting components and connecting your Crebee Gateway Pro for tag pairing.</p>
+                    <h3 class="text-base font-bold text-zinc-900 mt-1">Gateway Pro Connection & Tag Pairing Guide</h3>
+                    <p class="text-zinc-600 text-xs font-light">Inspecting components and connecting your CREBEE Gateway Pro for tag pairing.</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
@@ -800,7 +887,7 @@
                         <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/MIW0WSBfve4" allowfullscreen></iframe></div>
                     </div>
                     <div class="space-y-1.5 bg-white p-3 rounded-none border border-zinc-300">
-                        <p class="text-xs font-bold text-zinc-800">Gateway Pro Connection & Tag Pairing Guide</p>
+                        <p class="text-xs font-bold text-zinc-800">Gateway Pro Connection & Tag Pairing</p>
                         <div class="aspect-video bg-black rounded-none overflow-hidden"><iframe class="w-full h-full" src="https://www.youtube.com/embed/FAplSeHhcZk" allowfullscreen></iframe></div>
                     </div>
                 </div>
@@ -1268,6 +1355,7 @@
         let orderItems = [];
         const productInterests = new Set([
             'DIY ESL Kit Purchase',
+            'Gateway Pro - Standalone Purchase',
             '1.5 Inch Tag Bundle Order',
             '2.7 Inch Tag Bundle Order',
             '3.7 Inch Tag Bundle Order',
@@ -1275,6 +1363,7 @@
         ]);
         const orderProducts = [
             { value: 'DIY ESL Kit Purchase', label: 'DIY ESL Kit Purchase ($799)' },
+            { value: 'Gateway Pro - Standalone Purchase', label: 'Gateway Pro - Standalone Purchase' },
             { value: '1.5 Inch Tag Bundle Order', label: '1.5" ESL Tag Bundle (60-pack - $509*)' },
             { value: '2.7 Inch Tag Bundle Order', label: '2.7" ESL Tag Bundle (40-pack - $399*)' },
             { value: '3.7 Inch Tag Bundle Order', label: '3.7" ESL Tag Bundle (30-pack - $499*)' },
@@ -1331,6 +1420,7 @@
         }).format(cents / 100);
         const initialOrderProduct = {
             'DIY ESL Kit Purchase': 'DIY ESL Kit Purchase',
+            'Gateway Pro - Standalone Purchase': 'Gateway Pro - Standalone Purchase',
             '1.5 Inch Tag Bundle Order': '1.5 Inch Tag Bundle Order',
             '2.7 Inch Tag Bundle Order': '2.7 Inch Tag Bundle Order',
             '3.7 Inch Tag Bundle Order': '3.7 Inch Tag Bundle Order'
