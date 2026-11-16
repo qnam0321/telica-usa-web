@@ -14,6 +14,7 @@ type = "CompiledContentType"
 globs = ["**/*.wasm"]
 fallthrough = true
 
-# Rebuild trigger: 2026-11-16 02:10:42
+# Rebuild trigger: 2026-11-16 02:42:27 - FINAL PURGE ALL CACHE
+
 
 
