@@ -33,8 +33,8 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <meta name="version content="2026-11-16-04-16-28">
-    <meta name="copyright" content="Â© 2026 ASTERIKA LLC">
+    <meta name="version" content="2026-11-16-04-16-28">
+    <meta name="copyright" content="© 2026 ASTERIKA LLC">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="icon" href="https://telicausa.com/telica-new-logo.png" type="image/png">
     <link rel="apple-touch-icon" href="https://telicausa.com/telica-new-logo.png">
@@ -176,31 +176,29 @@
             <div class="flex items-center justify-between py-2">
                 <!-- ì™¼ìª½: ë¡œê³  -->
                 <div class="flex flex-col items-start">
-                    <a href="#" onclick="switchPage('home'); return false;" class="flex flex-col items-start shrink-0">
-                        <div class="flex items-center space-x-2">
-                            <img src="file:///C:/Users/Sales-NJ/Desktop/%23%20%EC%9B%B9%EC%9E%91%EC%97%85/telica-usa-web-repo/telica-logo.png" alt="TELICA Logo" class="h-5 sm:h-6 w-auto object-contain">
-                            <span class="px-2 py-1 bg-zinc-900 text-white text-[11px] sm:text-[12px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
-                        </div>
-                        <span class="text-[12px] sm:text-[14px] text-zinc-700 font-medium mt-1 tracking-tight leading-tight">Authorized U.S. TELICA Reseller</span>
+                    <a href="#" onclick="switchPage('home'); return false;" class="flex items-center space-x-2 shrink-0">
+                        <img src="telica-logo.png" alt="TELICA Logo" class="h-5 sm:h-6 w-auto object-contain">
+                        <span class="px-2 py-1 bg-zinc-900 text-white text-[11px] sm:text-[12px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
                     </a>
-
+                    <span class="text-[10.5px] sm:text-[12.2px] text-zinc-700 font-medium mt-1">Authorized U.S. TELICA Reseller</span>
                 </div>
 
                 <!-- ì¤‘ì•™: Desktop Navigation Menu -->
                 <nav class="hidden sm:flex items-center space-x-6 text-xs sm:text-sm font-medium">
                     <div class="relative group">
                         <button class="text-zinc-900 hover:text-red-600 transition">Products</button>
-                        <div class="absolute left-0 mt-0 w-48 bg-white border border-zinc-200 shadow-lg hidden group-hover:block z-50">
-                            <a href="#lineup" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">DIY ESL Kit</a>
-                            <a href="#gateway-pro" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Gateway Pro</a>
-                            <a href="#tag-1-5" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">1.5" ESL Tag (60-pack)</a>
-                            <a href="#tag-2-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" ESL Tag (40-pack)</a>
-                            <a href="#tag-3-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">3.7" ESL Tag (30-pack)</a>
+                        <div class="absolute left-0 mt-0 w-48 bg-white border border-zinc-200 shadow-lg hidden group-hover:block group-focus-within:block z-50">
+                            <a href="#lineup" onclick="switchPage('home', 'lineup'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">DIY ESL Kit</a>
+                            <a href="#gateway-pro" onclick="switchPage('home', 'gateway-pro'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Gateway Pro</a>
+                            <a href="#tag-1-5" onclick="switchPage('home', 'tag-1-5'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">1.5" ESL Tag (60-pack)</a>
+                            <a href="#tag-2-7" onclick="switchPage('home', 'tag-2-7'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" ESL Tag (40-pack)</a>
+                            <a href="#tag-2-7-freezer" onclick="switchPage('home', 'tag-2-7-freezer'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" Freezer Tag (40-pack)</a>
+                            <a href="#tag-3-7" onclick="switchPage('home', 'tag-3-7'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">3.7" ESL Tag (30-pack)</a>
                             <a href="#" onclick="switchPage('rails'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Rails & Hardware</a>
                         </div>
                     </div>
                     <a href="#" onclick="switchPage('support'); return false;" class="text-zinc-900 hover:text-red-600 transition">Setup & Guides</a>
-                    <a href="#" onclick="switchPage('rails'); return false;" class="text-zinc-900 hover:text-red-600 transition">Project Assessment</a>
+                    <a href="#commercial" onclick="switchPage('home', 'commercial'); return false;" class="text-zinc-900 hover:text-red-600 transition">Project Assessment</a>
                     <a href="#" onclick="switchPage('partners'); return false;" class="text-zinc-900 hover:text-red-600 transition">Partners & Supplier</a>
                     <a href="#" onclick="switchPage('about'); return false;" class="text-zinc-900 hover:text-red-600 transition">About Us</a>
                 </nav>
@@ -212,7 +210,7 @@
             </div>
 
         <!-- Navigation menu -->
-        <div id="mobile-menu" class="hidden absolute top-[9rem] sm:top-24 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 shadow-xl z-50">
+        <div id="mobile-menu" class="hidden absolute top-[7.5rem] sm:top-24 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 shadow-xl z-50">
             <div class="space-y-2 text-xs font-medium p-4">
                 <div class="flex items-center justify-between mb-2">
                     <button id="menu-close" aria-label="Close navigation menu" class="text-zinc-500 font-bold">✕</button>
@@ -222,17 +220,18 @@
                 <div class="py-2 border-t border-zinc-200 mt-3 pt-3">
                     <span class="block py-1 font-bold text-zinc-900 uppercase text-[10px] tracking-wide text-zinc-700">Products</span>
                     <div class="pl-3 space-y-1 border-l-2 border-zinc-200 mt-2">
-                        <a href="#lineup" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-900 font-semibold">DIY ESL Kit</a>
-                        <a href="#gateway-pro" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">Gateway Pro</a>
-                        <a href="#tag-1-5" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">1.5" ESL Tag (60-pack)</a>
-                        <a href="#tag-2-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">2.7" ESL Tag (40-pack)</a>
-                        <a href="#tag-3-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">3.7" ESL Tag (30-pack)</a>
+                        <a href="#lineup" onclick="switchPage('home', 'lineup'); return false;" class="block py-1 text-zinc-900 font-semibold">DIY ESL Kit</a>
+                        <a href="#gateway-pro" onclick="switchPage('home', 'gateway-pro'); return false;" class="block py-1 text-zinc-600">Gateway Pro</a>
+                        <a href="#tag-1-5" onclick="switchPage('home', 'tag-1-5'); return false;" class="block py-1 text-zinc-600">1.5" ESL Tag (60-pack)</a>
+                        <a href="#tag-2-7" onclick="switchPage('home', 'tag-2-7'); return false;" class="block py-1 text-zinc-600">2.7" ESL Tag (40-pack)</a>
+                        <a href="#tag-2-7-freezer" onclick="switchPage('home', 'tag-2-7-freezer'); return false;" class="block py-1 text-zinc-600">2.7" Freezer Tag (40-pack)</a>
+                        <a href="#tag-3-7" onclick="switchPage('home', 'tag-3-7'); return false;" class="block py-1 text-zinc-600">3.7" ESL Tag (30-pack)</a>
                         <a href="#" onclick="switchPage('rails'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 text-zinc-600">Rails & Hardware</a>
                     </div>
                 </div>
                 
                 <a href="#" onclick="switchPage('support'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Setup & Guides</a>
-                <a href="#" onclick="switchPage('rails'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Project Assessment</a>
+                <a href="#commercial" onclick="switchPage('home', 'commercial'); return false;" class="block py-1 font-semibold text-zinc-900">Project Assessment</a>
                 <a href="#" onclick="switchPage('partners'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Partners & Supplier</a>
                 <a href="#" onclick="switchPage('about'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">About Us</a>
             </div>
@@ -259,7 +258,7 @@
                             Request a DIY ESL Kit Quote
                         </button>
                         <a href="#" onclick="switchPage('rails'); return false;" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-semibold px-6 py-3 rounded-none text-xs transition border border-zinc-700 text-center">
-                            View Rails & Hardware âž”
+                            View Rails & Hardware &#10140;
                         </a>
                     </div>
                 </div>
@@ -343,7 +342,7 @@
                         <p class="text-zinc-400 text-sm font-light max-w-xl mt-1">Browse our available shelf rail profiles and mounting accessories, including listed lengths, colors, and prices.</p>
                     </div>
                     <button onclick="switchPage('rails'); return false;" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition whitespace-nowrap cursor-pointer shadow-md">
-                        View Rails & Hardware Catalog âž”
+                        View Rails & Hardware Catalog &#10140;
                     </button>
                 </div>
             </div>
@@ -395,7 +394,7 @@
                     </div>
 
                     <div class="text-center">
-                        <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-none text-sm transition cursor-pointer shadow-md">
+                        <a href="#gateway-pro-setup" onclick="switchPage('support', 'gateway-pro-setup'); return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-none text-sm transition cursor-pointer shadow-md">
                             Watch the Gateway Pro Setup Videos
                         </a>
                     </div>
@@ -404,7 +403,7 @@
         </section>
 
         <!-- ESL Line-up ìƒì„¸ ì•ˆë‚´ ì„¹ì…˜ -->
-        <section id="lineup" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
+        <section id="lineup" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200 scroll-mt-24">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-10">
                     <span class="text-xs font-bold text-red-600 uppercase corporate-tag">ESL LINE-UP</span>
@@ -524,7 +523,7 @@
                             <!-- Pricing Section -->
                             <div class="border-t border-zinc-200 pt-4 mb-4">
                                 <p class="text-xs text-zinc-500 uppercase font-semibold tracking-wider mb-2">Pricing</p>
-                                <p class="text-4xl font-bold text-red-600 mb-2">$699</p>
+                                <p class="text-lg font-bold text-zinc-900 mb-2">$699</p>
                                 <p class="text-[10px] text-zinc-500 italic mb-4">Pricing and warranty information available upon inquiry.</p>
                                 </div>
 
@@ -533,7 +532,7 @@
                                 <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
                                     Request a Gateway Pro Quote
                                 </button>
-                                <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="w-full bg-white hover:bg-zinc-100 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
+                                <a href="#gateway-pro-setup" onclick="switchPage('support', 'gateway-pro-setup'); return false;" class="w-full bg-white hover:bg-zinc-100 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
                                     Watch the Setup Videos
                                 </a>
                             </div>
@@ -558,7 +557,7 @@
                                     </p>
 
                                     <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
-                                        <strong class="text-zinc-900">2-Year Factory Warranty</strong> â€” Comprehensive coverage for peace of mind.
+                                        <strong class="text-zinc-900">2-Year Factory Warranty</strong> — Comprehensive coverage for peace of mind.
                                     </p>
 
                                     <p class="text-2xl font-bold text-zinc-900">
@@ -601,23 +600,22 @@
                             <div class="p-6 sm:p-8 flex flex-col justify-between border-t md:border-t-0 md:border-l border-zinc-200">
                                 <div>
                                         <ul class="text-xs text-zinc-700 space-y-2 font-light">
-                                            <li>â€¢ Manage your shelf labels with or without a POS integration.</li>
-                                            <li>â€¢ Supports up to 3,000 ESLs per gateway.</li>
-                                            <li>â€¢ Works with TELICA 1.5â€³, 2.7â€³, and 3.7â€³ electronic shelf labels.</li>
-                                            <li>â€¢ Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</li>
+                                            <li>• Manage your shelf labels with or without a POS integration.</li>
+                                            <li>• Supports up to 3,000 ESLs per gateway.</li>
+                                            <li>• Works with TELICA 1.5″, 2.7″, and 3.7″ electronic shelf labels.</li>
+                                            <li>• Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</li>
                                         </ul>
                                     </div>
 
                                     <div class="border-t border-zinc-200 pt-4 mb-4">
                                         <p class="text-[10px] text-zinc-500 mb-2 italic">Pricing and warranty information coming soon.</p>
                                     </div>
-                                </div>
-
+                                
                                 <div class="flex flex-col gap-2">
                                     <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
                                         Request a Gateway Pro Quote
                                     </button>
-                                    <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="w-full bg-white hover:bg-zinc-50 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
+                                    <a href="#gateway-pro-setup" onclick="switchPage('support', 'gateway-pro-setup'); return false;" class="w-full bg-white hover:bg-zinc-50 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
                                         Watch the Setup Videos
                                     </a>
                                 </div>
@@ -645,7 +643,7 @@
                             </p>
                         </div>
                         <button onclick="openQuoteModal('1.5 Inch Tag Bundle Order')" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer">
-                            Request 1.5" Quote âž”
+                            Request 1.5" Quote &#10140;
                         </button>
                     </div>
 
@@ -662,11 +660,18 @@
                             </div>
                             <h4 class="text-base font-bold text-zinc-900 mb-1">2.7" ESL Tag (40-pack)</h4>
                             <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
-                                A versatile four-color label for everyday pricing and promotions, designed for retail shelving. Each pack includes <strong>40 tags</strong> and is priced at $439. <em>*Volume discounts available.</em>
+                                A versatile four-color label for everyday pricing and promotions, designed for retail shelving. Each standard pack includes <strong>40 tags</strong> and is priced at $439. <em>*Volume discounts available.</em>
                             </p>
+                            <div id="tag-2-7-freezer" class="flex items-center justify-end gap-2 border-t border-zinc-200 pt-3 mb-4 scroll-mt-24">
+                                <span class="text-xs font-semibold text-zinc-700">Freezer (40-pack)</span>
+                                <div class="text-right">
+                                    <span class="text-[13px] font-bold text-zinc-900">$450</span>
+                                    <span class="block text-[9px] text-zinc-500 font-light">($11.25 each)</span>
+                                </div>
+                            </div>
                         </div>
                         <button onclick="openQuoteModal('2.7 Inch Tag Bundle Order')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer shadow-sm">
-                            Request 2.7" Quote âž”
+                            Request 2.7" Quote &#10140;
                         </button>
                     </div>
 
@@ -687,7 +692,7 @@
                             </p>
                         </div>
                         <button onclick="openQuoteModal('3.7 Inch Tag Bundle Order')" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer">
-                            Request 3.7" Quote âž”
+                            Request 3.7" Quote &#10140;
                         </button>
                     </div>
                 </div>
@@ -776,8 +781,8 @@
                 </div>
                 
                 <div class="text-center mb-8">
-                    <a href="#setup-resources" onclick="switchPage('resources'); return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
-                        View the POS Setup Guide âž”
+                    <a href="#setup-resources" onclick="switchPage('support', 'setup-resources'); return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
+                        View the POS Setup Guide &#10140;
                     </a>
                 </div>
 
@@ -787,14 +792,14 @@
                         If your ESL deployment requires POS integration, site validation, or coordination across multiple locations, start with a project review.
                     </p>
                     <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=esl-project'; return false;" class="inline-block bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
-                        Discuss an ESL Project âž”
+                        Discuss an ESL Project &#10140;
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- ESL Project Assessment ì„¹ì…˜ -->
-        <section id="commercial" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
+        <section id="commercial" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200 scroll-mt-24">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-10">
                     <span class="text-xs font-bold text-red-600 uppercase corporate-tag">CUSTOM INTEGRATION & MULTI-LOCATION SUPPORT</span>
@@ -815,7 +820,7 @@
                         Tell us which POS you use, how many locations are in scope, and what you need to validate before rollout.
                     </p>
                     <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=esl-project'; return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
-                        Discuss an ESL Project âž”
+                        Discuss an ESL Project &#10140;
                     </a>
                 </div>
             </div>
@@ -843,9 +848,9 @@
                 <div class="bg-zinc-900 text-white p-6 rounded-none space-y-3">
                     <h3 class="font-bold text-sm border-b border-zinc-800 pb-3">Our Core Pillars</h3>
                     <ul class="space-y-2.5 text-xs font-light text-zinc-300">
-                        <li>â€¢ <strong>Products & Integration Support:</strong> ESL hardware, setup guidance, and integration support based on project requirements.</li>
-                        <li>â€¢ <strong>Subscription-Free DIY Kits:</strong> Starter kits with no monthly cloud fee.</li>
-                        <li>â€¢ <strong>Solutions for Different Environments:</strong> Product options for retail stores, warehouses, and other business settings.</li>
+                        <li>• <strong>Products & Integration Support:</strong> ESL hardware, setup guidance, and integration support based on project requirements.</li>
+                        <li>• <strong>Subscription-Free DIY Kits:</strong> Starter kits with no monthly cloud fee.</li>
+                        <li>• <strong>Solutions for Different Environments:</strong> Product options for retail stores, warehouses, and other business settings.</li>
                     </ul>
                 </div>
             </div>
@@ -858,7 +863,7 @@
                 </p>
             </div>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home & Solutions</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home & Solutions</a></div>
         </div>
     </div>
 
@@ -876,7 +881,7 @@
                     <p class="text-zinc-600 text-sm font-light mt-1">Rail types, lengths, and available colors for the products offered by TELICA USA.</p>
                 </div>
                 <button onclick="openQuoteModal('Rail & Hardware Order')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition shadow-sm whitespace-nowrap cursor-pointer">
-                    Request Rail Quote âž”
+                    Request Rail Quote &#10140;
                 </button>
             </div>
 
@@ -974,7 +979,7 @@
                     <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder â€” Normal</h3>
+                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder — Normal</h3>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
                         <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
@@ -982,7 +987,7 @@
                     <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder â€” Compressed</h3>
+                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder — Compressed</h3>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
                         <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
@@ -1015,7 +1020,7 @@
             <p class="text-xs text-zinc-600">Bulk orders for rails and accessories may qualify for negotiated pricing. Contact us for a quote.</p>
             <p class="text-xs text-zinc-500">Please confirm the selected type, color, and quantity when requesting a quote.</p>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home & Solutions</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home & Solutions</a></div>
         </div>
     </div>
 
@@ -1052,7 +1057,7 @@
             </div>
 
             <!-- ê·¸ë£¹ 2: Step 03 (POS Integration) -->
-            <div class="bg-zinc-900 text-white p-6 rounded-none border border-zinc-800 shadow-md space-y-4">
+            <div id="setup-resources" class="bg-zinc-900 text-white p-6 rounded-none border border-zinc-800 shadow-md space-y-4 scroll-mt-24">
                 <div class="flex flex-col md:flex-row md:items-center justify-between border-b border-zinc-800 pb-3 gap-2">
                     <div>
                         <span class="text-[10px] font-bold text-red-400 corporate-tag uppercase">STEP 03</span>
@@ -1060,7 +1065,7 @@
                         <p class="text-zinc-400 text-xs font-light">Connect your preferred platform for real-time digital price synchronization.</p>
                     </div>
                     <div class="flex flex-wrap gap-2 text-[10px] text-zinc-300 corporate-tag uppercase font-semibold">
-                        <span>SQUARE</span> â€¢ <span>SHOPIFY</span> â€¢ <span>LOYVERSE</span>
+                        <span>SQUARE</span> • <span>SHOPIFY</span> • <span>LOYVERSE</span>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -1138,7 +1143,7 @@
                 </div>
             </div>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home</a></div>
         </div>
     </div>
 
@@ -1183,7 +1188,7 @@
                         <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">Installation and integration partnership inquiries are reviewed by Asterika LLC. Tell us about your integration or installation services, the areas you serve, and the types of projects you support.</p>
                     </div>
                     <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=technical-partnership'; return false;" class="block text-center bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded-none transition cursor-pointer">
-                        Partner with Asterika âž”
+                        Partner with Asterika &#10140;
                     </a>
                 </div>
 
@@ -1208,7 +1213,7 @@
                 </div>
             </div>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">← Back to Home</a></div>
         </div>
     </div>
 
@@ -1258,8 +1263,8 @@
         </div>
 
         <div class="max-w-7xl mx-auto pt-3 border-t border-zinc-800 text-zinc-500 flex flex-col sm:flex-row justify-between items-center">
-            <p>Â© 2026 ASTERIKA LLC | TELICA USA. All rights reserved.</p>
-            <p class="mt-1 sm:mt-0 text-zinc-400">We typically respond within 1â€“2 business days.</p>
+            <p>© 2026 ASTERIKA LLC | TELICA USA. All rights reserved.</p>
+            <p class="mt-1 sm:mt-0 text-zinc-400">We typically respond within 1–2 business days.</p>
         </div>
     </footer>
 
@@ -1274,7 +1279,7 @@
                 <button onclick="closeDetailModal()" class="text-zinc-400 hover:text-black p-1">✕</button>
             </div>
             <div id="modal-opt-content" class="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed space-y-2"></div>
-            <button id="modal-inquiry-btn" onclick="" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none cursor-pointer transition shadow-md">Inquiry About This Option âž”</button>
+            <button id="modal-inquiry-btn" onclick="" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none cursor-pointer transition shadow-md">Inquiry About This Option &#10140;</button>
         </div>
     </div>
 
@@ -1286,20 +1291,20 @@
                     <p id="gallery-count" class="text-xs text-zinc-400 mt-1" aria-live="polite"></p>
                 </div>
                 <div class="flex items-center gap-2">
-                    <button type="button" onclick="zoomProductPhoto(-0.25)" aria-label="Zoom out" class="w-9 h-9 border border-zinc-600 hover:bg-zinc-800 text-lg">âˆ’</button>
+                    <button type="button" onclick="zoomProductPhoto(-0.25)" aria-label="Zoom out" class="w-9 h-9 border border-zinc-600 hover:bg-zinc-800 text-lg">−</button>
                     <button type="button" onclick="resetProductPhotoZoom()" aria-label="Reset zoom" class="h-9 px-3 border border-zinc-600 hover:bg-zinc-800 text-xs">Reset</button>
                     <button type="button" onclick="zoomProductPhoto(0.25)" aria-label="Zoom in" class="w-9 h-9 border border-zinc-600 hover:bg-zinc-800 text-lg">+</button>
-                    <button type="button" onclick="closeProductGallery()" aria-label="Close photo gallery" class="w-9 h-9 ml-1 text-zinc-300 hover:text-white text-xl">Ã—</button>
+                    <button type="button" onclick="closeProductGallery()" aria-label="Close photo gallery" class="w-9 h-9 ml-1 text-zinc-300 hover:text-white text-xl">×</button>
                 </div>
             </div>
             <div class="flex items-center gap-2 p-3 sm:p-4">
-                <button type="button" onclick="changeProductPhoto(-1)" aria-label="Previous photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">â€¹</button>
+                <button type="button" onclick="changeProductPhoto(-1)" aria-label="Previous photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">‹</button>
                 <div id="gallery-viewport" class="h-[55vh] sm:h-[65vh] flex-1 overflow-hidden flex items-center justify-center bg-black">
                     <img id="gallery-image" src="" alt="" class="max-h-full max-w-full object-contain transition-transform duration-150" onclick="zoomProductPhoto(0.25)" title="Click to zoom in">
                 </div>
-                <button type="button" onclick="changeProductPhoto(1)" aria-label="Next photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">â€º</button>
+                <button type="button" onclick="changeProductPhoto(1)" aria-label="Next photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">›</button>
             </div>
-            <p class="px-3 pb-3 sm:px-4 sm:pb-4 text-center text-xs text-zinc-400">Use + / âˆ’ to zoom. Click the photo to zoom in; use the arrows to switch views.</p>
+            <p class="px-3 pb-3 sm:px-4 sm:pb-4 text-center text-xs text-zinc-400">Use + / − to zoom. Click the photo to zoom in; use the arrows to switch views.</p>
         </div>
     </div>
 
@@ -1347,6 +1352,7 @@
                         <option value="DIY ESL Kit Purchase">DIY ESL Kit Purchase ($799)</option>
                         <option value="1.5 Inch Tag Bundle Order">1.5" ESL Tag Bundle Order (60-pack - $549*)</option>
                         <option value="2.7 Inch Tag Bundle Order">2.7" ESL Tag Bundle Order (40-pack - $439*)</option>
+                        <option value="2.7 Inch Freezer Tag Bundle Order">2.7" Freezer Tag Bundle Order (40-pack - $450)</option>
                         <option value="3.7 Inch Tag Bundle Order">3.7" ESL Tag Bundle Order (30-pack - $559*)</option>
                         <option value="Rail & Hardware Order">Rail & Hardware Order</option>
                         <option value="Partner / Reseller Inquiry">Partner / Reseller Inquiry</option>
@@ -1357,7 +1363,7 @@
                 <div id="order-items-group" class="hidden space-y-3">
                     <div id="order-items"></div>
                     <button type="button" id="add-order-item" onclick="addOrderItem()" class="text-red-700 hover:text-red-800 underline font-semibold">+ Add item</button>
-                    <p class="text-[11px] text-zinc-500">WELCOME10: 10% off DIY ESL Kits Â· WELCOME5: 5% off ESL Tag Bundles</p>
+                    <p class="text-[11px] text-zinc-500">WELCOME10: 10% off DIY ESL Kits · WELCOME5: 5% off ESL Tag Bundles</p>
                     <div class="border-t border-zinc-200 pt-3 text-right">
                         <p id="order-subtotal" class="text-xs text-zinc-600"></p>
                         <p id="order-discount-total" class="text-xs text-green-700"></p>
@@ -1378,12 +1384,16 @@
 
     <!-- ìŠ¤í¬ë¦½íŠ¸ -->
     <script>
-        function switchPage(pageName) {
+        function switchPage(pageName, targetId) {
             ['home', 'about', 'rails', 'support', 'partners'].forEach(p => {
                 document.getElementById('view-' + p).classList.add('hidden');
             });
             document.getElementById('view-' + pageName).classList.remove('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (targetId) {
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
 
         function openImageZoom(imageSrc, imageAlt) {
@@ -1441,7 +1451,7 @@
             image.alt = photo.alt;
             image.style.transform = `scale(${productPhotoZoom})`;
             productGalleryTitle.textContent = photo.title;
-            document.getElementById('gallery-count').textContent = `${photo.view} Â· ${Math.round(productPhotoZoom * 100)}%`;
+            document.getElementById('gallery-count').textContent = `${photo.view} · ${Math.round(productPhotoZoom * 100)}%`;
         }
 
         function openProductGallery(index) {
@@ -1506,7 +1516,7 @@
                 title: "Dedicated Commercial Support & Server Architecture Strategy (HQ & Managed Collaboration)",
                 tag: "Option 04 - Enterprise Support & Server Architecture",
                 interest: "Commercial & Multi-Location Project",
-                content: `<p>Large enterprise chains and multi-location rollouts requiring dedicated infrastructure are supported through special project pricing, extended hardware manufacturer warranties, and tailored service level agreements (SLAs).</p><p class="mt-2">Server management, technical assistance, and hosting models are fully flexible based on corporate requirementsâ€”ranging from <strong>corporate headquarters self-hosted server setups</strong> to <strong>HQ-managed or outsourced operational frameworks</strong>, backed by close technical coordination with our South Korean engineering team rather than rigid regional support assumptions.</p>`
+                content: `<p>Large enterprise chains and multi-location rollouts requiring dedicated infrastructure are supported through special project pricing, extended hardware manufacturer warranties, and tailored service level agreements (SLAs).</p><p class="mt-2">Server management, technical assistance, and hosting models are fully flexible based on corporate requirements—ranging from <strong>corporate headquarters self-hosted server setups</strong> to <strong>HQ-managed or outsourced operational frameworks</strong>, backed by close technical coordination with our South Korean engineering team rather than rigid regional support assumptions.</p>`
             }
         };
 
@@ -1531,6 +1541,7 @@
             'Gateway Pro - Standalone Purchase',
             '1.5 Inch Tag Bundle Order',
             '2.7 Inch Tag Bundle Order',
+            '2.7 Inch Freezer Tag Bundle Order',
             '3.7 Inch Tag Bundle Order',
             'Rail & Hardware Order'
         ]);
@@ -1539,16 +1550,17 @@
             { value: 'Gateway Pro - Standalone Purchase', label: 'Gateway Pro - Standalone Purchase' },
             { value: '1.5 Inch Tag Bundle Order', label: '1.5" ESL Tag Bundle (60-pack - $549*)' },
             { value: '2.7 Inch Tag Bundle Order', label: '2.7" ESL Tag Bundle (40-pack - $439*)' },
+            { value: '2.7 Inch Freezer Tag Bundle Order', label: '2.7" Freezer Tag Bundle (40-pack - $450)' },
             { value: '3.7 Inch Tag Bundle Order', label: '3.7" ESL Tag Bundle (30-pack - $559*)' },
-            { value: 'Double-Sided Adhesive Rail', label: 'Double-Sided Adhesive Rail â€” 1200 mm (47.24 in), Transparent / White / Grey / Black' },
-            { value: 'L Shape 90 Degree Rail', label: 'L Shape 90 Degree Rail â€” 1200 mm (47.24 in), Transparent' },
-            { value: 'L Shape 45 Degree Rail', label: 'L Shape 45 Degree Rail â€” 900 mm (35.43 in), Transparent' },
-            { value: 'HG Type Rail', label: 'HG Type Rail â€” 1200 mm (47.24 in), White / Grey / Black' },
-            { value: 'Freezer Rail', label: 'Freezer Rail â€” 1200 mm (47.24 in), Transparent' },
-            { value: 'Swing Holder Normal', label: 'Swing Holder Normal â€” Transparent' },
-            { value: 'Swing Holder Compressed', label: 'Swing Holder Compressed â€” Transparent' },
-            { value: 'Stand', label: 'Stand â€” Transparent' },
-            { value: 'Clip', label: 'Clip â€” Black' }
+            { value: 'Double-Sided Adhesive Rail', label: 'Double-Sided Adhesive Rail — 1200 mm (47.24 in), Transparent / White / Grey / Black' },
+            { value: 'L Shape 90 Degree Rail', label: 'L Shape 90 Degree Rail — 1200 mm (47.24 in), Transparent' },
+            { value: 'L Shape 45 Degree Rail', label: 'L Shape 45 Degree Rail — 900 mm (35.43 in), Transparent' },
+            { value: 'HG Type Rail', label: 'HG Type Rail — 1200 mm (47.24 in), White / Grey / Black' },
+            { value: 'Freezer Rail', label: 'Freezer Rail — 1200 mm (47.24 in), Transparent' },
+            { value: 'Swing Holder Normal', label: 'Swing Holder Normal — Transparent' },
+            { value: 'Swing Holder Compressed', label: 'Swing Holder Compressed — Transparent' },
+            { value: 'Stand', label: 'Stand — Transparent' },
+            { value: 'Clip', label: 'Clip — Black' }
         ];
         const railHardwareProductValues = new Set([
             'Double-Sided Adhesive Rail',
@@ -1563,9 +1575,10 @@
         ]);
         const orderItemPricesCents = {
             'DIY ESL Kit Purchase': 79900,
-            '1.5 Inch Tag Bundle Order': 50900,
-            '2.7 Inch Tag Bundle Order': 39900,
-            '3.7 Inch Tag Bundle Order': 49900,
+            '1.5 Inch Tag Bundle Order': 54900,
+            '2.7 Inch Tag Bundle Order': 43900,
+            '2.7 Inch Freezer Tag Bundle Order': 45000,
+            '3.7 Inch Tag Bundle Order': 55900,
             'Double-Sided Adhesive Rail': 350,
             'L Shape 90 Degree Rail': 490,
             'L Shape 45 Degree Rail': 490,
@@ -1583,6 +1596,7 @@
                 products: new Set([
                     '1.5 Inch Tag Bundle Order',
                     '2.7 Inch Tag Bundle Order',
+                    '2.7 Inch Freezer Tag Bundle Order',
                     '3.7 Inch Tag Bundle Order'
                 ])
             }
@@ -1596,6 +1610,7 @@
             'Gateway Pro - Standalone Purchase': 'Gateway Pro - Standalone Purchase',
             '1.5 Inch Tag Bundle Order': '1.5 Inch Tag Bundle Order',
             '2.7 Inch Tag Bundle Order': '2.7 Inch Tag Bundle Order',
+            '2.7 Inch Freezer Tag Bundle Order': '2.7 Inch Freezer Tag Bundle Order',
             '3.7 Inch Tag Bundle Order': '3.7 Inch Tag Bundle Order'
         };
 
@@ -1630,7 +1645,7 @@
                 label.textContent = `Order Item ${index + 1}`;
                 const removeButton = document.createElement('button');
                 removeButton.type = 'button';
-                removeButton.textContent = 'Ã—';
+                removeButton.textContent = '×';
                 removeButton.setAttribute('aria-label', `Remove order item ${index + 1}`);
                 removeButton.className = 'text-zinc-500 hover:text-red-700 text-xl leading-none px-2';
                 removeButton.addEventListener('click', () => removeOrderItem(index));
@@ -1694,7 +1709,7 @@
                 quantityControls.className = 'flex items-center';
                 const decrement = document.createElement('button');
                 decrement.type = 'button';
-                decrement.textContent = 'âˆ’';
+                decrement.textContent = '−';
                 decrement.setAttribute('aria-label', `Decrease quantity for item ${index + 1}`);
                 decrement.className = 'bg-zinc-200 hover:bg-zinc-300 px-4 py-2.5 font-bold';
                 decrement.addEventListener('click', () => updateItemQuantity(index, -1));
@@ -1766,14 +1781,14 @@
             if (total) {
                 if (!Number.isInteger(quantity) || quantity < 1) {
                     total.textContent = Number.isInteger(quantity) && quantity === 0 && index === 0
-                        ? `Unit price: ${formatCurrency(unitPriceCents)} Â· Item total: ${formatCurrency(0)}`
-                        : `Unit price: ${formatCurrency(unitPriceCents)} Â· Enter a valid quantity`;
+                        ? `Unit price: ${formatCurrency(unitPriceCents)} · Item total: ${formatCurrency(0)}`
+                        : `Unit price: ${formatCurrency(unitPriceCents)} · Enter a valid quantity`;
                 } else {
                     const itemSubtotalCents = unitPriceCents * quantity;
                     const itemDiscountCents = discount.valid ? Math.round(itemSubtotalCents * discount.rate / 100) : 0;
                     total.textContent = itemDiscountCents
-                        ? `Subtotal: ${formatCurrency(itemSubtotalCents)} Â· Discount: âˆ’${formatCurrency(itemDiscountCents)} Â· Item total: ${formatCurrency(itemSubtotalCents - itemDiscountCents)}`
-                        : `Unit price: ${formatCurrency(unitPriceCents)} Â· Item total: ${formatCurrency(itemSubtotalCents)}`;
+                        ? `Subtotal: ${formatCurrency(itemSubtotalCents)} · Discount: −${formatCurrency(itemDiscountCents)} · Item total: ${formatCurrency(itemSubtotalCents - itemDiscountCents)}`
+                        : `Unit price: ${formatCurrency(unitPriceCents)} · Item total: ${formatCurrency(itemSubtotalCents)}`;
                 }
             }
             updateOrderGrandTotal();
@@ -1810,7 +1825,7 @@
             if (invalidPricedItems) {
                 subtotal.textContent = '';
                 discountTotal.textContent = '';
-                total.textContent = 'Estimated order total: â€”';
+                total.textContent = 'Estimated order total: —';
                 note.textContent = 'Enter a whole-number quantity for each priced item.';
                 return;
             }
@@ -1826,9 +1841,9 @@
 
             subtotal.textContent = validItems.length ? `Subtotal: ${formatCurrency(subtotalCents)}` : '';
             discountTotal.textContent = discountCents && validItems.length
-                ? `Total discounts: âˆ’${formatCurrency(discountCents)}`
+                ? `Total discounts: −${formatCurrency(discountCents)}`
                 : '';
-            total.textContent = validItems.length ? `Estimated order total: ${formatCurrency(totalCents)}` : 'Estimated order total: â€”';
+            total.textContent = validItems.length ? `Estimated order total: ${formatCurrency(totalCents)}` : 'Estimated order total: —';
             note.textContent = unpricedItems
                 ? 'Priced items only; custom-priced items are excluded.'
                 : 'Based on listed prices. Discount is an estimate; final pricing will be confirmed with your quote.';
@@ -1886,8 +1901,8 @@
                 document.getElementById('zip-location').innerText = "Checking...";
                 fetch(`https://api.zippopotam.us/us/${zip.trim()}`)
                     .then(r => r.ok ? r.json() : Promise.reject())
-                    .then(d => { detectedLocation = `${d.places[0]['place name']}, ${d.places[0]['state abbreviation']}`; document.getElementById('zip-location').innerText = `ðŸ“ ${detectedLocation}`; })
-                    .catch(() => { detectedLocation = ""; document.getElementById('zip-location').innerText = "âš ï¸ Invalid ZIP"; });
+                    .then(d => { detectedLocation = `${d.places[0]['place name']}, ${d.places[0]['state abbreviation']}`; document.getElementById('zip-location').innerText = `📍 ${detectedLocation}`; })
+                    .catch(() => { detectedLocation = ""; document.getElementById('zip-location').innerText = "⚠️ Invalid ZIP"; });
             } else { detectedLocation = ""; document.getElementById('zip-location').innerText = ""; }
         }
 
@@ -1909,7 +1924,7 @@
             const canSubmit = valid && orderItemsValid;
             btn.disabled = !canSubmit || isSubmittingQuote;
             btn.className = canSubmit && !isSubmittingQuote ? "w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-none cursor-pointer transition shadow-md" : "w-full bg-zinc-300 text-zinc-500 font-semibold py-3 rounded-none cursor-not-allowed transition";
-            btn.innerText = isSubmittingQuote ? "Sending..." : canSubmit ? "Send Inquiry âž”" : "Fill in required fields";
+            btn.innerText = isSubmittingQuote ? "Sending..." : canSubmit ? "Send Inquiry \u2794" : "Fill in required fields";
         }
 
         let isDragging = false, startX, startY, currentX = 0, currentY = 0;
