@@ -164,45 +164,73 @@
 
     <!-- 상단 헤더 -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-0 sm:h-16 flex flex-wrap items-center justify-between gap-y-1 sm:flex-nowrap sm:justify-start">
-            
-            <!-- Brand -->
-            <div class="order-1 flex items-center space-x-3 sm:order-none">
-                <a href="#" onclick="switchPage('home'); return false;" class="flex items-center shrink-0 group space-x-1.5 py-0.5">
-                    <img src="telica-logo.png" alt="TELICA Logo" class="h-4 sm:h-5 w-auto object-contain">
-                    <span class="px-1.5 py-0.5 bg-zinc-900 text-white text-[10px] sm:text-[11px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
+        <!-- 메인 헤더 -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <!-- 첫 번째 줄: 로고와 메뉴 -->
+            <div class="flex items-center justify-between py-3">
+                <!-- 로고 -->
+                <a href="#" onclick="switchPage('home'); return false;" class="flex items-center space-x-2 shrink-0">
+                    <img src="telica-logo.png" alt="TELICA Logo" class="h-8 sm:h-10 w-auto object-contain">
+                    <span class="px-2 py-1 bg-zinc-900 text-white text-[11px] sm:text-[12px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
                 </a>
+
+                <!-- Desktop Navigation Menu + Actions (오른쪽 정렬) -->
+                <div class="flex items-center space-x-6">
+                    <!-- Navigation Menu -->
+                    <nav class="hidden sm:flex items-center space-x-6 text-xs font-medium">
+                        <div class="relative group">
+                            <button class="text-zinc-900 hover:text-red-600 transition">Products</button>
+                            <div class="absolute left-0 mt-0 w-48 bg-white border border-zinc-200 shadow-lg hidden group-hover:block z-50">
+                                <a href="#lineup" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">DIY ESL Kit</a>
+                                <a href="#gateway-pro" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Gateway Pro</a>
+                                <a href="#tag-1-5" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">1.5" ESL Tag (60-pack)</a>
+                                <a href="#tag-2-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" ESL Tag (40-pack)</a>
+                                <a href="#tag-3-7" onclick="switchPage('home'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">3.7" ESL Tag (30-pack)</a>
+                                <a href="#" onclick="switchPage('rails'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Rails & Hardware</a>
+                            </div>
+                        </div>
+                        <a href="#" onclick="switchPage('support'); return false;" class="text-zinc-900 hover:text-red-600 transition">Setup & Guides</a>
+                        <a href="#" onclick="switchPage('partners'); return false;" class="text-zinc-900 hover:text-red-600 transition">Partners & Supplier Network</a>
+                        <a href="#commercial" onclick="switchPage('home'); return false;" class="text-zinc-900 hover:text-red-600 transition">ESL Project Assessment</a>
+                        <a href="#" onclick="switchPage('about'); return false;" class="text-zinc-900 hover:text-red-600 transition">About Us</a>
+                    </nav>
+
+                    <!-- Compact actions -->
+                    <div class="flex items-center space-x-2">
+                        <button onclick="openQuoteModal('General Inquiry')" class="bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-4 py-2 rounded-none transition cursor-pointer shadow-sm">Quote</button>
+                        <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="sm:hidden text-zinc-700 p-1.5 rounded-none hover:bg-zinc-100">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <div class="order-3 flex w-full flex-col items-start leading-tight text-left sm:order-none sm:ml-3 sm:w-auto">
-                <span class="text-[9px] sm:text-xs font-bold tracking-tight text-zinc-900 sm:whitespace-nowrap">Authorized U.S. TELICA Reseller</span>
-            </div>
-
-            <!-- Compact actions -->
-            <div class="order-2 flex items-center space-x-2 sm:order-none sm:ml-auto">
-                <button onclick="openQuoteModal('General Inquiry')" class="bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-4 py-2 rounded-none transition cursor-pointer shadow-sm">Quote</button>
-                <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="text-zinc-700 p-1.5 rounded-none hover:bg-zinc-100">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
+            <!-- 두 번째 줄: 설명 문구 -->
+            <div class="border-t border-zinc-200 py-2">
+                <p class="text-[11px] sm:text-xs font-normal text-zinc-700">Authorized U.S. TELICA Reseller</p>
             </div>
         </div>
 
         <!-- Navigation menu -->
-        <div id="mobile-menu" class="hidden absolute top-[4.75rem] sm:top-16 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 p-4 space-y-3 shadow-xl z-50">
-            <div class="flex items-center justify-between border-b border-zinc-100 pb-2">
-                <span class="text-xs font-bold text-zinc-500 uppercase">Navigation Menu</span>
-                <button id="menu-close" aria-label="Close navigation menu" class="text-zinc-500 font-bold">✕</button>
-            </div>
-            <div class="space-y-2 text-xs font-medium">
-                <a href="#" onclick="switchPage('home'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-bold text-red-600">Home</a>
-                <div class="pl-2 space-y-1 border-l-2 border-zinc-100 my-1">
-                    <a href="#lineup" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-900 font-semibold">· DIY ESL Kit</a>
-                    <a href="#gateway-pro" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· Gateway Pro</a>
-                    <a href="#tag-1-5" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 1.5" ESL Tag (60-pack)</a>
-                    <a href="#tag-2-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 2.7" ESL Tag (40-pack)</a>
-                    <a href="#tag-3-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">· 3.7" ESL Tag (30-pack)</a>
-                    <a href="#" onclick="switchPage('rails'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 text-zinc-600">· Rails & Hardware</a>
+        <div id="mobile-menu" class="hidden absolute top-[8.5rem] sm:top-20 right-4 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-none border border-zinc-200 shadow-xl z-50">
+            <div class="space-y-2 text-xs font-medium p-4">
+                <div class="flex items-center justify-between mb-2">
+                    <button id="menu-close" aria-label="Close navigation menu" class="text-zinc-500 font-bold">✕</button>
                 </div>
+                
+                <!-- Products Section -->
+                <div class="py-2 border-t border-zinc-200 mt-3 pt-3">
+                    <span class="block py-1 font-bold text-zinc-900 uppercase text-[10px] tracking-wide text-zinc-700">Products</span>
+                    <div class="pl-3 space-y-1 border-l-2 border-zinc-200 mt-2">
+                        <a href="#lineup" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-900 font-semibold">DIY ESL Kit</a>
+                        <a href="#gateway-pro" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">Gateway Pro</a>
+                        <a href="#tag-1-5" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">1.5" ESL Tag (60-pack)</a>
+                        <a href="#tag-2-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">2.7" ESL Tag (40-pack)</a>
+                        <a href="#tag-3-7" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 text-zinc-600">3.7" ESL Tag (30-pack)</a>
+                        <a href="#" onclick="switchPage('rails'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 text-zinc-600">Rails & Hardware</a>
+                    </div>
+                </div>
+                
                 <a href="#" onclick="switchPage('support'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Setup & Guides</a>
                 <a href="#" onclick="switchPage('partners'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Partners & Supplier Network</a>
                 <a href="#commercial" onclick="switchPage('home'); mobileMenu.classList.add('hidden');" class="block py-1 font-semibold text-zinc-900">ESL Project Assessment</a>
@@ -419,68 +447,89 @@
                     </div>
 
                     <!-- Gateway Pro Product Card -->
-                    <div id="gateway-pro" class="bg-white p-6 sm:p-8 rounded-none border border-zinc-300 flex flex-col justify-between shadow-xs scroll-mt-24">
-                        <div>
-                            <!-- Title Section - Above Images -->
-                            <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-                                <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold">GATEWAY & CONNECTIVITY</span>
-                                <span class="text-xs font-bold text-red-600 corporate-tag uppercase">Available for Standalone Purchase</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-zinc-900 mb-1">CREBEE Gateway Pro</h3>
-                            <p class="text-zinc-600 text-xs mb-4 font-semibold">Available for standalone purchase</p>
+                    <div id="gateway-pro" class="bg-white rounded-none border border-zinc-300 shadow-xs scroll-mt-24 overflow-hidden">
+                        <!-- Two-column layout: left image, right description (desktop) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                            <!-- Image Section - Left side on desktop, top on mobile -->
+                            <div class="p-6 sm:p-8 flex flex-col">
+                                <!-- Title & Description Above Images -->
+                                <div class="mb-6">
+                                    <h3 class="text-2xl font-bold text-zinc-900 mb-3 block">Gateway Pro</h3>
+                                    
+                                    <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+                                        <span class="text-xs text-zinc-700 corporate-tag uppercase font-semibold">GATEWAY & CONNECTIVITY</span>
+                                        <span class="text-xs font-bold text-red-600 corporate-tag uppercase">Available for Standalone Purchase</span>
+                                    </div>
 
-                            <!-- Image Gallery Section -->
-                            <div class="mb-4">
-                                <!-- Main Image -->
-                                <div class="w-full h-64 bg-zinc-100 rounded-none mb-3 overflow-hidden flex items-center justify-center border border-zinc-200 relative">
-                                    <img id="gateway-pro-main-image" src="crebee-gateway-pro-front.webp" alt="CREBEE Gateway Pro - Front view" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                                    <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
+                                        The Gateway Pro sends product and price updates wirelessly to compatible TELICA electronic shelf labels. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee.
+                                    </p>
+
+                                    <p class="text-zinc-600 text-sm font-light leading-relaxed mb-4">
+                                        <strong class="text-zinc-900">2-Year Factory Warranty</strong> — Comprehensive coverage for peace of mind.
+                                    </p>
+
+                                    <p class="text-2xl font-bold text-zinc-900">
+                                        $699
+                                    </p>
                                 </div>
-                                
-                                <!-- Thumbnail Gallery -->
-                                <div class="flex gap-2 overflow-x-auto pb-2">
-                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-front.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden ring-2 ring-red-500 cursor-pointer">
-                                        <img src="crebee-gateway-pro-front.webp" alt="Front" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-top.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-top.webp" alt="Ports and connectivity" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-side.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-side.webp" alt="Side view" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-angle.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-angle.webp" alt="Angle view" class="w-full h-full object-cover">
-                                    </button>
-                                    <button onclick="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-back.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-14 h-14 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
-                                        <img src="crebee-gateway-pro-back.webp" alt="Back and mounting" class="w-full h-full object-cover">
-                                    </button>
+
+                                <!-- Image Gallery Section -->
+                                <div class="mb-6">
+                                    <!-- Main Image - Smaller -->
+                                    <div class="w-full h-48 bg-zinc-100 rounded-none mb-3 overflow-hidden flex items-center justify-center border border-zinc-200 relative cursor-pointer" onclick="openImageZoom(document.getElementById('gateway-pro-main-image').src, document.getElementById('gateway-pro-main-image').alt)">
+                                        <img id="gateway-pro-main-image" src="crebee-gateway-pro-front.webp" alt="CREBEE Gateway Pro - Front view" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" data-gateway-zoom onerror="this.style.display='none'">
+                                        <div class="absolute inset-0 flex items-center justify-center bg-black/0 hover:bg-black/10 transition pointer-events-none">
+                                            <span class="text-white text-xs font-semibold opacity-0 hover:opacity-100 transition">Click to enlarge</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Thumbnail Gallery -->
+                                    <div class="flex gap-2 overflow-x-auto pb-2">
+                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-front.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden ring-2 ring-red-500 cursor-pointer">
+                                            <img src="crebee-gateway-pro-front.webp" alt="Front" class="w-full h-full object-cover">
+                                        </button>
+                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-top.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                            <img src="crebee-gateway-pro-top.webp" alt="Ports and connectivity" class="w-full h-full object-cover">
+                                        </button>
+                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-side.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                            <img src="crebee-gateway-pro-side.webp" alt="Side view" class="w-full h-full object-cover">
+                                        </button>
+                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-angle.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                            <img src="crebee-gateway-pro-angle.webp" alt="Angle view" class="w-full h-full object-cover">
+                                        </button>
+                                        <button onmouseover="document.getElementById('gateway-pro-main-image').src='crebee-gateway-pro-back.webp'; this.classList.add('ring-2'); document.querySelectorAll('#gateway-pro .thumbnail-btn').forEach(b => b !== this && b.classList.remove('ring-2'));" class="thumbnail-btn w-12 h-12 flex-shrink-0 bg-zinc-200 border border-zinc-300 rounded-none overflow-hidden cursor-pointer">
+                                            <img src="crebee-gateway-pro-back.webp" alt="Back and mounting" class="w-full h-full object-cover">
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
-                            <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">
-                                The Gateway Pro sends product and price updates wirelessly to compatible TELICA electronic shelf labels. CREBEE software is built in, with no separate software purchase or monthly CREBEE subscription fee.
-                            </p>
+                            <!-- Description Section - Right side on desktop, bottom on mobile -->
+                            <div class="p-6 sm:p-8 flex flex-col justify-between border-t md:border-t-0 md:border-l border-zinc-200">
+                                <div>
+                                        <ul class="text-xs text-zinc-700 space-y-2 font-light">
+                                            <li>• Manage your shelf labels with or without a POS integration.</li>
+                                            <li>• Supports up to 3,000 ESLs per gateway.</li>
+                                            <li>• Works with TELICA 1.5″, 2.7″, and 3.7″ electronic shelf labels.</li>
+                                            <li>• Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</li>
+                                        </ul>
+                                    </div>
 
-                            <div class="bg-zinc-50 p-4 rounded-none border border-zinc-200 mb-4 space-y-2">
-                                <ul class="text-xs text-zinc-700 space-y-2 font-light">
-                                    <li>• Manage your shelf labels with or without a POS integration.</li>
-                                    <li>• Supports up to 3,000 ESLs per gateway.</li>
-                                    <li>• Works with TELICA 1.5″, 2.7″, and 3.7″ electronic shelf labels.</li>
-                                    <li>• Wireless range is up to 98 ft (30 m) with a clear line of sight. Actual coverage varies with store layout and wireless conditions.</li>
-                                </ul>
+                                    <div class="border-t border-zinc-200 pt-4 mb-4">
+                                        <p class="text-[10px] text-zinc-500 mb-2 italic">Pricing and warranty information coming soon.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-2">
+                                    <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
+                                        Request a Gateway Pro Quote
+                                    </button>
+                                    <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="w-full bg-white hover:bg-zinc-50 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
+                                        Watch the Setup Videos
+                                    </a>
+                                </div>
                             </div>
-
-                            <div class="border-t border-zinc-200 pt-4 mb-4">
-                                <p class="text-[10px] text-zinc-500 mb-2 italic">Pricing and warranty information coming soon.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <button onclick="openQuoteModal('Gateway Pro - Standalone Purchase')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none transition shadow-md cursor-pointer">
-                                Request a Gateway Pro Quote
-                            </button>
-                            <a href="#gateway-pro-setup" onclick="switchPage('support'); return false;" class="w-full bg-white hover:bg-zinc-50 text-zinc-900 text-xs font-semibold py-3 rounded-none transition border border-zinc-300 text-center cursor-pointer">
-                                Watch the Setup Videos
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -491,11 +540,11 @@
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">COMPACT</span>
-                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">60 TAGS ($509*)</span>
+                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">60 TAGS ($549*)</span>
                             </div>
                             <h4 class="text-base font-bold text-zinc-900 mb-1">1.5" ESL Tag (60-pack)</h4>
                             <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
-                                Ideal for narrow shelf edges, cosmetics, and small retail items. The e-paper display supports four-color pricing and barcodes. Each pack includes <strong>60 tags</strong> and is priced at $509. <em>*Volume discounts available.</em>
+                                Ideal for narrow shelf edges, cosmetics, and small retail items. The e-paper display supports four-color pricing and barcodes. Each pack includes <strong>60 tags</strong> and is priced at $549. <em>*Volume discounts available.</em>
                             </p>
                         </div>
                         <button onclick="openQuoteModal('1.5 Inch Tag Bundle Order')" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer">
@@ -507,11 +556,11 @@
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-[11px] font-bold text-red-600 corporate-tag uppercase">MOST POPULAR</span>
-                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">40 TAGS ($399*)</span>
+                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">40 TAGS ($439*)</span>
                             </div>
                             <h4 class="text-base font-bold text-zinc-900 mb-1">2.7" ESL Tag (40-pack)</h4>
                             <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
-                                A versatile four-color label for everyday pricing and promotions, designed for retail shelving. Each pack includes <strong>40 tags</strong> and is priced at $399. <em>*Volume discounts available.</em>
+                                A versatile four-color label for everyday pricing and promotions, designed for retail shelving. Each pack includes <strong>40 tags</strong> and is priced at $439. <em>*Volume discounts available.</em>
                             </p>
                         </div>
                         <button onclick="openQuoteModal('2.7 Inch Tag Bundle Order')" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer shadow-sm">
@@ -523,11 +572,11 @@
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <span class="text-[11px] text-zinc-600 corporate-tag uppercase font-semibold">LARGE FORMAT</span>
-                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">30 TAGS ($499*)</span>
+                                <span class="text-[11px] font-bold text-zinc-900 corporate-tag">30 TAGS ($559*)</span>
                             </div>
                             <h4 class="text-base font-bold text-zinc-900 mb-1">3.7" ESL Tag (30-pack)</h4>
                             <p class="text-zinc-600 text-xs leading-relaxed font-light mb-4">
-                                Designed to display detailed product information and promotions on endcaps. Each pack includes <strong>30 tags</strong> and is priced at $499. <em>*Volume discounts available.</em>
+                                Designed to display detailed product information and promotions on endcaps. Each pack includes <strong>30 tags</strong> and is priced at $559. <em>*Volume discounts available.</em>
                             </p>
                         </div>
                         <button onclick="openQuoteModal('3.7 Inch Tag Bundle Order')" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold py-2.5 rounded-none transition cursor-pointer">
@@ -1189,9 +1238,9 @@
                     <label class="block font-semibold text-zinc-700 mb-1">Interest / Inquiry Type *</label>
                     <select id="modal-interest" onchange="handleOrderInterestChange()" class="w-full bg-zinc-50 border border-zinc-300 rounded-none px-3 py-2.5 focus:outline-none focus:border-red-600 cursor-pointer">
                         <option value="DIY ESL Kit Purchase">DIY ESL Kit Purchase ($799)</option>
-                        <option value="1.5 Inch Tag Bundle Order">1.5" ESL Tag Bundle Order (60-pack - $509*)</option>
-                        <option value="2.7 Inch Tag Bundle Order">2.7" ESL Tag Bundle Order (40-pack - $399*)</option>
-                        <option value="3.7 Inch Tag Bundle Order">3.7" ESL Tag Bundle Order (30-pack - $499*)</option>
+                        <option value="1.5 Inch Tag Bundle Order">1.5" ESL Tag Bundle Order (60-pack - $549*)</option>
+                        <option value="2.7 Inch Tag Bundle Order">2.7" ESL Tag Bundle Order (40-pack - $439*)</option>
+                        <option value="3.7 Inch Tag Bundle Order">3.7" ESL Tag Bundle Order (30-pack - $559*)</option>
                         <option value="Rail & Hardware Order">Rail & Hardware Order</option>
                         <option value="Partner / Reseller Inquiry">Partner / Reseller Inquiry</option>
                         <option value="Commercial & Multi-Location Project">Commercial & Multi-Location Project (Negotiable)</option>
@@ -1228,6 +1277,21 @@
             });
             document.getElementById('view-' + pageName).classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openImageZoom(imageSrc, imageAlt) {
+            const modal = document.getElementById('image-zoom-modal');
+            const zoomImage = document.getElementById('zoom-image');
+            zoomImage.src = imageSrc;
+            zoomImage.alt = imageAlt;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageZoom() {
+            const modal = document.getElementById('image-zoom-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
         }
 
         const menuBtn = document.getElementById('menu-btn');
@@ -1366,9 +1430,9 @@
         const orderProducts = [
             { value: 'DIY ESL Kit Purchase', label: 'DIY ESL Kit Purchase ($799)' },
             { value: 'Gateway Pro - Standalone Purchase', label: 'Gateway Pro - Standalone Purchase' },
-            { value: '1.5 Inch Tag Bundle Order', label: '1.5" ESL Tag Bundle (60-pack - $509*)' },
-            { value: '2.7 Inch Tag Bundle Order', label: '2.7" ESL Tag Bundle (40-pack - $399*)' },
-            { value: '3.7 Inch Tag Bundle Order', label: '3.7" ESL Tag Bundle (30-pack - $499*)' },
+            { value: '1.5 Inch Tag Bundle Order', label: '1.5" ESL Tag Bundle (60-pack - $549*)' },
+            { value: '2.7 Inch Tag Bundle Order', label: '2.7" ESL Tag Bundle (40-pack - $439*)' },
+            { value: '3.7 Inch Tag Bundle Order', label: '3.7" ESL Tag Bundle (30-pack - $559*)' },
             { value: 'Double-Sided Adhesive Rail', label: 'Double-Sided Adhesive Rail — 1200 mm (47.24 in), Transparent / White / Grey / Black' },
             { value: 'L Shape 90 Degree Rail', label: 'L Shape 90 Degree Rail — 1200 mm (47.24 in), Transparent' },
             { value: 'L Shape 45 Degree Rail', label: 'L Shape 45 Degree Rail — 900 mm (35.43 in), Transparent' },
@@ -1844,6 +1908,62 @@
             dots[currentSlide].classList.replace('bg-zinc-600', 'bg-red-500');
         }, 4000);
 
+    </script>
+
+    <!-- Image Zoom Modal -->
+    <div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div class="relative max-w-4xl max-h-[90vh] flex flex-col">
+            <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300">&times;</button>
+            <img id="modalImage" src="" alt="Zoomed image" class="max-w-full max-h-[80vh] object-contain">
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+
+        // Add click event to all gateway pro product images
+        function setupImageZoom() {
+            const gatewayImages = document.querySelectorAll('[data-gateway-zoom]');
+            gatewayImages.forEach(img => {
+                img.addEventListener('click', function(e) {
+                    modal.classList.remove('hidden');
+                    modalImage.src = this.src;
+                });
+                img.style.cursor = 'pointer';
+            });
+        }
+
+        // Initialize zoom on page load
+        setupImageZoom();
+
+        // Re-setup when image changes via thumbnail selection
+        const mainImage = document.getElementById('gateway-pro-main-image');
+        if (mainImage) {
+            const observer = new MutationObserver(() => {
+                setupImageZoom();
+            });
+            observer.observe(mainImage, { attributes: true, attributeFilter: ['src'] });
+        }
+
+        // Close modal when clicking close button or outside the image
+        closeModal.addEventListener('click', function() {
+            modal.classList.add('hidden');
+        });
+
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modal.classList.add('hidden');
+            }
+        });
     </script>
 </body>
 </html>
