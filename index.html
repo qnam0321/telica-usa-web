@@ -150,6 +150,55 @@
     <style>
         body { font-family: 'Inter', Arial, sans-serif; }
         .corporate-tag { font-family: Arial, sans-serif; }
+        .brand-lockup { width: 150px; flex: 0 0 auto; }
+        .brand-logo-row { display: flex; align-items: center; gap: 7.4px; width: 150px; }
+        .brand-logo-row .brand-wordmark { width: 104px; height: auto; flex: none; }
+        .brand-logo-row .brand-usa-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 38.5px;
+            height: 22.6px;
+            padding: 0;
+            border-radius: 3.7px;
+            font-size: 10.15px;
+            line-height: 15.2px;
+            flex: none;
+        }
+        .brand-reseller {
+            margin-top: 3px;
+            color: #4B4B4B;
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 14px;
+            white-space: nowrap;
+        }
+        @media (min-width: 640px) {
+            .brand-lockup,
+            .brand-logo-row { width: 170px; }
+            .brand-logo-row { gap: 7.25px; }
+            .brand-logo-row .brand-wordmark { width: 123px; }
+            .brand-logo-row .brand-usa-badge {
+                width: 39.75px;
+                height: 23.6px;
+                border-radius: 3.6px;
+                font-size: 10.88px;
+                line-height: 15px;
+            }
+        }
+        @media (max-width: 359px) {
+            .brand-lockup,
+            .brand-logo-row { width: 140px; }
+            .brand-logo-row { gap: 6.9px; }
+            .brand-logo-row .brand-wordmark { width: 97.2px; }
+            .brand-logo-row .brand-usa-badge {
+                width: 35.9px;
+                height: 21.1px;
+                border-radius: 3.45px;
+                font-size: 9.47px;
+                line-height: 14.2px;
+            }
+        }
         @media (min-width: 1024px) {
             .desktop-dropdown:hover .dropdown-menu {
                 opacity: 1;
@@ -171,16 +220,20 @@
     <!-- ìƒë‹¨ í—¤ë” -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-zinc-200">
         <!-- ë©”ì¸ í—¤ë” -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="px-4 sm:px-6">
+            <div class="max-w-7xl mx-auto">
 <!-- ë‘ ë²ˆì§¸ ì¤„: ë¡œê³  + ë©”ë‰´ (ì¤‘ì•™) -->
-            <div class="flex items-center justify-between py-2">
+            <div class="flex items-center justify-between py-[11.5px]">
                 <!-- ì™¼ìª½: ë¡œê³  -->
-                <div class="flex flex-col items-start">
-                    <a href="#" onclick="switchPage('home'); return false;" class="flex items-center space-x-2 shrink-0">
-                        <img src="telica-logo.png" alt="TELICA Logo" class="h-5 sm:h-6 w-auto object-contain">
-                        <span class="px-2 py-1 bg-zinc-900 text-white text-[11px] sm:text-[12px] font-extrabold rounded tracking-normal corporate-tag">USA</span>
+                <div class="brand-lockup flex flex-col items-start">
+                    <a href="#" onclick="switchPage('home'); return false;" class="flex flex-col items-start shrink-0">
+                        <div class="brand-logo-row">
+                            <img src="telica-logo.png" alt="TELICA Logo" class="brand-wordmark object-contain">
+                            <span class="bg-zinc-900 text-white font-extrabold tracking-normal corporate-tag brand-usa-badge">USA</span>
+                        </div>
+                        <span class="brand-reseller">Authorized U.S. TELICA Reseller</span>
                     </a>
-                    <span class="text-[10.5px] sm:text-[12.2px] text-zinc-700 font-medium mt-1">Authorized U.S. TELICA Reseller</span>
+
                 </div>
 
                 <!-- ì¤‘ì•™: Desktop Navigation Menu -->
@@ -207,6 +260,7 @@
                 <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="sm:hidden text-zinc-700 p-1.5 rounded-none hover:bg-zinc-100">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
+            </div>
             </div>
 
         <!-- Navigation menu -->
