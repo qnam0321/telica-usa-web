@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">TELICA 2.7-inch Standard ESL front dimensions</title>
+<desc id="desc">Housing width 3.23 in (82.0 mm) and height 1.65 in (42.0 mm). Front view.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path fill="#27557c" d="M0 0 10 5 0 10Z"/></marker></defs>
+<rect width="1200" height="800" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#172b3d"><text x="70" y="88" font-size="38" font-weight="700">TELICA 2.7″ Standard ESL</text><text x="72" y="127" font-size="22" fill="#4b647b">FRONT VIEW · HOUSING DIMENSIONS</text></g>
+<path d="M70 150H1130" stroke="#d6e0e9" stroke-width="2"/>
+<g stroke="#24394d" fill="none" stroke-width="3">
+<rect x="240" y="221.5" width="650" height="333" rx="15" fill="#f4f7fa"/>
+<rect x="248" y="229.5" width="634" height="317" rx="10" stroke="#8298aa" stroke-width="1.8"/>
+<rect x="318" y="261.46" width="481" height="253.08" rx="3" fill="white"/>
+<circle cx="284.2" cy="271.45" r="8"/><rect x="818.5" y="271.45" width="33.15" height="233.1" rx="3" stroke="#8298aa"/><path d="M823.7 298.09000000000003h22.750000000000004" stroke-width="2.4"/><path d="M823.7 306.748h22.750000000000004" stroke-width="1.2"/><path d="M823.7 315.406h22.750000000000004" stroke-width="1.2"/><path d="M823.7 324.06399999999996h22.750000000000004" stroke-width="2.4"/><path d="M823.7 332.722h22.750000000000004" stroke-width="1.2"/><path d="M823.7 341.38h22.750000000000004" stroke-width="1.2"/><path d="M823.7 350.038h22.750000000000004" stroke-width="2.4"/><path d="M823.7 358.696h22.750000000000004" stroke-width="1.2"/><path d="M823.7 367.35400000000004h22.750000000000004" stroke-width="1.2"/><path d="M823.7 376.012h22.750000000000004" stroke-width="2.4"/><path d="M823.7 384.66999999999996h22.750000000000004" stroke-width="1.2"/><path d="M823.7 393.328h22.750000000000004" stroke-width="1.2"/><path d="M823.7 401.986h22.750000000000004" stroke-width="2.4"/><path d="M823.7 410.644h22.750000000000004" stroke-width="1.2"/><path d="M823.7 419.302h22.750000000000004" stroke-width="1.2"/><path d="M823.7 427.96000000000004h22.750000000000004" stroke-width="2.4"/><path d="M823.7 436.618h22.750000000000004" stroke-width="1.2"/><path d="M823.7 445.276h22.750000000000004" stroke-width="1.2"/><path d="M823.7 453.93399999999997h22.750000000000004" stroke-width="2.4"/><path d="M823.7 462.592h22.750000000000004" stroke-width="1.2"/><path d="M823.7 471.25h22.750000000000004" stroke-width="1.2"/>
+</g>
+
+<g stroke="#7894ab" stroke-width="1.6"><path d="M240 562.5V632.5M890 562.5V632.5M898 221.5H967M898 554.5H967"/></g>
+<g stroke="#27557c" stroke-width="2.4" marker-start="url(#arrow)" marker-end="url(#arrow)"><path d="M240 620.5H890"/><path d="M955 221.5V554.5"/></g>
+<g font-family="Arial, sans-serif" fill="#27557c" font-size="28" font-weight="700" text-anchor="middle"><text x="565" y="659.5">3.23 in (82.0 mm)</text><text transform="translate(997 388) rotate(-90)">1.65 in (42.0 mm)</text></g>
+<text x="72" y="756" font-family="Arial, sans-serif" font-size="18" fill="#4b647b">Dimensions shown as width × height. Inch values rounded to two decimals.</text>
+</svg>
