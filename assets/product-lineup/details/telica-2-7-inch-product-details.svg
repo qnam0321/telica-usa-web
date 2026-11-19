@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1209" viewBox="0 0 720 1209" role="img" aria-labelledby="title desc">
+<title id="title">TELICA USA 2.7-inch Standard ESL product details</title>
+<desc id="desc">2.7-inch four-color electronic shelf label for retail shelves and countertop placement with a compatible stand. 152 by 296 pixels at 125 DPI, 2.4 GHz wireless, two CR2450 batteries, 40 tags per box, and one-year warranty. Example applications include grocery and convenience shelving, pharmacy aisles, wine, liquor and specialty retail, and hardware and general merchandise.</desc>
+<rect width="720" height="1030" fill="#fff"/>
+<rect width="720" height="189" fill="#18191b"/>
+<rect width="720" height="7" fill="#db2025"/>
+<g font-family="Arial, sans-serif">
+<text x="38" y="50" fill="#ff8588" font-size="23" font-weight="700" letter-spacing="2">TELICA USA</text>
+<text x="38" y="106" fill="#fff" font-size="48" font-weight="700">2.7″ Standard ESL</text>
+<text x="39" y="151" fill="#e7e7e7" font-size="27">Product Details</text>
+<text x="38" y="238" fill="#1d1e20" font-size="27" font-weight="700">For everyday retail shelf labeling</text>
+<text x="38" y="270" fill="#53575b" font-size="22">Use a compatible stand for countertop placement.</text>
+<rect x="38" y="302" width="644" height="162" rx="8" fill="#f5f5f6"/>
+<text x="58" y="334" fill="#a61920" font-size="22" font-weight="700">EXAMPLE APPLICATIONS</text>
+<g fill="#242528" font-size="22">
+<text x="58" y="362">Grocery and convenience shelving</text>
+<text x="58" y="390">Pharmacy aisles</text>
+<text x="58" y="418">Wine, liquor and specialty retail</text>
+<text x="58" y="446">Hardware and general merchandise</text>
+</g>
+<g fill="#f5f5f6">
+<rect x="38" y="481" width="644" height="133" rx="8"/>
+<rect x="38" y="631" width="644" height="180" rx="8"/>
+<rect x="38" y="828" width="644" height="190" rx="8"/>
+</g>
+<g x="58" fill="#a61920" font-size="22" font-weight="700">
+<text x="58" y="513">DISPLAY</text>
+<text x="58" y="663">CONNECTIVITY &amp; POWER</text>
+<text x="58" y="860">HOUSING &amp; OPERATING CONDITIONS</text>
+</g>
+<g fill="#242528" font-size="25">
+<text x="58" y="553">2.7″ e-paper · 152 × 296 px (125 DPI)</text>
+<text x="58" y="587">Black, white, red, and yellow</text>
+<text x="58" y="701">2.4 GHz · IEEE 802.15.4</text>
+<text x="58" y="732">Up to 98 ft (30 m) in clear line of sight †</text>
+<text x="58" y="763">2 × CR2450 lithium coin cells</text>
+<text x="58" y="794">Battery life: approx. 5 years (up to 6)*</text>
+<text x="58" y="899">3.23 × 1.65 × 0.55 in</text>
+<text x="58" y="930">(82.0 × 42.0 × 14.0 mm) · W × H × D</text>
+<text x="58" y="961">32–104 °F (0–40 °C) · 45–65% RH</text>
+<text x="58" y="993">Reinforced plastic · 4.9 ft (1.5 m) drop test</text>
+</g>
+<text x="38" y="1057" fill="#1d1e20" font-weight="700" font-size="25">40 tags per box · 1-year warranty</text>
+<path d="M38 1080H682" stroke="#dadbdd" stroke-width="2"/>
+<g fill="#53575b" font-size="19">
+<text x="38" y="1108">* Battery life varies with use and update frequency.</text>
+<text x="38" y="1133">† Actual range varies with the RF environment.</text>
+<text x="38" y="1160">Product details may change. Confirm when ordering.</text>
+</g>
+</g>
+</svg>

@@ -237,21 +237,90 @@
             object-fit: contain;
             transition: transform .18s ease;
         }
-        #product-gallery-modal button[aria-label="Zoom out"],
-        #product-gallery-modal button[aria-label="Zoom in"],
-        #product-gallery-modal button[aria-label="Close photo gallery"],
-        #product-gallery-modal button[aria-label="Previous photo"],
-        #product-gallery-modal button[aria-label="Next photo"] {
+        .gallery-thumb[data-open-direct] { max-width: 82px; text-align: center; }
+        body.product-gallery-open { overflow: hidden; }
+        #product-gallery-modal {
+            position: fixed;
+            inset: 0;
+            margin: auto;
+            padding: 0;
+            width: min(64rem, calc(100% - 1.5rem));
+            max-width: none;
+            height: min(54rem, calc(100% - 1.5rem));
+            height: min(54rem, calc(100dvh - 1.5rem));
+            max-height: none;
+            border: 1px solid #52525b;
+            background: #18181b;
+            color: #fff;
+            overflow: hidden;
+        }
+        #product-gallery-modal:not([open]) { display: none; }
+        #product-gallery-modal::backdrop { background: rgb(0 0 0 / 88%); }
+        .product-gallery-dialog {
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto minmax(0, 1fr) auto;
+        }
+        .product-gallery-heading {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: .5rem;
+            padding: .5rem .75rem;
+            overflow-wrap: anywhere;
+        }
+        #gallery-title { margin: 0; font-size: 1rem; font-weight: 700; }
+        #gallery-count, #gallery-note { margin: .125rem 0 0; font-size: .75rem; color: #d4d4d8; }
+        #gallery-note[hidden] { display: none; }
+        #gallery-viewport {
+            overflow: auto;
+            overscroll-behavior: contain;
+            background: #000;
+        }
+        #gallery-image {
+            display: block;
+            width: calc(100% * var(--gallery-zoom, 1));
+            height: calc(100% * var(--gallery-zoom, 1));
+            max-width: none;
+            object-fit: contain;
+        }
+        .product-gallery-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .25rem;
+            padding: .5rem .25rem;
+        }
+        .product-gallery-control {
+            display: inline-grid;
+            flex: none;
+            place-items: center;
             min-width: 44px;
             min-height: 44px;
+            padding: 0 .375rem;
+            border: 1px solid #71717a;
+            background: #27272a;
+            border-radius: .25rem;
+            color: #fff;
+            font: inherit;
+            font-size: .75rem;
+            touch-action: manipulation;
+            cursor: pointer;
         }
-        #gallery-viewport { overflow: auto; }
-        #product-gallery-modal > div { max-height: calc(100dvh - 1.5rem); overflow-y: auto; }
-        #product-gallery-modal button[aria-label="Reset zoom"] { min-height: 44px; }
-        @media (max-width: 480px) {
-            #product-gallery-modal > div > div:first-child { flex-wrap: wrap; }
-            #product-gallery-modal > div > div:first-child > div:first-child { flex: 1 1 100%; }
-            #product-gallery-modal > div > div:first-child > div:last-child { width: 100%; justify-content: flex-end; }
+        .product-gallery-control[hidden] { display: none; }
+        .product-gallery-control:focus-visible, #gallery-viewport:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: -3px;
+        }
+        .product-gallery-control svg {
+            display: block;
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
         @media (hover: hover) and (pointer: fine) {
             .product-gallery-main:not([data-dimensions="true"]):hover img { transform: scale(var(--preview-scale, 1)) scale(1.17); }
@@ -400,7 +469,7 @@
                             Request a DIY ESL Kit Quote
                         </button>
                         <a href="#" onclick="switchPage('rails'); return false;" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-semibold px-6 py-3 rounded-none text-xs transition border border-zinc-700 text-center">
-                            View Rails & Hardware âž”
+                            View Rails & Hardware &#10132;
                         </a>
                     </div>
                 </div>
@@ -484,7 +553,7 @@
                         <p class="text-zinc-400 text-sm font-light max-w-xl mt-1">Browse our available shelf rail profiles and mounting accessories, including listed lengths, colors, and prices.</p>
                     </div>
                     <button onclick="switchPage('rails'); return false;" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition whitespace-nowrap cursor-pointer shadow-md">
-                        View Rails & Hardware Catalog âž”
+                        View Rails & Hardware Catalog &#10132;
                     </button>
                 </div>
             </div>
@@ -638,7 +707,7 @@
                 </div>
 
                 <h3 class="text-xl font-bold text-zinc-900">ESL Tag Packs</h3>
-                <p class="text-sm text-zinc-600 leading-relaxed mt-2 mb-4">Battery life is approximately 5 years, with up to 6 years possible depending on usage and update frequency. TELICA uses reinforced plastic housings and reports drop testing from heights of up to 1.5 m (4.9 ft).</p>
+                <p class="text-sm text-zinc-600 leading-relaxed mt-2 mb-4">For standard ESL tags, battery life is approximately 5 years, with up to 6 years possible depending on usage and update frequency. For the 2.7″ Freezer-Grade TE-27C-Q2N, TELICA estimates approximately 7 years with two updates per day. TELICA uses reinforced plastic housings and reports drop testing from heights of up to 1.5 m (4.9 ft).</p>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <article id="tag-2-7" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
                         <div class="product-gallery mb-4" data-product-gallery="tag-2-7" data-product-name="2.7-inch Standard ESL Tag">
@@ -661,29 +730,35 @@
                                 <button type="button" data-gallery-thumb data-card-src="assets/product-lineup/tag-2-7-standard-dimensions.svg" data-full-src="assets/product-lineup/tag-2-7-standard-dimensions.svg" data-alt="2.7-inch Standard ESL tag housing dimensions: 3.23 inches by 1.65 inches (82.0 by 42.0 millimeters)." data-label="Dimensions" data-dimensions="true" aria-label="Show 2.7-inch Standard ESL tag dimensions" aria-pressed="false" class="gallery-thumb">
                                     <span class="gallery-thumb-image"><img src="assets/product-lineup/tag-2-7-standard-dimensions.svg" width="1200" height="800" alt="" loading="lazy" decoding="async"></span><span>Dimensions</span>
                                 </button>
+                                <button type="button" data-gallery-thumb data-open-direct data-full-src="assets/product-lineup/details/telica-2-7-inch-product-details.svg" data-alt="2.7-inch Standard ESL Tag product details. Four-color e-paper in black, white, red, and yellow; 152 by 296 pixels at 125 DPI. For store shelves or countertop placement with a compatible stand." data-label="Product Details" aria-label="Enlarge 2.7-inch Standard ESL Tag product details" class="gallery-thumb">
+                                    <span class="gallery-thumb-image"><img src="assets/product-lineup/details/telica-2-7-inch-product-details.svg" width="720" height="1209" alt="" loading="lazy" decoding="async"></span><span>Product Details</span>
+                                </button>
                             </div>
                         </div>
                         <span class="text-xs font-bold text-red-600 corporate-tag uppercase">Most Popular</span>
                         <h4 class="text-lg font-bold text-zinc-900 mt-1">2.7″ Standard ESL Tag</h4>
                         <p class="text-2xl font-extrabold text-zinc-900 mt-2">$439 <span class="text-sm font-medium text-zinc-600">/ 40-pack</span></p>
                         <p class="text-xs text-zinc-500 mt-1">40 tags · $10.98 each</p>
-                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A four-color shelf label for everyday pricing and promotions on standard retail shelves.</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A four-color label for everyday pricing and promotions on retail shelves. It can also be used in refrigerated displays that stay at or above 32 °F (0 °C) and do not freeze, including chilled beverage cases where color is needed. Use a compatible stand for countertop placement. Applications include grocery and convenience shelving, pharmacy aisles, wine, liquor and specialty retail, and hardware and general merchandise.</p>
                         <div class="mt-auto flex flex-col sm:flex-row gap-2">
                             <button type="button" onclick="openQuoteModal('2.7 Inch Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 2.7″ Standard Quote</button>
-                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 2.7 inch standard tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 2.7 inch standard tag installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Installation</a>
                         </div>
                     </article>
                     <article id="tag-2-7-freezer" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
                         <div class="product-gallery mb-4" data-product-gallery="tag-2-7-freezer" data-product-name="2.7-inch Freezer-Grade ESL Tag">
-                            <button type="button" data-gallery-open data-full-src="assets/product-lineup/tag-2-7-freezer-front-full.webp" data-alt="2.7-inch Freezer-Grade TELICA ESL tag with a blue snowflake and frozen strawberry example label display" data-label="Front" aria-label="Enlarge 2.7-inch Freezer-Grade ESL tag front view" style="--preview-scale:1.075" class="product-gallery-main aspect-[4/3] border border-zinc-200">
-                                <img src="assets/product-lineup/tag-2-7-freezer-front-card.webp" width="1200" height="613" alt="2.7-inch Freezer-Grade TELICA ESL tag with a blue snowflake and frozen strawberry example label display" decoding="async">
+                            <button type="button" data-gallery-open data-full-src="assets/product-lineup/tag-2-7-freezer-front-full.webp" data-alt="2.7-inch Freezer-Grade TELICA ESL tag with a blue snowflake and frozen strawberry example label. The TE-27C-Q2N e-paper display is black and white." data-label="Front" aria-label="Enlarge 2.7-inch Freezer-Grade ESL tag front view" style="--preview-scale:1.075" class="product-gallery-main aspect-[4/3] border border-zinc-200">
+                                <img src="assets/product-lineup/tag-2-7-freezer-front-card.webp" width="1200" height="613" alt="2.7-inch Freezer-Grade TELICA ESL tag with a blue snowflake and frozen strawberry example label. The TE-27C-Q2N e-paper display is black and white." decoding="async">
                             </button>
                             <div class="gallery-thumbnails" aria-label="2.7-inch Freezer-Grade ESL tag views">
-                                <button type="button" data-gallery-thumb data-card-src="assets/product-lineup/tag-2-7-freezer-front-card.webp" data-full-src="assets/product-lineup/tag-2-7-freezer-front-full.webp" data-alt="2.7-inch Freezer-Grade TELICA ESL tag with a blue snowflake and frozen strawberry example label display" data-label="Front" data-preview-scale="1.075" data-note="Example label display; the product price and pack size are shown on the card." aria-label="Show 2.7-inch Freezer-Grade ESL tag front view" aria-pressed="true" class="gallery-thumb">
+                                <button type="button" data-gallery-thumb data-card-src="assets/product-lineup/tag-2-7-freezer-front-card.webp" data-full-src="assets/product-lineup/tag-2-7-freezer-front-full.webp" data-alt="2.7-inch Freezer-Grade TELICA ESL tag with a blue snowflake and frozen strawberry example label. The TE-27C-Q2N e-paper display is black and white." data-label="Front" data-preview-scale="1.075" data-note="Color in the product photo is illustrative; the TE-27C-Q2N e-paper display is black and white." aria-label="Show 2.7-inch Freezer-Grade ESL tag front view" aria-pressed="true" class="gallery-thumb">
                                     <span class="gallery-thumb-image"><img src="assets/product-lineup/tag-2-7-freezer-front-thumb.webp" width="180" height="92" alt="" loading="lazy" decoding="async"></span><span>Front</span>
                                 </button>
                                 <button type="button" data-gallery-thumb data-card-src="assets/product-lineup/tag-2-7-freezer-dimensions.svg" data-full-src="assets/product-lineup/tag-2-7-freezer-dimensions.svg" data-alt="2.7-inch Freezer-Grade ESL tag housing dimensions: 3.23 inches by 1.65 inches (82.0 by 42.0 millimeters)." data-label="Dimensions" data-dimensions="true" aria-label="Show 2.7-inch Freezer-Grade ESL tag dimensions" aria-pressed="false" class="gallery-thumb">
                                     <span class="gallery-thumb-image"><img src="assets/product-lineup/tag-2-7-freezer-dimensions.svg" width="1200" height="800" alt="" loading="lazy" decoding="async"></span><span>Dimensions</span>
+                                </button>
+                                <button type="button" data-gallery-thumb data-open-direct data-full-src="assets/product-lineup/details/telica-2-7-inch-freezer-grade-product-details.svg" data-alt="2.7-inch Freezer-Grade ESL Tag product details. TE-27C-Q2N black-and-white e-paper, minus 13 to 50 degrees Fahrenheit, and approximately seven years of battery life with two updates per day." data-label="Product Details" aria-label="Enlarge 2.7-inch Freezer-Grade ESL Tag product details" class="gallery-thumb">
+                                    <span class="gallery-thumb-image"><img src="assets/product-lineup/details/telica-2-7-inch-freezer-grade-product-details.svg" width="720" height="1209" alt="" loading="lazy" decoding="async"></span><span>Product Details</span>
                                 </button>
                             </div>
                         </div>
@@ -691,10 +766,10 @@
                         <h4 class="text-lg font-bold text-zinc-900 mt-1">2.7″ Freezer-Grade ESL Tag</h4>
                         <p class="text-2xl font-extrabold text-zinc-900 mt-2">$450 <span class="text-sm font-medium text-zinc-600">/ 40-pack</span></p>
                         <p class="text-xs text-zinc-500 mt-1">40 tags · $11.25 each</p>
-                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">Designed for refrigerated and frozen displays, including commercial coolers and freezers.</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">The TE-27C-Q2N uses a black-and-white e-paper display for cases that may fall below freezing; its operating range is −13 to 50 °F (−25 to 10 °C). Use it for meat, seafood, produce, and frozen-food displays that may drop below freezing. For refrigerated food or drink cases that stay at or above 32 °F (0 °C) and need color, the 2.7-inch Standard four-color tag can be used.</p>
                         <div class="mt-auto flex flex-col sm:flex-row gap-2">
                             <button type="button" onclick="openQuoteModal('2.7 Inch Freezer Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 2.7″ Freezer Quote</button>
-                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 2.7 inch freezer-grade tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 2.7 inch freezer-grade tag installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Installation</a>
                         </div>
                     </article>
                     <article id="tag-1-5" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
@@ -718,16 +793,19 @@
                                 <button type="button" data-gallery-thumb data-card-src="assets/product-lineup/tag-1-5-compact-dimensions.svg" data-full-src="assets/product-lineup/tag-1-5-compact-dimensions.svg" data-alt="1.5-inch Compact ESL tag housing dimensions: 1.48 inches by 1.80 inches (37.56 by 45.76 millimeters)." data-label="Dimensions" data-dimensions="true" aria-label="Show 1.5-inch Compact ESL tag dimensions" aria-pressed="false" class="gallery-thumb">
                                     <span class="gallery-thumb-image"><img src="assets/product-lineup/tag-1-5-compact-dimensions.svg" width="1200" height="800" alt="" loading="lazy" decoding="async"></span><span>Dimensions</span>
                                 </button>
+                                <button type="button" data-gallery-thumb data-open-direct data-full-src="assets/product-lineup/details/telica-1-5-inch-product-details.svg" data-alt="1.5-inch Compact ESL Tag product details. Four-color e-paper in black, white, red, and yellow. Hook-mounting guidance and example applications for compact retail items." data-label="Product Details" aria-label="Enlarge 1.5-inch Compact ESL Tag product details" class="gallery-thumb">
+                                    <span class="gallery-thumb-image"><img src="assets/product-lineup/details/telica-1-5-inch-product-details.svg" width="720" height="1209" alt="" loading="lazy" decoding="async"></span><span>Product Details</span>
+                                </button>
                             </div>
                         </div>
                         <span class="text-xs font-bold text-zinc-600 corporate-tag uppercase">Compact</span>
                         <h4 class="text-lg font-bold text-zinc-900 mt-1">1.5″ ESL Tag</h4>
                         <p class="text-2xl font-extrabold text-zinc-900 mt-2">$549 <span class="text-sm font-medium text-zinc-600">/ 60-pack</span></p>
                         <p class="text-xs text-zinc-500 mt-1">60 tags · $9.15 each</p>
-                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A compact four-color label for prices and barcodes on narrow shelves, cosmetics displays, and small items.</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A compact four-color label for products displayed on retail hooks. Mount it with a compatible tag clip. Use it for cosmetics and personal care products, pharmacy and OTC items, small packaged goods and spices, or jewelry, accessories and small electronics.</p>
                         <div class="mt-auto flex flex-col sm:flex-row gap-2">
                             <button type="button" onclick="openQuoteModal('1.5 Inch Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 1.5″ Quote</button>
-                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 1.5 inch tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 1.5 inch tag installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Installation</a>
                         </div>
                     </article>
                     <article id="tag-3-7" class="bg-white p-5 sm:p-6 border border-zinc-300 shadow-sm flex flex-col scroll-mt-24">
@@ -751,16 +829,19 @@
                                 <button type="button" data-gallery-thumb data-card-src="assets/product-lineup/tag-3-7-large-dimensions.svg" data-full-src="assets/product-lineup/tag-3-7-large-dimensions.svg" data-alt="3.7-inch Large Format ESL tag housing dimensions: 4.09 inches by 2.48 inches (104.0 by 63.0 millimeters)." data-label="Dimensions" data-dimensions="true" aria-label="Show 3.7-inch Large Format ESL tag dimensions" aria-pressed="false" class="gallery-thumb">
                                     <span class="gallery-thumb-image"><img src="assets/product-lineup/tag-3-7-large-dimensions.svg" width="1200" height="800" alt="" loading="lazy" decoding="async"></span><span>Dimensions</span>
                                 </button>
+                                <button type="button" data-gallery-thumb data-open-direct data-full-src="assets/product-lineup/details/telica-3-7-inch-product-details.svg" data-alt="3.7-inch Large Format ESL Tag product details. TE-37R-Q2N three-color e-paper in black, white, and red only; no yellow. 240 by 416 pixels at 139 DPI, for pricing and promotions." data-label="Product Details" aria-label="Enlarge 3.7-inch Large Format ESL Tag product details" class="gallery-thumb">
+                                    <span class="gallery-thumb-image"><img src="assets/product-lineup/details/telica-3-7-inch-product-details.svg" width="720" height="1030" alt="" loading="lazy" decoding="async"></span><span>Product Details</span>
+                                </button>
                             </div>
                         </div>
                         <span class="text-xs font-bold text-zinc-600 corporate-tag uppercase">Large Format</span>
                         <h4 class="text-lg font-bold text-zinc-900 mt-1">3.7″ ESL Tag</h4>
                         <p class="text-2xl font-extrabold text-zinc-900 mt-2">$559 <span class="text-sm font-medium text-zinc-600">/ 30-pack</span></p>
                         <p class="text-xs text-zinc-500 mt-1">30 tags · $18.63 each</p>
-                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">A larger display for detailed product information and promotions on endcaps and other prominent displays.</p>
+                        <p class="text-sm text-zinc-600 leading-relaxed mt-3 mb-4">The TE-37R-Q2N has a larger three-color display for detailed product information and promotions on endcaps and other prominent displays.</p>
                         <div class="mt-auto flex flex-col sm:flex-row gap-2">
                             <button type="button" onclick="openQuoteModal('3.7 Inch Tag Bundle Order')" class="min-h-[44px] flex-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-3 transition">Request a 3.7″ Quote</button>
-                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 3.7 inch tag pharmacy installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Pharmacy Installation</a>
+                            <a href="#pharmacy-esl-installation" onclick="switchPage('support', 'pharmacy-esl-installation'); return false;" aria-label="Watch the 3.7 inch tag installation showcase" class="min-h-[44px] flex-1 flex items-center justify-center gap-2 border border-zinc-400 hover:bg-zinc-100 text-zinc-900 text-xs font-semibold px-3 py-3 text-center"><span aria-hidden="true">▶</span> Watch Installation</a>
                         </div>
                     </article>
                 </div>
@@ -827,7 +908,7 @@
                         </div>
                         <div class="p-5 bg-white border border-zinc-300">
                             <h3 class="text-sm font-bold text-zinc-900 mb-2">Tag Battery Life</h3>
-                            <p class="text-zinc-600 text-xs leading-relaxed">Battery life is approximately 5 years, with up to 6 years possible depending on usage and update frequency. TELICA uses reinforced plastic housings and reports drop testing from heights of up to 1.5 m (4.9 ft).</p>
+                            <p class="text-zinc-600 text-xs leading-relaxed">For standard ESL tags, battery life is approximately 5 years, with up to 6 years possible depending on usage and update frequency. For the 2.7″ Freezer-Grade TE-27C-Q2N, TELICA estimates approximately 7 years with two updates per day. TELICA uses reinforced plastic housings and reports drop testing from heights of up to 1.5 m (4.9 ft).</p>
                         </div>
                         <div class="p-5 bg-white border border-zinc-300">
                             <h3 class="text-sm font-bold text-zinc-900 mb-2">FCC Certification</h3>
@@ -890,7 +971,7 @@
                 
                 <div class="text-center mb-8">
                     <a href="#setup-resources" onclick="switchPage('resources'); return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
-                        View the POS Setup Guide âž”
+                        View the POS Setup Guide &#10132;
                     </a>
                 </div>
 
@@ -900,7 +981,7 @@
                         If your ESL deployment requires POS integration, site validation, or coordination across multiple locations, start with a project review.
                     </p>
                     <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=esl-project'; return false;" class="inline-block bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
-                        Discuss an ESL Project âž”
+                        Discuss an ESL Project &#10132;
                     </a>
                 </div>
             </div>
@@ -928,7 +1009,7 @@
                         Tell us which POS you use, how many locations are in scope, and what you need to validate before rollout.
                     </p>
                     <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=esl-project'; return false;" class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition cursor-pointer shadow-md">
-                        Discuss an ESL Project âž”
+                        Discuss an ESL Project &#10132;
                     </a>
                 </div>
             </div>
@@ -956,9 +1037,9 @@
                 <div class="bg-zinc-900 text-white p-6 rounded-none space-y-3">
                     <h3 class="font-bold text-sm border-b border-zinc-800 pb-3">Our Core Pillars</h3>
                     <ul class="space-y-2.5 text-xs font-light text-zinc-300">
-                        <li>â€¢ <strong>Products & Integration Support:</strong> ESL hardware, setup guidance, and integration support based on project requirements.</li>
-                        <li>â€¢ <strong>Subscription-Free DIY Kits:</strong> Starter kits with no monthly cloud fee.</li>
-                        <li>â€¢ <strong>Solutions for Different Environments:</strong> Product options for retail stores, warehouses, and other business settings.</li>
+                        <li>&#8226; <strong>Products & Integration Support:</strong> ESL hardware, setup guidance, and integration support based on project requirements.</li>
+                        <li>&#8226; <strong>Subscription-Free DIY Kits:</strong> Starter kits with no monthly cloud fee.</li>
+                        <li>&#8226; <strong>Solutions for Different Environments:</strong> Product options for retail stores, warehouses, and other business settings.</li>
                     </ul>
                 </div>
             </div>
@@ -971,7 +1052,7 @@
                 </p>
             </div>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home & Solutions</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">&#8592; Back to Home & Solutions</a></div>
         </div>
     </div>
 
@@ -989,7 +1070,7 @@
                     <p class="text-zinc-600 text-sm font-light mt-1">Rail types, lengths, and available colors for the products offered by TELICA USA.</p>
                 </div>
                 <button onclick="openQuoteModal('Rail & Hardware Order')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition shadow-sm whitespace-nowrap cursor-pointer">
-                    Request Rail Quote âž”
+                    Request Rail Quote &#10132;
                 </button>
             </div>
 
@@ -1087,7 +1168,7 @@
                     <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder â€” Normal</h3>
+                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder &#8212; Normal</h3>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
                         <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
@@ -1095,7 +1176,7 @@
                     <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder â€” Compressed</h3>
+                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder &#8212; Compressed</h3>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
                         <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
@@ -1128,7 +1209,7 @@
             <p class="text-xs text-zinc-600">Bulk orders for rails and accessories may qualify for negotiated pricing. Contact us for a quote.</p>
             <p class="text-xs text-zinc-500">Please confirm the selected type, color, and quantity when requesting a quote.</p>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home & Solutions</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">&#8592; Back to Home & Solutions</a></div>
         </div>
     </div>
 
@@ -1173,7 +1254,7 @@
                         <p class="text-zinc-400 text-xs font-light">Connect your preferred platform for real-time digital price synchronization.</p>
                     </div>
                     <div class="flex flex-wrap gap-2 text-[10px] text-zinc-300 corporate-tag uppercase font-semibold">
-                        <span>SQUARE</span> â€¢ <span>SHOPIFY</span> â€¢ <span>LOYVERSE</span>
+                        <span>SQUARE</span> &#8226; <span>SHOPIFY</span> &#8226; <span>LOYVERSE</span>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -1251,7 +1332,7 @@
                 </div>
             </div>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">&#8592; Back to Home</a></div>
         </div>
     </div>
 
@@ -1296,7 +1377,7 @@
                         <p class="text-zinc-600 text-xs font-light leading-relaxed mb-4">Installation and integration partnership inquiries are reviewed by Asterika LLC. Tell us about your integration or installation services, the areas you serve, and the types of projects you support.</p>
                     </div>
                     <a href="#" onclick="window.location.href='https://asterika.net/pages/contact?inquiry=technical-partnership'; return false;" class="block text-center bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded-none transition cursor-pointer">
-                        Partner with Asterika âž”
+                        Partner with Asterika &#10132;
                     </a>
                 </div>
 
@@ -1321,7 +1402,7 @@
                 </div>
             </div>
 
-            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">â† Back to Home</a></div>
+            <div><a href="#" onclick="switchPage('home'); return false;" class="inline-block bg-zinc-900 text-white text-xs font-semibold px-6 py-2.5 rounded-none transition">&#8592; Back to Home</a></div>
         </div>
     </div>
 
@@ -1371,8 +1452,8 @@
         </div>
 
         <div class="max-w-7xl mx-auto pt-3 border-t border-zinc-800 text-zinc-500 flex flex-col sm:flex-row justify-between items-center">
-            <p>Â© 2026 ASTERIKA LLC | TELICA USA. All rights reserved.</p>
-            <p class="mt-1 sm:mt-0 text-zinc-400">We typically respond within 1â€“2 business days.</p>
+            <p>&copy; 2026 ASTERIKA LLC | TELICA USA. All rights reserved.</p>
+            <p class="mt-1 sm:mt-0 text-zinc-400">We typically respond within 1&ndash;2 business days.</p>
         </div>
     </footer>
 
@@ -1387,35 +1468,32 @@
                 <button onclick="closeDetailModal()" class="text-zinc-400 hover:text-black p-1">✕</button>
             </div>
             <div id="modal-opt-content" class="text-xs sm:text-sm text-zinc-600 font-light leading-relaxed space-y-2"></div>
-            <button id="modal-inquiry-btn" onclick="" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none cursor-pointer transition shadow-md">Inquiry About This Option âž”</button>
+            <button id="modal-inquiry-btn" onclick="" class="w-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold py-3 rounded-none cursor-pointer transition shadow-md">Inquiry About This Option &#10132;</button>
         </div>
     </div>
 
-    <div id="product-gallery-modal" class="hidden fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="gallery-title" onclick="if (event.target === this) closeProductGallery()">
-        <div class="w-full max-w-5xl bg-zinc-950 text-white border border-zinc-700">
-            <div class="flex items-center justify-between gap-3 p-3 sm:p-4 border-b border-zinc-800">
+    <dialog id="product-gallery-modal" aria-labelledby="gallery-title">
+        <div class="product-gallery-dialog">
+            <div class="product-gallery-heading">
                 <div>
-                    <h2 id="gallery-title" class="font-semibold text-sm sm:text-base">Double-Sided Adhesive Rail</h2>
-                    <p id="gallery-count" class="text-xs text-zinc-400 mt-1" aria-live="polite"></p>
-                    <p id="gallery-note" class="hidden mt-1 max-w-2xl text-xs leading-relaxed text-zinc-300" role="note"></p>
+                    <h2 id="gallery-title">Product Gallery</h2>
+                    <p id="gallery-count" aria-live="polite"></p>
+                    <p id="gallery-note" hidden></p>
                 </div>
-                <div class="flex items-center gap-2">
-                    <button type="button" onclick="zoomProductPhoto(-0.25)" aria-label="Zoom out" class="w-9 h-9 border border-zinc-600 hover:bg-zinc-800 text-lg">âˆ’</button>
-                    <button type="button" onclick="resetProductPhotoZoom()" aria-label="Reset zoom" class="h-9 px-3 border border-zinc-600 hover:bg-zinc-800 text-xs">Reset</button>
-                    <button type="button" onclick="zoomProductPhoto(0.25)" aria-label="Zoom in" class="w-9 h-9 border border-zinc-600 hover:bg-zinc-800 text-lg">+</button>
-                    <button type="button" onclick="closeProductGallery()" aria-label="Close photo gallery" class="w-9 h-9 ml-1 text-zinc-300 hover:text-white text-xl">Ã—</button>
-                </div>
+                <button type="button" class="product-gallery-control" aria-label="Close photo gallery" onclick="closeProductGallery()"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
             </div>
-            <div class="flex items-center gap-2 p-3 sm:p-4">
-                <button type="button" onclick="changeProductPhoto(-1)" aria-label="Previous photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">â€¹</button>
-                <div id="gallery-viewport" class="h-[55vh] sm:h-[65vh] flex-1 overflow-hidden flex items-center justify-center bg-black">
-                    <img id="gallery-image" src="" alt="" class="max-h-full max-w-full object-contain transition-transform duration-150" onclick="zoomProductPhoto(0.25)" title="Click to zoom in">
-                </div>
-                <button type="button" onclick="changeProductPhoto(1)" aria-label="Next photo" class="shrink-0 w-9 h-12 border border-zinc-700 hover:bg-zinc-800">â€º</button>
+            <div id="gallery-viewport" tabindex="0" aria-label="Scrollable photo">
+                <img id="gallery-image" alt="" onclick="zoomProductPhoto(0.25)">
             </div>
-            <p class="px-3 pb-3 sm:px-4 sm:pb-4 text-center text-xs text-zinc-400">Use + / âˆ’ to zoom. Click the photo to zoom in; use the arrows to switch views.</p>
+            <div class="product-gallery-controls">
+                <button type="button" class="product-gallery-control" aria-label="Previous photo" onclick="changeProductPhoto(-1)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 6-6 6 6 6"/></svg></button>
+                <button type="button" class="product-gallery-control" aria-label="Zoom out" onclick="zoomProductPhoto(-0.25)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg></button>
+                <button type="button" class="product-gallery-control" aria-label="Reset zoom" onclick="resetProductPhotoZoom()">Reset</button>
+                <button type="button" class="product-gallery-control" aria-label="Zoom in" onclick="zoomProductPhoto(0.25)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m-7-7v14"/></svg></button>
+                <button type="button" class="product-gallery-control" aria-label="Next photo" onclick="changeProductPhoto(1)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 6 6-6 6"/></svg></button>
+            </div>
         </div>
-    </div>
+    </dialog>
 
     <!-- ëª¨ë‹¬: Quote Inquiry -->
     <div id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quote-title" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
@@ -1561,65 +1639,101 @@
         let currentProductGalleryPhotos = productGalleryPhotos;
         let currentProductGalleryOpener = null;
         let productPhotoZoom = 1;
-        const productGalleryTitle = document.getElementById('gallery-title');
+        const productGalleryDialog = document.getElementById('product-gallery-modal');
+        const productGalleryViewport = document.getElementById('gallery-viewport');
+        const productGalleryImage = document.getElementById('gallery-image');
+        const productGalleryCount = document.getElementById('gallery-count');
+
+        function renderProductGalleryZoom() {
+            const photo = currentProductGalleryPhotos[currentProductPhoto];
+            productGalleryImage.style.setProperty('--gallery-zoom', productPhotoZoom);
+            productGalleryCount.textContent = `${photo.view} / ${Math.round(productPhotoZoom * 100)}%`;
+        }
 
         function renderProductGallery() {
-            const image = document.getElementById('gallery-image');
             const photo = currentProductGalleryPhotos[currentProductPhoto];
-            image.src = photo.src;
-            image.alt = photo.alt;
-            image.style.transform = `scale(${productPhotoZoom})`;
-            productGalleryTitle.textContent = photo.title;
+            productGalleryImage.src = photo.src;
+            productGalleryImage.alt = photo.alt;
+            document.getElementById('gallery-title').textContent = photo.title;
             const note = document.getElementById('gallery-note');
             note.textContent = photo.note || '';
-            note.classList.toggle('hidden', !photo.note);
+            note.hidden = !photo.note;
+            productGalleryDialog.querySelectorAll('[aria-label="Previous photo"], [aria-label="Next photo"]').forEach(button => {
+                button.hidden = photo.startIndex === photo.endIndex;
+            });
             if (photo.galleryButton) selectProductGalleryView(photo.galleryButton);
-            document.getElementById('gallery-count').textContent = `${photo.view} Â· ${Math.round(productPhotoZoom * 100)}%`;
+            resetProductPhotoZoom();
+        }
+
+        function showProductGallery() {
+            renderProductGallery();
+            productGalleryDialog.showModal();
+            document.body.classList.add('product-gallery-open');
+            productGalleryDialog.querySelector('[aria-label="Close photo gallery"]').focus();
         }
 
         function openProductGallery(index) {
             currentProductGalleryPhotos = productGalleryPhotos;
             currentProductGalleryOpener = document.activeElement;
-            const photo = productGalleryPhotos[Math.max(0, Math.min(index, productGalleryPhotos.length - 1))];
-            currentProductPhoto = photo.startIndex;
-            productPhotoZoom = 1;
-            renderProductGallery();
-            document.getElementById('product-gallery-modal').classList.remove('hidden');
-            document.getElementById('product-gallery-modal').querySelector('[aria-label="Close photo gallery"]').focus();
+            currentProductPhoto = Math.max(0, Math.min(index, productGalleryPhotos.length - 1));
+            showProductGallery();
         }
 
         function closeProductGallery() {
-            document.getElementById('product-gallery-modal').classList.add('hidden');
-            if (currentProductGalleryOpener) currentProductGalleryOpener.focus();
+            productGalleryDialog.close();
+        }
+
+        productGalleryDialog.addEventListener('click', (event) => {
+            if (event.target === productGalleryDialog) closeProductGallery();
+        });
+
+        productGalleryDialog.addEventListener('close', () => {
+            document.body.classList.remove('product-gallery-open');
+            currentProductGalleryOpener?.focus({ preventScroll: true });
             currentProductGalleryOpener = null;
             currentProductGalleryPhotos = productGalleryPhotos;
-        }
+        });
 
         function changeProductPhoto(direction) {
             const photo = currentProductGalleryPhotos[currentProductPhoto];
             const productPhotoCount = photo.endIndex - photo.startIndex + 1;
+            if (productPhotoCount < 2) return;
             currentProductPhoto = photo.startIndex + (currentProductPhoto - photo.startIndex + direction + productPhotoCount) % productPhotoCount;
-            productPhotoZoom = 1;
             renderProductGallery();
         }
 
         function zoomProductPhoto(amount) {
+            const width = productGalleryViewport.clientWidth;
+            const height = productGalleryViewport.clientHeight;
+            const centerX = (productGalleryViewport.scrollLeft + width / 2) / productPhotoZoom;
+            const centerY = (productGalleryViewport.scrollTop + height / 2) / productPhotoZoom;
             productPhotoZoom = Math.max(1, Math.min(3, productPhotoZoom + amount));
-            renderProductGallery();
+            renderProductGalleryZoom();
+            productGalleryViewport.scrollTo(centerX * productPhotoZoom - width / 2, centerY * productPhotoZoom - height / 2);
         }
 
         function resetProductPhotoZoom() {
             productPhotoZoom = 1;
-            renderProductGallery();
+            renderProductGalleryZoom();
+            productGalleryViewport.scrollTo(0, 0);
         }
 
-        document.addEventListener('keydown', (event) => {
-            if (document.getElementById('product-gallery-modal').classList.contains('hidden')) return;
-            if (event.key === 'Escape') closeProductGallery();
-            if (event.key === 'ArrowLeft') changeProductPhoto(-1);
-            if (event.key === 'ArrowRight') changeProductPhoto(1);
-            if (event.key === '+' || event.key === '=') zoomProductPhoto(0.25);
-            if (event.key === '-') zoomProductPhoto(-0.25);
+        productGalleryDialog.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                closeProductGallery();
+                return;
+            }
+            if (event.target === productGalleryViewport && event.key.startsWith('Arrow')) return;
+            switch (event.key) {
+                case 'ArrowLeft': changeProductPhoto(-1); break;
+                case 'ArrowRight': changeProductPhoto(1); break;
+                case '+':
+                case '=': zoomProductPhoto(0.25); break;
+                case '-': zoomProductPhoto(-0.25); break;
+                default: return;
+            }
+            event.preventDefault();
         });
 
         const optionDetails = {
@@ -1644,7 +1758,7 @@
                 title: "Dedicated Commercial Support & Server Architecture Strategy (HQ & Managed Collaboration)",
                 tag: "Option 04 - Enterprise Support & Server Architecture",
                 interest: "Commercial & Multi-Location Project",
-                content: `<p>Large enterprise chains and multi-location rollouts requiring dedicated infrastructure are supported through special project pricing, extended hardware manufacturer warranties, and tailored service level agreements (SLAs).</p><p class="mt-2">Server management, technical assistance, and hosting models are fully flexible based on corporate requirementsâ€”ranging from <strong>corporate headquarters self-hosted server setups</strong> to <strong>HQ-managed or outsourced operational frameworks</strong>, backed by close technical coordination with our South Korean engineering team rather than rigid regional support assumptions.</p>`
+                content: `<p>Large enterprise chains and multi-location rollouts requiring dedicated infrastructure are supported through special project pricing, extended hardware manufacturer warranties, and tailored service level agreements (SLAs).</p><p class="mt-2">Server management, technical assistance, and hosting models are fully flexible based on corporate requirements&#8212;ranging from <strong>corporate headquarters self-hosted server setups</strong> to <strong>HQ-managed or outsourced operational frameworks</strong>, backed by close technical coordination with our South Korean engineering team rather than rigid regional support assumptions.</p>`
             }
         };
 
@@ -2026,7 +2140,7 @@
                 fetch(`https://api.zippopotam.us/us/${zip.trim()}`)
                     .then(r => r.ok ? r.json() : Promise.reject())
                     .then(d => { detectedLocation = `${d.places[0]['place name']}, ${d.places[0]['state abbreviation']}`; document.getElementById('zip-location').innerText = `ðŸ“ ${detectedLocation}`; })
-                    .catch(() => { detectedLocation = ""; document.getElementById('zip-location').innerText = "âš ï¸ Invalid ZIP"; });
+                    .catch(() => { detectedLocation = ""; document.getElementById('zip-location').innerText = "\u26a0\ufe0f Invalid ZIP"; });
             } else { detectedLocation = ""; document.getElementById('zip-location').innerText = ""; }
         }
 
@@ -2183,17 +2297,17 @@
             mainButton.dataset.note = button.dataset.note || '';
             mainButton.dataset.dimensions = button.dataset.dimensions || 'false';
             mainButton.setAttribute('aria-label', `Enlarge ${gallery.dataset.productName} - ${button.dataset.label} view`);
-            gallery.querySelectorAll('[data-gallery-thumb]').forEach(thumbnail => {
+            gallery.querySelectorAll('[data-gallery-thumb]:not([data-open-direct])').forEach(thumbnail => {
                 thumbnail.setAttribute('aria-pressed', String(thumbnail === button));
             });
         }
 
-        function openProductImageGallery(gallery, opener) {
+        function openProductImageGallery(gallery, opener, directView = null) {
             currentProductGalleryOpener = opener;
             const thumbnails = Array.from(gallery.querySelectorAll('[data-gallery-thumb]'));
             const views = thumbnails.length ? thumbnails : [opener];
-            const selectedIndex = views.findIndex(view => view.getAttribute('aria-pressed') === 'true');
-            currentProductGalleryPhotos = views.map((view, index) => ({
+            const selectedIndex = views.findIndex(view => directView ? view === directView : view.getAttribute('aria-pressed') === 'true');
+            currentProductGalleryPhotos = views.map(view => ({
                 src: view.dataset.fullSrc,
                 alt: view.dataset.alt,
                 title: gallery.dataset.productName,
@@ -2201,21 +2315,21 @@
                 endIndex: views.length - 1,
                 view: view.dataset.label || 'Kit',
                 note: view.dataset.note || '',
-                galleryButton: view.matches('[data-gallery-thumb]') ? view : null
+                galleryButton: view.matches('[data-gallery-thumb]:not([data-open-direct])') ? view : null
             }));
             currentProductPhoto = selectedIndex < 0 ? 0 : selectedIndex;
-            productPhotoZoom = 1;
-            renderProductGallery();
-            const modal = document.getElementById('product-gallery-modal');
-            modal.classList.remove('hidden');
-            modal.querySelector('[aria-label="Close photo gallery"]').focus();
+            showProductGallery();
         }
 
         document.querySelectorAll('[data-product-gallery]').forEach(gallery => {
             gallery.addEventListener('click', event => {
                 const thumbnail = event.target.closest('[data-gallery-thumb]');
                 if (thumbnail && gallery.contains(thumbnail)) {
-                    selectProductGalleryView(thumbnail);
+                    if (thumbnail.hasAttribute('data-open-direct')) {
+                        openProductImageGallery(gallery, thumbnail, thumbnail);
+                    } else {
+                        selectProductGalleryView(thumbnail);
+                    }
                     return;
                 }
                 const opener = event.target.closest('[data-gallery-open]');

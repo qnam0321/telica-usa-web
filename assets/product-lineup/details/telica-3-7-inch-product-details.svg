@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1030" viewBox="0 0 720 1030" role="img" aria-labelledby="title desc">
+<title id="title">TELICA USA 3.7-inch ESL product details</title>
+<desc id="desc">3.7-inch three-color electronic shelf label with a larger display for product details, pricing, and promotions. Model TE-37R-Q2N, 240 by 416 pixels at 139 DPI, a two-cell CR2477 lithium battery pack, 30 tags per box, and one-year warranty.</desc>
+<rect width="720" height="1030" fill="#fff"/>
+<rect width="720" height="189" fill="#18191b"/>
+<rect width="720" height="7" fill="#db2025"/>
+<g font-family="Arial, sans-serif">
+<text x="38" y="50" fill="#ff8588" font-size="23" font-weight="700" letter-spacing="2">TELICA USA</text>
+<text x="38" y="106" fill="#fff" font-size="48" font-weight="700">3.7″ ESL</text>
+<text x="39" y="151" fill="#e7e7e7" font-size="27">Product Details · TE-37R-Q2N</text>
+<text x="38" y="238" fill="#1d1e20" font-size="27" font-weight="700">More room for pricing and promotions</text>
+<text x="38" y="270" fill="#53575b" font-size="22">Show product names, prices, and offers together.</text>
+<g fill="#f5f5f6">
+<rect x="38" y="302" width="644" height="144" rx="8"/>
+<rect x="38" y="462" width="644" height="190" rx="8"/>
+<rect x="38" y="668" width="644" height="181" rx="8"/>
+</g>
+<g x="58" fill="#a61920" font-size="22" font-weight="700">
+<text x="58" y="334">DISPLAY</text>
+<text x="58" y="491">CONNECTIVITY &amp; POWER</text>
+<text x="58" y="697">HOUSING &amp; OPERATING CONDITIONS</text>
+</g>
+<g fill="#242528" font-size="23">
+<text x="58" y="367">3.7″ e-paper · 240 × 416 px (139 DPI)</text>
+<text x="58" y="397">Black, white, and red</text>
+<text x="58" y="427">Active area: 81.5 × 47.04 mm</text>
+<text x="58" y="521">2.4 GHz · IEEE 802.15.4</text>
+<text x="58" y="549">Up to 98 ft (30 m) in clear line of sight †</text>
+<text x="58" y="577">FeliCa NFC Forum Type 3</text>
+<text x="58" y="605">CR2477 lithium battery pack (2 cells)</text>
+<text x="58" y="633">Battery life: approx. 5 years (up to 6)*</text>
+<text x="58" y="727">4.09 × 2.48 × 0.67 in</text>
+<text x="58" y="753">(104.0 × 63.0 × 17.0 mm) · W × H × D</text>
+<text x="58" y="779">Operating range: 32–95 °F (0–35 °C)</text>
+<text x="58" y="805">Weight: 86 g (3.03 oz)</text>
+<text x="58" y="831">Reinforced plastic · 4.9 ft (1.5 m) drop test</text>
+</g>
+<text x="38" y="878" fill="#1d1e20" font-weight="700" font-size="25">30 tags per box · 1-year warranty</text>
+<path d="M38 901H682" stroke="#dadbdd" stroke-width="2"/>
+<g fill="#53575b" font-size="19">
+<text x="38" y="929">* Battery life varies with use and update frequency.</text>
+<text x="38" y="954">† Actual range varies with the RF environment.</text>
+<text x="38" y="981">Product details may change. Confirm when ordering.</text>
+</g>
+</g>
+</svg>

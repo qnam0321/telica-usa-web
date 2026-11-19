@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="720" height="1209" viewBox="0 0 720 1209" role="img" aria-labelledby="title desc">
+<title id="title">TELICA USA 2.7-inch Freezer-Grade ESL product details</title>
+<desc id="desc">TE-27C-Q2N black-and-white freezer-grade electronic shelf label. 152 by 296 pixels at 125 DPI. Operating range minus 13 to 50 degrees Fahrenheit. Approximate battery life of seven years with two updates per day. Applications include chilled meat, seafood and vegetables, frozen food cases, and chilled foods and drinks behind glass doors.</desc>
+<rect width="720" height="1209" fill="#fff"/>
+<rect width="720" height="189" fill="#18191b"/>
+<rect width="720" height="7" fill="#db2025"/>
+<g font-family="Arial, sans-serif">
+<text x="38" y="50" fill="#ff8588" font-size="23" font-weight="700" letter-spacing="2">TELICA USA</text>
+<text x="38" y="106" fill="#fff" font-size="44" font-weight="700">2.7″ Freezer-Grade ESL</text>
+<text x="39" y="151" fill="#e7e7e7" font-size="27">Product Details · TE-27C-Q2N</text>
+<text x="38" y="238" fill="#1d1e20" font-size="27" font-weight="700">For refrigerated and freezer cases</text>
+<text x="38" y="270" fill="#53575b" font-size="22">Engineered for wireless communication and</text>
+<text x="38" y="296" fill="#53575b" font-size="22">e-paper display operation at low temperatures.</text>
+<rect x="38" y="320" width="644" height="162" rx="8" fill="#f5f5f6"/>
+<text x="58" y="352" fill="#a61920" font-size="22" font-weight="700">EXAMPLE APPLICATIONS</text>
+<g fill="#242528" font-size="22">
+<text x="58" y="380">Refrigerated meat and seafood cases</text>
+<text x="58" y="408">Chilled vegetable and produce displays</text>
+<text x="58" y="436">Frozen food cases</text>
+<text x="58" y="464">Chilled foods and drinks behind glass doors</text>
+</g>
+<g fill="#f5f5f6">
+<rect x="38" y="499" width="644" height="115" rx="8"/>
+<rect x="38" y="631" width="644" height="180" rx="8"/>
+<rect x="38" y="828" width="644" height="161" rx="8"/>
+</g>
+<g x="58" fill="#a61920" font-size="22" font-weight="700">
+<text x="58" y="527">DISPLAY</text>
+<text x="58" y="663">CONNECTIVITY &amp; POWER</text>
+<text x="58" y="860">HOUSING &amp; OPERATING CONDITIONS</text>
+</g>
+<g fill="#242528" font-size="25">
+<text x="58" y="563">2.7″ e-paper · 152 × 296 px (125 DPI)</text>
+<text x="58" y="593">Black &amp; white · Active area: 60.1 × 30.7 mm</text>
+<text x="58" y="701">FeliCa NFC Forum Type 3</text>
+<text x="58" y="732">Battery type: CR24502 × 2</text>
+<text x="58" y="763">Battery life: approx. 7 years*</text>
+<text x="58" y="794">Designed for wireless use in cold cases</text>
+<text x="58" y="899">3.23 × 1.65 × 0.55 in</text>
+<text x="58" y="930">(82.0 × 42.0 × 14.0 mm) · W × H × D</text>
+<text x="58" y="961">Operating range: −13 to 50 °F (−25 to 10 °C)</text>
+</g>
+<text x="38" y="1057" fill="#1d1e20" font-weight="700" font-size="25">1-year warranty</text>
+<path d="M38 1080H682" stroke="#dadbdd" stroke-width="2"/>
+<g fill="#53575b" font-size="19">
+<text x="38" y="1108">* Manufacturer estimate with two updates per day.</text>
+<text x="38" y="1133">Product details may change. Confirm when ordering.</text>
+</g>
+</g>
+<g transform="translate(640 250)" fill="none" stroke="#2372d8">
+<circle r="32" fill="#eef6ff" stroke-width="2"/>
+<defs><path id="flake-arm" d="M0 0V-21 M-6 -15L0 -9L6 -15"/></defs>
+<g stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round">
+<use xlink:href="#flake-arm" transform="rotate(0)"/>
+<use xlink:href="#flake-arm" transform="rotate(60)"/>
+<use xlink:href="#flake-arm" transform="rotate(120)"/>
+<use xlink:href="#flake-arm" transform="rotate(180)"/>
+<use xlink:href="#flake-arm" transform="rotate(240)"/>
+<use xlink:href="#flake-arm" transform="rotate(300)"/>
+</g>
+</g>
+</svg>
