@@ -16,9 +16,13 @@ TELICA USA official website with enhanced SEO optimization - Authorized U.S. Res
 
 ## 배포
 
-Cloudflare Workers Builds가 `main` 브랜치의 변경을 빌드하여 `solitary-mountain-261e` Worker에 자동 배포합니다.
+`wrangler.toml`은 `dist`를 공개 정적 파일 디렉터리로 지정합니다. Cloudflare Workers Builds의 빌드 명령은 `npm run build`로 설정해야 합니다. `build.mjs`는 공개 파일만 `dist`에 복사하며, 저장소 전체를 복사하지 않아야 합니다. 이 저장소에는 Cloudflare 대시보드의 실제 빌드 명령 설정이 포함되어 있지 않으므로 운영 배포 전에 대시보드 설정을 확인하세요.
 
-빌드 명령은 사이트 파일을 `dist`에 복사하며, `npx wrangler deploy`가 정적 파일을 배포합니다.
+## Rails & Hardware
+
+공개 카탈로그와 주문 옵션은 `index.html`의 `hardwareCatalog` 데이터에서 품목별 `published` 및 `orderable` 상태를 공유합니다. 현재 9개 품목은 공개되고 `Quote only`로 표시되며, 주문 계산에는 포함되지 않습니다. 이전 가격과 주문 로직은 `private-archive/rails-hardware-before-hide.html`에 보존되어 있고 빌드 출력에서 제외됩니다. 관련 제품 사진은 카탈로그와 함께 공개 빌드에 포함됩니다.
+
+복구 또는 재고 확인 후 주문을 재개할 때는 `hardwareCatalog`에서 해당 품목만 공개/주문 가능 상태로 설정하고 확인된 SKU와 단가를 입력하세요. 비공개 품목은 카탈로그와 주문 옵션 양쪽에서 자동으로 제외됩니다.
 
 ## 작업 현황
 

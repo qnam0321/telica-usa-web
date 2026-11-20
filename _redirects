@@ -1,2 +1,7 @@
 # Cloudflare Pages redirect rules
+/rails /#rails 302
+/rails/ /#rails 302
+/rails-hardware /#rails 302
+/rails-and-hardware /#rails 302
+/hardware /#rails 302
 /* /index.html 200

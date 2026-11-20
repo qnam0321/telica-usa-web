@@ -411,11 +411,11 @@
                             <a href="#tag-2-7" onclick="switchPage('home', 'tag-2-7'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" ESL Tag (40-pack)</a>
                             <a href="#tag-2-7-freezer" onclick="switchPage('home', 'tag-2-7-freezer'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">2.7" Freezer Tag (40-pack)</a>
                             <a href="#tag-3-7" onclick="switchPage('home', 'tag-3-7'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">3.7" ESL Tag (30-pack)</a>
-                            <a href="#" onclick="switchPage('rails'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Rails & Hardware</a>
+                            <a href="#rails" onclick="switchPage('rails'); return false;" class="block px-4 py-2 text-zinc-900 hover:bg-zinc-100">Rails & Hardware</a>
                         </div>
                     </div>
                     <a href="#" onclick="switchPage('support'); return false;" class="text-zinc-900 hover:text-red-600 transition">Setup & Guides</a>
-                    <a href="#" onclick="switchPage('rails'); return false;" class="text-zinc-900 hover:text-red-600 transition">Project Assessment</a>
+                    <a href="#commercial" onclick="switchPage('home', 'commercial'); return false;" class="text-zinc-900 hover:text-red-600 transition">Project Assessment</a>
                     <a href="#" onclick="switchPage('partners'); return false;" class="text-zinc-900 hover:text-red-600 transition">Partners & Supplier</a>
                     <a href="#" onclick="switchPage('about'); return false;" class="text-zinc-900 hover:text-red-600 transition">About Us</a>
                 </nav>
@@ -444,12 +444,12 @@
                         <a href="#tag-2-7" onclick="switchPage('home', 'tag-2-7'); return false;" class="block py-1 text-zinc-600">2.7" ESL Tag (40-pack)</a>
                         <a href="#tag-2-7-freezer" onclick="switchPage('home', 'tag-2-7-freezer'); return false;" class="block py-1 text-zinc-600">2.7" Freezer Tag (40-pack)</a>
                         <a href="#tag-3-7" onclick="switchPage('home', 'tag-3-7'); return false;" class="block py-1 text-zinc-600">3.7" ESL Tag (30-pack)</a>
-                        <a href="#" onclick="switchPage('rails'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 text-zinc-600">Rails & Hardware</a>
+                        <a href="#rails" onclick="switchPage('rails'); return false;" class="block py-1 text-zinc-600">Rails & Hardware</a>
                     </div>
                 </div>
                 
                 <a href="#" onclick="switchPage('support'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Setup & Guides</a>
-                <a href="#" onclick="switchPage('rails'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Project Assessment</a>
+                <a href="#commercial" onclick="switchPage('home', 'commercial'); return false;" class="block py-1 font-semibold text-zinc-900">Project Assessment</a>
                 <a href="#" onclick="switchPage('partners'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">Partners & Supplier</a>
                 <a href="#" onclick="switchPage('about'); mobileMenu.classList.add('hidden'); return false;" class="block py-1 font-semibold text-zinc-900">About Us</a>
             </div>
@@ -475,9 +475,6 @@
                         <button onclick="openQuoteModal('DIY ESL Kit Purchase')" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-none text-xs transition cursor-pointer text-center shadow-md">
                             Request a DIY ESL Kit Quote
                         </button>
-                        <a href="#" onclick="switchPage('rails'); return false;" class="bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-semibold px-6 py-3 rounded-none text-xs transition border border-zinc-700 text-center">
-                            View Rails & Hardware &#10132;
-                        </a>
                     </div>
                 </div>
 
@@ -554,14 +551,11 @@
                 </div>
 
                 <div class="mt-10 bg-zinc-900 text-white p-6 sm:p-8 rounded-none flex flex-col md:flex-row items-center justify-between gap-6 border border-zinc-800">
-                    <div>
-                        <span class="text-[10px] uppercase text-red-400 corporate-tag font-bold">RETAIL STORE HARDWARE</span>
-                        <h4 class="text-lg font-bold mt-1">Need Shelf Rails & Mounting Solutions?</h4>
-                        <p class="text-zinc-400 text-sm font-light max-w-xl mt-1">Browse our available shelf rail profiles and mounting accessories, including listed lengths, colors, and prices.</p>
+                    <div class="w-full md:flex-1">
+                        <h4 class="text-lg font-bold">Need help choosing a mount?</h4>
+                        <p class="text-zinc-400 text-sm font-light max-w-xl mt-1">Tell us about your shelving so we can review mounting options for your TELICA labels.</p>
                     </div>
-                    <button onclick="switchPage('rails'); return false;" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition whitespace-nowrap cursor-pointer shadow-md">
-                        View Rails & Hardware Catalog &#10132;
-                    </button>
+                    <a href="#commercial" onclick="switchPage('home', 'commercial'); return false;" class="w-full md:w-auto bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition text-center shadow-md">Request a Mounting Review</a>
                 </div>
             </div>
         </section>
@@ -995,7 +989,7 @@
         </section>
 
         <!-- ESL Project Assessment ì„¹ì…˜ -->
-        <section id="commercial" class="py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
+        <section id="commercial" class="scroll-mt-24 py-16 px-4 sm:px-6 bg-white border-b border-zinc-200">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-10">
                     <span class="text-xs font-bold text-red-600 uppercase corporate-tag">CUSTOM INTEGRATION & MULTI-LOCATION SUPPORT</span>
@@ -1076,10 +1070,18 @@
                     <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900">ESL Shelf Rails & Accessories</h1>
                     <p class="text-zinc-600 text-sm font-light mt-1">Rail types, lengths, and available colors for the products offered by TELICA USA.</p>
                 </div>
-                <button onclick="openQuoteModal('Rail & Hardware Order')" class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition shadow-sm whitespace-nowrap cursor-pointer">
-                    Request Rail Quote &#10132;
-                </button>
+                <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-general-hardware-quote class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition shadow-sm whitespace-nowrap text-center">
+                    Request a Hardware Quote &#10132;
+                </a>
             </div>
+
+            <section aria-labelledby="hardware-availability-heading" class="p-6 bg-zinc-50 border border-zinc-300">
+                <span class="text-xs font-bold text-red-600 uppercase corporate-tag">Availability &amp; Ordering</span>
+                <h2 id="hardware-availability-heading" class="text-lg font-bold text-zinc-900 mt-1">Not currently stocked</h2>
+                <p class="text-sm text-zinc-700 leading-relaxed mt-2">Hardware and accessories are available by quotation. The estimated lead time for small orders is 15–20 days. Volume orders require coordination with our manufacturer. Availability, pricing, and lead times are confirmed in your quote. Mounting compatibility will also be confirmed with your quote.</p>
+                <p class="text-xs text-zinc-600 mt-3">Please include the item or SKU, estimated quantity, and shelf type or dimensions. A photo of the shelf edge is helpful if available.</p>
+                <p class="text-xs text-zinc-600 mt-2">Email: <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-general-hardware-quote class="font-semibold text-red-700 underline">info@telicausa.com</a></p>
+            </section>
 
             <section aria-labelledby="rail-products-heading">
                 <div class="mb-5">
@@ -1087,7 +1089,7 @@
                     <h2 id="rail-products-heading" class="text-xl font-bold text-zinc-900 mt-1">Shelf Rails</h2>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="adhesive-rail" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 grid grid-cols-2 gap-2">
                                 <button type="button" onclick="openProductGallery(0)" aria-label="View Double-Sided Adhesive Rail photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
@@ -1097,15 +1099,16 @@
                                     <img src="double-sided-adhesive-2.png" alt="Double-Sided Adhesive Rail, side view" class="w-full h-full object-contain">
                                 </button>
                             </div>
-                            <h3 class="text-sm font-bold text-zinc-900">Double-Sided Adhesive Rail</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">Double-Sided Adhesive Rail</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
                             <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
                             <p>Colors: <strong class="text-zinc-900">Transparent, White, Grey, Black</strong></p>
                         </div>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="l-shape-90" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 grid grid-cols-2 gap-2">
                                 <button type="button" onclick="openProductGallery(2)" aria-label="View L Shape 90 Degree Rail photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
@@ -1115,15 +1118,16 @@
                                     <img src="l-shape-90-degree-2.png" alt="L Shape 90 Degree Rail, side view" class="w-full h-full object-contain">
                                 </button>
                             </div>
-                            <h3 class="text-sm font-bold text-zinc-900">L Shape 90 Degree Rail</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">L Shape 90 Degree Rail</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
                             <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
                             <p>Color: <strong class="text-zinc-900">Transparent</strong></p>
                         </div>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="l-shape-45" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 grid grid-cols-2 gap-2">
                                 <button type="button" onclick="openProductGallery(4)" aria-label="View L Shape 45 Degree Rail photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
@@ -1133,35 +1137,38 @@
                                     <img src="l-shape-45-degree-2-v2.png" alt="L Shape 45 Degree Rail, side profile" class="w-full h-full object-contain">
                                 </button>
                             </div>
-                            <h3 class="text-sm font-bold text-zinc-900">L Shape 45 Degree Rail</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">L Shape 45 Degree Rail</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
                             <p>Length: <strong class="text-zinc-900">900 mm (35.43 in)</strong></p>
                             <p>Color: <strong class="text-zinc-900">Transparent</strong></p>
                         </div>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="hg-rail" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">HG Type Rail</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">HG Type Rail</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
                             <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
                             <p>Colors: <strong class="text-zinc-900">White, Grey, Black</strong></p>
                         </div>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="freezer-rail" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Freezer Rail</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">Freezer Rail</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <div class="mt-4 pt-3 border-t border-zinc-100 text-xs leading-relaxed text-zinc-600">
                             <p>Length: <strong class="text-zinc-900">1200 mm (47.24 in)</strong></p>
                             <p>Color: <strong class="text-zinc-900">Transparent</strong></p>
                         </div>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
                 </div>
             </section>
@@ -1172,31 +1179,34 @@
                     <h2 id="accessories-heading" class="text-xl font-bold text-zinc-900 mt-1">Mounting Accessories</h2>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="swing-holder-normal" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder &#8212; Normal</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">Swing Holder &#8212; Normal</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="swing-holder-compressed" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Swing Holder &#8212; Compressed</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">Swing Holder &#8212; Compressed</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="stand" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 flex items-center justify-center border border-dashed border-zinc-300 bg-zinc-50 text-xs text-zinc-500">Product photo coming soon</div>
-                            <h3 class="text-sm font-bold text-zinc-900">Stand</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">Stand</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Transparent</strong></p>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
-                    <article class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
+                    <article data-hardware-id="clip" class="bg-white p-5 border border-zinc-300 flex flex-col justify-between">
                         <div>
                             <div class="h-28 mb-4 grid grid-cols-2 gap-2">
                                 <button type="button" onclick="openProductGallery(6)" aria-label="View Clip photo, angle 1" class="overflow-hidden border border-zinc-300 bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-red-600">
@@ -1206,10 +1216,11 @@
                                     <img src="clip-2.png" alt="Black ESL shelf clip with clear label holder" class="w-full h-full object-contain">
                                 </button>
                             </div>
-                            <h3 class="text-sm font-bold text-zinc-900">Clip</h3>
+                            <h3 data-hardware-name class="text-sm font-bold text-zinc-900">Clip</h3>
+                            <span data-hardware-status class="mt-2 inline-block bg-amber-100 px-2 py-1 text-[10px] font-semibold text-amber-900">Quote only</span>
                         </div>
                         <p class="mt-4 pt-3 border-t border-zinc-100 text-xs text-zinc-600">Color: <strong class="text-zinc-900">Black</strong></p>
-                        <button onclick="openQuoteModal('Rail & Hardware Order')" class="mt-4 w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 transition cursor-pointer">Request Quote</button>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-hardware-quote class="mt-4 block w-full bg-zinc-100 hover:bg-zinc-200 text-zinc-900 text-xs font-semibold py-2 text-center transition">Request a Hardware Quote</a>
                     </article>
                 </div>
             </section>
@@ -1549,7 +1560,6 @@
                         <option value="2.7 Inch Tag Bundle Order">2.7" ESL Tag Bundle Order (40-pack - $439*)</option>
                         <option value="2.7 Inch Freezer Tag Bundle Order">2.7" Freezer Tag Bundle Order (40-pack - $450)</option>
                         <option value="3.7 Inch Tag Bundle Order">3.7" ESL Tag Bundle Order (30-pack - $559*)</option>
-                        <option value="Rail & Hardware Order">Rail & Hardware Order</option>
                         <option value="Partner / Reseller Inquiry">Partner / Reseller Inquiry</option>
                         <option value="Commercial & Multi-Location Project">Commercial & Multi-Location Project (Negotiable)</option>
                         <option value="General Inquiry">General Inquiry</option>
@@ -1557,6 +1567,12 @@
                 </div>
                 <div id="order-items-group" class="hidden space-y-3">
                     <div id="order-items"></div>
+                    <div id="hardware-ordering-note" class="hidden border border-zinc-200 bg-zinc-50 p-3 space-y-2">
+                        <p class="font-bold text-zinc-800">Hardware &amp; accessories · Quote only</p>
+                        <p class="text-zinc-600">Online ordering is temporarily unavailable for these items. Please email us to request a quote.</p>
+                        <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-general-hardware-quote class="inline-block bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 text-center">Request a Hardware Quote</a>
+                        <p class="text-xs text-zinc-600">Email: <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-general-hardware-quote class="font-semibold text-red-700 underline">info@telicausa.com</a></p>
+                    </div>
                     <button type="button" id="add-order-item" onclick="addOrderItem()" class="text-red-700 hover:text-red-800 underline font-semibold">+ Add item</button>
                     <div>
                         <label for="order-discount-code" class="block font-semibold text-zinc-700 mb-1">Discount Code (Optional)</label>
@@ -1613,6 +1629,17 @@
             }
         }
 
+        function redirectLegacyRailsRoute() {
+            const legacyPath = /^\/(?:rails|rails-hardware|rails-and-hardware|hardware)\/?$/i.test(window.location.pathname);
+            const legacyHash = /^#(?:rails|rails-hardware|rails-and-hardware|view-rails|hardware)$/i.test(window.location.hash);
+            if (!legacyPath && !legacyHash) return;
+            window.history.replaceState(null, '', `/${window.location.search}#rails`);
+            switchPage('rails');
+        }
+        window.addEventListener('hashchange', redirectLegacyRailsRoute);
+        window.addEventListener('popstate', redirectLegacyRailsRoute);
+        redirectLegacyRailsRoute();
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuClose = document.getElementById('menu-close');
@@ -1632,7 +1659,7 @@
             if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) setMobileMenuOpen(false);
         });
 
-        const productGalleryPhotos = [
+        const hardwareGalleryPhotos = [
             { src: 'double-sided-adhesive-1.png', alt: 'Double-Sided Adhesive Rail, angled view', title: 'Double-Sided Adhesive Rail', startIndex: 0, endIndex: 1, view: 'View 1 of 2' },
             { src: 'double-sided-adhesive-2.png', alt: 'Double-Sided Adhesive Rail, side view', title: 'Double-Sided Adhesive Rail', startIndex: 0, endIndex: 1, view: 'View 2 of 2' },
             { src: 'l-shape-90-degree-1.png', alt: 'L Shape 90 Degree Rail, angled profile view', title: 'L Shape 90 Degree Rail', startIndex: 2, endIndex: 3, view: 'View 1 of 2' },
@@ -1643,7 +1670,7 @@
             { src: 'clip-2.png', alt: 'Black ESL shelf clip with clear label holder', title: 'Clip', startIndex: 6, endIndex: 7, view: 'View 2 of 2' }
         ];
         let currentProductPhoto = 0;
-        let currentProductGalleryPhotos = productGalleryPhotos;
+        let currentProductGalleryPhotos = hardwareGalleryPhotos;
         let currentProductGalleryOpener = null;
         let productPhotoZoom = 1;
         const galleryPointers = new Map();
@@ -1682,9 +1709,9 @@
         }
 
         function openProductGallery(index) {
-            currentProductGalleryPhotos = productGalleryPhotos;
+            currentProductGalleryPhotos = hardwareGalleryPhotos;
             currentProductGalleryOpener = document.activeElement;
-            currentProductPhoto = Math.max(0, Math.min(index, productGalleryPhotos.length - 1));
+            currentProductPhoto = Math.max(0, Math.min(index, hardwareGalleryPhotos.length - 1));
             showProductGallery();
         }
 
@@ -1700,7 +1727,7 @@
             document.body.classList.remove('product-gallery-open');
             currentProductGalleryOpener?.focus({ preventScroll: true });
             currentProductGalleryOpener = null;
-            currentProductGalleryPhotos = productGalleryPhotos;
+            currentProductGalleryPhotos = hardwareGalleryPhotos;
         });
 
         function changeProductPhoto(direction) {
@@ -1895,60 +1922,59 @@
         const modalHeader = document.getElementById('modal-header');
         let isSubmittingQuote = false;
         let orderItems = [];
-        const productInterests = new Set([
+        const hardwareCatalog = [
+            { id: 'adhesive-rail', name: 'Double-Sided Adhesive Rail', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'l-shape-90', name: 'L Shape 90 Degree Rail', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'l-shape-45', name: 'L Shape 45 Degree Rail', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'hg-rail', name: 'HG Type Rail', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'freezer-rail', name: 'Freezer Rail', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'swing-holder-normal', name: 'Swing Holder — Normal', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'swing-holder-compressed', name: 'Swing Holder — Compressed', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'stand', name: 'Stand', sku: null, published: true, orderable: false, priceCents: null },
+            { id: 'clip', name: 'Clip', sku: null, published: true, orderable: false, priceCents: null }
+        ];
+        hardwareCatalog.forEach(product => {
+            if (product.orderable && (!product.published || !Number.isInteger(product.priceCents) || product.priceCents < 0)) {
+                throw new Error(`Orderable hardware requires a published item and a valid price: ${product.id}`);
+            }
+        });
+        const inquiryTypes = new Set([
             'DIY ESL Kit Purchase',
             'Gateway Pro - Standalone Purchase',
             '1.5 Inch Tag Bundle Order',
             '2.7 Inch Tag Bundle Order',
             '2.7 Inch Freezer Tag Bundle Order',
             '3.7 Inch Tag Bundle Order',
-            'Rail & Hardware Order'
+            'Partner / Reseller Inquiry',
+            'Commercial & Multi-Location Project',
+            'General Inquiry'
         ]);
-        const orderProducts = [
-            { value: 'DIY ESL Kit Purchase', label: 'DIY ESL Kit Purchase ($799)' },
-            { value: 'Gateway Pro - Standalone Purchase', label: 'Gateway Pro - Standalone Purchase' },
-            { value: '1.5 Inch Tag Bundle Order', label: '1.5" ESL Tag Bundle (60-pack - $549*)' },
-            { value: '2.7 Inch Tag Bundle Order', label: '2.7" ESL Tag Bundle (40-pack - $439*)' },
-            { value: '2.7 Inch Freezer Tag Bundle Order', label: '2.7" Freezer Tag Bundle (40-pack - $450)' },
-            { value: '3.7 Inch Tag Bundle Order', label: '3.7" ESL Tag Bundle (30-pack - $559*)' },
-            { value: 'Double-Sided Adhesive Rail', label: 'Double-Sided Adhesive Rail — 1200 mm (47.24 in), Transparent / White / Grey / Black' },
-            { value: 'L Shape 90 Degree Rail', label: 'L Shape 90 Degree Rail — 1200 mm (47.24 in), Transparent' },
-            { value: 'L Shape 45 Degree Rail', label: 'L Shape 45 Degree Rail — 900 mm (35.43 in), Transparent' },
-            { value: 'HG Type Rail', label: 'HG Type Rail — 1200 mm (47.24 in), White / Grey / Black' },
-            { value: 'Freezer Rail', label: 'Freezer Rail — 1200 mm (47.24 in), Transparent' },
-            { value: 'Swing Holder Normal', label: 'Swing Holder Normal — Transparent' },
-            { value: 'Swing Holder Compressed', label: 'Swing Holder Compressed — Transparent' },
-            { value: 'Stand', label: 'Stand — Transparent' },
-            { value: 'Clip', label: 'Clip — Black' }
+        const productInterests = new Set([
+            'DIY ESL Kit Purchase',
+            'Gateway Pro - Standalone Purchase',
+            '1.5 Inch Tag Bundle Order',
+            '2.7 Inch Tag Bundle Order',
+            '2.7 Inch Freezer Tag Bundle Order',
+            '3.7 Inch Tag Bundle Order'
+        ]);
+        const baseOrderProducts = [
+            { value: 'DIY ESL Kit Purchase', label: 'DIY ESL Kit Purchase ($799)', priceCents: 79900 },
+            { value: 'Gateway Pro - Standalone Purchase', label: 'Gateway Pro - Standalone Purchase', priceCents: 69900 },
+            { value: '1.5 Inch Tag Bundle Order', label: '1.5" ESL Tag Bundle (60-pack - $549*)', priceCents: 54900 },
+            { value: '2.7 Inch Tag Bundle Order', label: '2.7" ESL Tag Bundle (40-pack - $439*)', priceCents: 43900 },
+            { value: '2.7 Inch Freezer Tag Bundle Order', label: '2.7" Freezer Tag Bundle (40-pack - $450)', priceCents: 45000 },
+            { value: '3.7 Inch Tag Bundle Order', label: '3.7" ESL Tag Bundle (30-pack - $559*)', priceCents: 55900 }
         ];
-        const railHardwareProductValues = new Set([
-            'Double-Sided Adhesive Rail',
-            'L Shape 90 Degree Rail',
-            'L Shape 45 Degree Rail',
-            'HG Type Rail',
-            'Freezer Rail',
-            'Swing Holder Normal',
-            'Swing Holder Compressed',
-            'Stand',
-            'Clip'
-        ]);
-        const orderItemPricesCents = {
-            'DIY ESL Kit Purchase': 79900,
-            'Gateway Pro - Standalone Purchase': 69900,
-            '1.5 Inch Tag Bundle Order': 54900,
-            '2.7 Inch Tag Bundle Order': 43900,
-            '2.7 Inch Freezer Tag Bundle Order': 45000,
-            '3.7 Inch Tag Bundle Order': 55900,
-            'Double-Sided Adhesive Rail': 350,
-            'L Shape 90 Degree Rail': 490,
-            'L Shape 45 Degree Rail': 490,
-            'HG Type Rail': 350,
-            'Freezer Rail': 370,
-            'Swing Holder Normal': 150,
-            'Swing Holder Compressed': 90,
-            'Stand': 90,
-            'Clip': 250
-        };
+        const orderProducts = [
+            ...baseOrderProducts,
+            ...hardwareCatalog.filter(product => product.published && product.orderable).map(product => ({
+                value: product.id,
+                label: product.name,
+                priceCents: product.priceCents
+            }))
+        ];
+        const publicOrderProductValues = new Set(orderProducts.map(product => product.value));
+        const orderItemPricesCents = Object.fromEntries(orderProducts.map(product => [product.value, product.priceCents]));
         const equipmentProducts = new Set(['DIY ESL Kit Purchase', 'Gateway Pro - Standalone Purchase']);
         const tagProducts = new Set([
             '1.5 Inch Tag Bundle Order',
@@ -1969,6 +1995,47 @@
             '3.7 Inch Tag Bundle Order': '3.7 Inch Tag Bundle Order'
         };
 
+        function filterPublicOrderItems(items) {
+            return items.filter(item => !item.product || publicOrderProductValues.has(item.product));
+        }
+
+        function hardwareQuoteMailto(product) {
+            const details = product ? [
+                `Item: ${product.name}`,
+                `SKU: ${product.sku || 'Not listed in the current catalog'}`,
+                ''
+            ] : [];
+            details.push('Please include the item or SKU, estimated quantity, and shelf type or dimensions. A photo of the shelf edge is helpful if available.');
+            return `mailto:info@telicausa.com?subject=${encodeURIComponent('Hardware & Accessories Inquiry')}&body=${encodeURIComponent(details.join('\n'))}`;
+        }
+
+        function renderHardwareCatalog() {
+            const productsById = new Map(hardwareCatalog.map(product => [product.id, product]));
+            document.querySelectorAll('[data-hardware-id]').forEach(card => {
+                const product = productsById.get(card.dataset.hardwareId);
+                const hidden = !product || !product.published;
+                card.hidden = hidden;
+                card.style.display = hidden ? 'none' : '';
+                if (hidden) return;
+                card.querySelector('[data-hardware-name]').textContent = product.name;
+                const status = card.querySelector('[data-hardware-status]');
+                status.textContent = product.orderable ? 'Available to order' : 'Quote only';
+                status.classList.toggle('bg-amber-100', !product.orderable);
+                status.classList.toggle('text-amber-900', !product.orderable);
+                status.classList.toggle('bg-green-100', product.orderable);
+                status.classList.toggle('text-green-900', product.orderable);
+                card.querySelector('[data-hardware-quote]').href = hardwareQuoteMailto(product);
+            });
+            document.querySelectorAll('[data-general-hardware-quote]').forEach(link => {
+                link.href = hardwareQuoteMailto(null);
+            });
+            document.getElementById('hardware-ordering-note').classList.toggle(
+                'hidden',
+                !hardwareCatalog.some(product => product.published && !product.orderable)
+            );
+        }
+        renderHardwareCatalog();
+
         function initializeOrderItems(interest) {
             orderItems = productInterests.has(interest)
                 ? [{ product: initialOrderProduct[interest] || '', quantity: 1 }]
@@ -1987,6 +2054,7 @@
             const group = document.getElementById('order-items-group');
             const container = document.getElementById('order-items');
             const addButton = document.getElementById('add-order-item');
+            orderItems = filterPublicOrderItems(orderItems);
             group.classList.toggle('hidden', !productInterests.has(document.getElementById('modal-interest').value));
             container.replaceChildren();
 
@@ -2014,10 +2082,15 @@
                 placeholder.value = '';
                 placeholder.textContent = 'Select a product';
                 productSelector.append(placeholder);
+                const hardwareOptions = hardwareCatalog.filter(product => product.published).map(product => ({
+                    value: product.id,
+                    label: `${product.name}${product.sku ? ` · ${product.sku}` : ''} — ${product.orderable ? 'Available to order' : 'Quote only'}`,
+                    disabled: !product.orderable
+                }));
                 const productGroups = [
-                    { label: 'ESL Kits & Tag Bundles', products: orderProducts.filter(product => !railHardwareProductValues.has(product.value)) },
-                    { label: 'Rail & Hardware', products: orderProducts.filter(product => railHardwareProductValues.has(product.value)) }
-                ];
+                    { label: 'ESL Kits & Tag Bundles', products: baseOrderProducts },
+                    { label: 'Rails & Hardware', products: hardwareOptions }
+                ].filter(productGroup => productGroup.products.length > 0);
                 productGroups.forEach(productGroup => {
                     const optgroup = document.createElement('optgroup');
                     optgroup.label = productGroup.label;
@@ -2025,6 +2098,7 @@
                         const option = document.createElement('option');
                         option.value = product.value;
                         option.textContent = product.label;
+                        option.disabled = Boolean(product.disabled);
                         optgroup.append(option);
                     });
                     productSelector.append(optgroup);
@@ -2082,10 +2156,11 @@
 
         function calculateQuoteEstimate() {
             const code = document.getElementById('order-discount-code').value.trim().toUpperCase();
+            const publicOrderItems = filterPublicOrderItems(orderItems);
             const validQuantity = (item, index) => Number.isInteger(item.quantity) && item.quantity >= (index === 0 ? 0 : 1);
-            const equipmentPresent = orderItems.some((item, index) => validQuantity(item, index) && item.quantity > 0 && equipmentProducts.has(item.product));
+            const equipmentPresent = publicOrderItems.some((item, index) => validQuantity(item, index) && item.quantity > 0 && equipmentProducts.has(item.product));
             const welcomeEligible = code === 'WELCOME5' && equipmentPresent;
-            const items = orderItems.map((item, index) => {
+            const items = publicOrderItems.map((item, index) => {
                 const valid = validQuantity(item, index);
                 const unitPrice = orderItemPricesCents[item.product];
                 const subtotal = valid && unitPrice !== undefined ? unitPrice * item.quantity : 0;
@@ -2194,12 +2269,15 @@
             status.innerText = '';
             const interestSelect = document.getElementById('modal-interest');
             const previousInterest = interestSelect.value;
+            orderItems = filterPublicOrderItems(orderItems);
             if (interest) {
-                interestSelect.value = interest;
+                interestSelect.value = inquiryTypes.has(interest) ? interest : 'General Inquiry';
             }
             document.getElementById('bulk-order-note').classList.toggle('hidden', !productInterests.has(interestSelect.value));
             if (pricingRequest || interestSelect.value !== previousInterest || orderItems.length === 0) {
                 initializeOrderItems(interestSelect.value);
+            } else {
+                renderOrderItems();
             }
             document.getElementById('request-vip').checked = pricingRequest === 'vip';
             document.getElementById('request-volume').checked = pricingRequest === 'volume';
@@ -2251,14 +2329,16 @@
                           document.getElementById('modal-email').value.trim() &&
                           document.getElementById('modal-phone').value.trim() &&
                           document.getElementById('modal-zip').value.trim().length === 5 &&
-                          document.getElementById('modal-message').value.trim();
+                          document.getElementById('modal-message').value.trim() &&
+                          inquiryTypes.has(document.getElementById('modal-interest').value);
             const interest = document.getElementById('modal-interest').value;
+            const publicOrderItems = filterPublicOrderItems(orderItems);
             const orderItemsValid = !productInterests.has(interest) || (
-                orderItems.length > 0 &&
-                orderItems.every((item, index) =>
+                publicOrderItems.length > 0 &&
+                publicOrderItems.every((item, index) =>
                     item.product && Number.isInteger(item.quantity) && item.quantity >= (index === 0 ? 0 : 1)
                 ) &&
-                orderItems.some(item => item.quantity >= 1)
+                publicOrderItems.some(item => item.quantity >= 1)
             );
             const vipRequested = productInterests.has(interest) && document.getElementById('request-vip').checked;
             const sameEmail = document.getElementById('vip-same-email').checked;
@@ -2288,8 +2368,27 @@
             const zip = document.getElementById('modal-zip').value;
             const address = document.getElementById('modal-address').value.trim();
             const interest = document.getElementById('modal-interest').value;
+            const status = document.getElementById('quote-form-status');
+            if (!inquiryTypes.has(interest)) {
+                status.className = 'text-red-700';
+                status.textContent = 'Please select a valid inquiry type.';
+                status.classList.remove('hidden');
+                validateQuoteForm();
+                return;
+            }
             const message = document.getElementById('modal-message').value;
             const estimate = calculateQuoteEstimate();
+            if (productInterests.has(interest) && (
+                estimate.invalid ||
+                !estimate.items.length ||
+                !estimate.items.some(item => item.valid && item.quantity >= 1)
+            )) {
+                status.className = 'text-red-700';
+                status.textContent = 'Add a valid product and quantity before submitting this quote request.';
+                status.classList.remove('hidden');
+                validateQuoteForm();
+                return;
+            }
             const vipRequested = document.getElementById('request-vip').checked;
             const volumeRequested = document.getElementById('request-volume').checked;
             const sameEmail = document.getElementById('vip-same-email').checked;
@@ -2305,7 +2404,6 @@
             });
             const loc = detectedLocation ? `${zip} (${detectedLocation})` : zip.trim();
             const fullAddress = address ? `${address}, ${loc}` : loc;
-            const status = document.getElementById('quote-form-status');
             const btn = document.getElementById('submit-btn');
             const formData = new URLSearchParams({
                 _subject: `[TELICA USA Inquiry] ${interest} - From ${name}`,
@@ -2316,7 +2414,7 @@
                 location: fullAddress,
                 interest,
                 ...(productInterests.has(interest) ? {
-                    quantity: String(orderItems.reduce((total, item) => total + item.quantity, 0)),
+                    quantity: String(estimate.items.reduce((total, item) => total + item.quantity, 0)),
                     order_items: JSON.stringify(estimatedItems),
                     pricing_requests: JSON.stringify({
                         welcome_code_entered: document.getElementById('order-discount-code').value.trim(),
