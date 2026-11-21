@@ -1060,7 +1060,7 @@
     <!-- [ì„œë¸Œ íŽ˜ì´ì§€ ë·°: Rails & Hardware Catalog] -->
     <div id="view-rails" class="page-view hidden py-16 px-4 sm:px-6 bg-white">
         <div class="max-w-6xl mx-auto space-y-8">
-            <div class="border-b border-zinc-200 pb-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div class="border-b border-zinc-200 pb-4">
                 <div>
                     <div class="flex items-center space-x-2 text-xs font-semibold text-zinc-500 mb-2">
                         <a href="#" onclick="switchPage('home'); return false;" class="hover:underline">Home</a>
@@ -1070,16 +1070,15 @@
                     <h1 class="text-2xl sm:text-3xl font-bold text-zinc-900">ESL Shelf Rails & Accessories</h1>
                     <p class="text-zinc-600 text-sm font-light mt-1">Rail types, lengths, and available colors for the products offered by TELICA USA.</p>
                 </div>
-                <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-general-hardware-quote class="bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition shadow-sm whitespace-nowrap text-center">
-                    Request a Hardware Quote &#10132;
-                </a>
             </div>
 
             <section aria-labelledby="hardware-availability-heading" class="p-6 bg-zinc-50 border border-zinc-300">
-                <span class="text-xs font-bold text-red-600 uppercase corporate-tag">Availability &amp; Ordering</span>
-                <h2 id="hardware-availability-heading" class="text-lg font-bold text-zinc-900 mt-1">Not currently stocked</h2>
-                <p class="text-sm text-zinc-700 leading-relaxed mt-2">Hardware and accessories are available by quotation. The estimated lead time for small orders is 15–20 days. Volume orders require coordination with our manufacturer. Availability, pricing, and lead times are confirmed in your quote. Mounting compatibility will also be confirmed with your quote.</p>
-                <p class="text-xs text-zinc-600 mt-3">Please include the item or SKU, estimated quantity, and shelf type or dimensions. A photo of the shelf edge is helpful if available.</p>
+                <h2 id="hardware-availability-heading" class="text-lg font-bold text-zinc-900">Rails &amp; Mounting Hardware</h2>
+                <p class="text-sm text-zinc-700 leading-relaxed mt-2">Planning a TELICA ESL installation? Share a photo of your shelf edge or its dimensions, along with the estimated quantity. We’ll review mounting options for your fixtures and confirm pricing, availability, and lead time in your quote.</p>
+                <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-general-hardware-quote class="inline-block mt-4 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-6 py-3 rounded-none transition shadow-sm text-center">
+                    Request a Hardware Quote
+                </a>
+                <p class="text-xs text-zinc-600 leading-relaxed mt-3">Hardware is sourced to order. Estimated lead time for small orders is 15–20 days. Timing for volume orders is confirmed with the manufacturer.</p>
                 <p class="text-xs text-zinc-600 mt-2">Email: <a href="mailto:info@telicausa.com?subject=Hardware%20%26%20Accessories%20Inquiry" data-general-hardware-quote class="font-semibold text-red-700 underline">info@telicausa.com</a></p>
             </section>
 
@@ -2005,7 +2004,7 @@
                 `SKU: ${product.sku || 'Not listed in the current catalog'}`,
                 ''
             ] : [];
-            details.push('Please include the item or SKU, estimated quantity, and shelf type or dimensions. A photo of the shelf edge is helpful if available.');
+            details.push('Please include a photo of your shelf edge or its dimensions, the estimated quantity, and the item name or SKU if known.');
             return `mailto:info@telicausa.com?subject=${encodeURIComponent('Hardware & Accessories Inquiry')}&body=${encodeURIComponent(details.join('\n'))}`;
         }
 
