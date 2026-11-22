@@ -28,6 +28,8 @@ const publicFiles = [
     'double-sided-adhesive-2.png',
     'l-shape-90-degree-1.png',
     'l-shape-90-degree-2.png',
+    'l-shape-90-adhesive-main.png',
+    'l-shape-90-adhesive-length.png',
     'l-shape-45-degree-1-v2.png',
     'l-shape-45-degree-2-v2.png',
     'clip-1.png',
