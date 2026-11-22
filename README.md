@@ -24,6 +24,8 @@ TELICA USA official website with enhanced SEO optimization - Authorized U.S. Res
 
 복구 또는 재고 확인 후 주문을 재개할 때는 `hardwareCatalog`에서 해당 품목만 공개/주문 가능 상태로 설정하고 확인된 SKU와 단가를 입력하세요. 비공개 품목은 카탈로그와 주문 옵션 양쪽에서 자동으로 제외됩니다.
 
+제품별 출고 및 설치 안내는 `index.html`의 `baseOrderProducts`에서 각 품목의 `guidance`로 관리하며, 제품 카드와 견적 항목에 함께 표시됩니다. 태그 번들의 공통 문구는 `tagBundleShippingGuidance`에서 수정하고, 특정 품목의 안내만 바뀌면 해당 품목의 `guidance`를 별도로 수정하세요.
+
 ## 작업 현황
 
 - SEO 최적화 완료
